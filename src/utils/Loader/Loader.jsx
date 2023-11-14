@@ -4,8 +4,8 @@ const Loader = ({ color='#020181' }) => {
   return (
     <div className="flex h-fit justify-center items-center">
       <Hearts
-        height="250"
-        width="250"
+        height="150"
+        width="150"
         color={color}
         ariaLabel="hearts-loading"
         wrapperStyle={{}}

@@ -6,14 +6,23 @@ import { Loader } from "./utils";
 export default function App() {
   const [loading, setLoading] = useState(true);
 
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     setLoading(false);
+  //   };
+  //   window.addEventListener("load", handleLoad);
+  //   return () => {
+  //     window.removeEventListener("load", handleLoad);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const handleLoad = () => {
+    const fetchData = async () => {
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setLoading(false);
     };
-    window.addEventListener("load", handleLoad);
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+
+    fetchData();
   }, []);
 
   return (
