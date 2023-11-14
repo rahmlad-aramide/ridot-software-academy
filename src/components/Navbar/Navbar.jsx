@@ -28,7 +28,7 @@ const Navbar = () => {
           <div className='flex justify-between items-center w-[90%] max-w-[1200px] mx-auto'>
             <div className="w-fit">
               <Link to="/">
-                <img src={ridotLogo} alt="Ridot software academy" className="max-w-[150px]" />
+                <img src={ridotLogo} alt="Ridot software academy" className="max-w-[140px]" />
               </Link>
             </div>
             <button ref={togglerRef} onClick={handleOpenNav} className='fixed md:hidden top-5 right-4 sm:right-8 z-50 transition duration-200 hover:scale-125 active:scale-100'>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <div className='flex w-6 h-1 bg-black/80'></div>
               </div>
             </button>
-            <nav ref={navRef} className="bg-white -translate-y-[calc(100%_+_200px)] md:translate-y-0 fixed md:relative bg-light shadow-xl md:shadow-none rounded-lg border md:border-0 md:bg-transparent top-[10%] md:top-0 right-[180px] md:right-0 h-fit w-fit px-8 py-4 md:px-0 translate-x-full md:translate-x-0 transition duration-200">
+            <nav ref={navRef} className="bg-white -translate-y-[calc(100%_+_200px)] md:translate-y-0 fixed md:relative bg-light shadow-xl md:shadow-none rounded-lg border md:border-0 md:bg-transparent top-[10%] md:top-0 right-[180px] md:right-0 h-fit w-fit px-6 sm:px-8 py-4 md:px-0 translate-x-full md:translate-x-0 transition duration-200">
               <ul className='flex items-center md:justify-center flex-col md:flex-row md:mt-0 w-full'>
                 <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/" onClick={handleOpenNav}>
                   Home
@@ -56,7 +56,7 @@ const Navbar = () => {
                   Contact us
                 </NavLink>
                 </li>
-                <Link to="/pricing" className='bg-primary text-white rounded px-2 sm:px-5 py-2 sm:py-[14px] text-sm font-medium flex shrink-0 transition duration-200 active:scale-100 hover:scale-90'>
+                <Link to="/pricing" className='bg-primary text-white rounded-lg px-2 sm:px-5 py-1.5 sm:py-2 text-sm font-medium flex shrink-0 transition duration-200 active:scale-100 hover:scale-90'>
                   Our Pricing
                 </Link>
               </ul>

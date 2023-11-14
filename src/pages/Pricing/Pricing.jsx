@@ -8,7 +8,6 @@ const Pricing = () => {
   const navigateTo = useNavigate();
   const [selectedVal, setSelectedVal] = useState("Pick a plan");
   const handleChange = (e) => {
-    // console.log(e.target.value)
     setSelectedVal(e.target.value);
   };
   const handleNavigate = (link) => {
@@ -22,7 +21,7 @@ const Pricing = () => {
       <Navbar />
       <div className="pt-20 w-[90%] max-w-[1200px] mx-auto">
         <div className="flex flex-col w-full items-center mb-10 mt-10">
-          <h1 className="font-DMSans font-bold text-primary110 text-4xl md:text-5xl w-[90%] max-w-[13ch] text-center mb-2">
+          <h1 className="font-DMSans font-bold text-primary text-4xl md:text-5xl w-[90%] max-w-[16ch] text-center mb-2">
             Pick a plan that&rsquo;s right for you
           </h1>
           <div className="-z-10 -mt-2 md:-mt-3">
@@ -47,7 +46,7 @@ const Pricing = () => {
                         {data.title}
                       </h2>
                       <p className="max-w-[60ch] mt-4">{data.subtitle}</p>
-                      <div className="grid gap-2 md:gap-4 grid-cols-2 mt-4">
+                      <div className="grid gap-2 md:gap-4 grid-cols-1 sm:grid-cols-2 mt-4">
                         <div>
                           <span className="font-medium">Course Duration:</span> 3 months
                         </div>
@@ -82,7 +81,7 @@ const Pricing = () => {
                       <div className="flex items-center my-8 mt-10">
                         <span
                           style={{ color: data.priceBg }}
-                          className={`text-[52px] md:text-[62px] font-semibold leading-6 mr-[0.625rem]`}
+                          className={`text-[42px] md:text-[62px] font-semibold leading-6 mr-[0.625rem]`}
                         >
                           <span>₦</span>
                           {data.price}
@@ -97,7 +96,7 @@ const Pricing = () => {
                     {data.desc.map((desc, index) => (
                       <div key={index} className="flex items-center mb-4">
                         <img src={desc.icon} alt={desc.text} />
-                        <span className="ml-2">{desc.text}</span>
+                        <span className="ml-2">{desc.text}.</span>
                       </div>
                     ))}
                   </div>
@@ -114,7 +113,7 @@ const Pricing = () => {
                   ) : (
                     <div className="mt-4 mb-2">
                       <Link to={`${data.link}`}>
-                        <button style={{backgroundColor: data.priceBg}} className="bg-primary hover:scale-95 transition duration-200 rounded-full text-white w-full py-2">
+                        <button style={{backgroundColor: data.priceBg}} className="bg-primary hover:scale-95 transition duration-200 rounded-lg text-white w-full py-2">
                           {data.buttonVal}
                         </button>
                       </Link>

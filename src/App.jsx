@@ -8,9 +8,7 @@ export default function App() {
 
   useEffect(() => {
     const handleLoad = () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      setLoading(false);
     };
     window.addEventListener("load", handleLoad);
     return () => {
