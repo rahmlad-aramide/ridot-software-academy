@@ -42,7 +42,7 @@ const Pricing = () => {
                   style={{ backgroundColor: data.priceBg }}
                   className={`w-full h-[10px] rounded-tl-lg rounded-tr-lg`}
                 ></div>
-                <div className="flex justify-between flex-col min-h-[44rem] px-[1.875rem] pt-10 pb-8">
+                <div className="flex justify-between flex-col h-full min-h-[44rem] px-[1.875rem] pt-10 pb-8">
                   <div>
                     <div className="mb-4">
                       <h2 className="text-[#333] text-[1.375rem] font-semibold py-1">

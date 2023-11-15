@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Error, Home, Pricing, Success } from "./pages";
 import { useEffect, useState } from "react";
 import { Loader } from "./utils";
+import { Footer } from "./components";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +33,7 @@ export default function App() {
           <Loader />
         </div>
       ) : (
+        <>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
@@ -39,6 +41,8 @@ export default function App() {
           {/* <Route path="/checkout" element={<Pricing />} /> */}
           <Route path="/success" element={<Success />} />
         </Routes>
+        <Footer />
+        </>
       )}
     </>
   );
