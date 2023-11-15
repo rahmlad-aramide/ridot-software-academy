@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Navbar } from "../../components";
 import { pricingData } from "../../utils/data";
 import underline from "../../assets/images/underline.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { PaystackCheckout } from "../../utils";
 
 const Pricing = () => {
   const navigateTo = useNavigate();
   const [selectedVal, setSelectedVal] = useState("Pick a plan");
+  const [selectedPrice, setSelectedPrice] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
   const handleChange = (e) => {
     setSelectedVal(e.target.value);
   };
@@ -84,7 +87,7 @@ const Pricing = () => {
                           className={`text-[42px] md:text-[62px] font-semibold leading-6 mr-[0.625rem]`}
                         >
                           <span>₦</span>
-                          {data.price}
+                          {data.price.toLocaleString()}
                         </span>{" "}
                         <div className="flex flex-col">
                           <span>₦<s>{data.discount}</s></span>
@@ -112,11 +115,14 @@ const Pricing = () => {
                     </div>
                   ) : (
                     <div className="mt-4 mb-2">
-                      <Link to={`${data.link}`}>
-                        <button style={{backgroundColor: data.priceBg}} className="bg-primary hover:scale-95 transition duration-200 rounded-lg text-white w-full py-2">
+                        <button onClick={()=>
+                          {
+                            setSelectedPrice(data.price)
+                            setOpenModal(true)
+                          }} 
+                          style={{backgroundColor: data.priceBg}} className="bg-primary hover:scale-95 transition duration-200 rounded-lg text-white w-full py-2">
                           {data.buttonVal}
                         </button>
-                      </Link>
                     </div>
                   )}
                 </div>
@@ -125,6 +131,12 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+      {
+        (openModal && selectedPrice !== null) &&
+        <div className="h-screen w-full fixed z-50 top-0 left-0 bg-black/30 backdrop-blur-sm flex justify-center">
+          <PaystackCheckout selectedPrice={selectedPrice} setSelectedPrice={setSelectedPrice} setOpenModal={setOpenModal} />
+        </div>
+      }
     </div>
   );
 };

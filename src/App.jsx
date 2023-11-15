@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Error, Home, Pricing } from "./pages";
+import { Error, Home, Pricing, Success } from "./pages";
 import { useEffect, useState } from "react";
 import { Loader } from "./utils";
 
@@ -36,6 +36,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
           <Route path="/pricing" element={<Pricing />} />
+          {/* <Route path="/checkout" element={<Pricing />} /> */}
+          <Route path="/success" element={<Success />} />
         </Routes>
       )}
     </>
