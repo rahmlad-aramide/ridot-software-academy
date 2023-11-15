@@ -98,7 +98,9 @@ const Pricing = () => {
                     <div className="h-[1px] w-full bg-[#2d2d2d80] opacity-50 mb-10"></div>
                     {data.desc.map((desc, index) => (
                       <div key={index} className="flex items-center mb-4">
-                        <img src={desc.icon} alt={desc.text} />
+                        {desc.icon &&
+                          <img src={desc.icon} alt={desc.text} />
+                        }
                         <span className="ml-2">{desc.text}.</span>
                       </div>
                     ))}
