@@ -21,7 +21,7 @@ const Pricing = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="w-[90%] max-w-[1200px] mx-auto">
         <div className="flex flex-col w-full items-center mb-10 mt-10">
           <h1 className="font-DMSans font-bold text-primary text-4xl md:text-5xl w-[90%] max-w-[16ch] text-center mb-2">
             Pick a plan that&rsquo;s right for you

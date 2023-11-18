@@ -1,7 +1,7 @@
 import { useState } from "react";
 import icon from '../../assets/icons/chevron.svg'
 
-const FAQ = ({ title, content }) => {
+export const FAQ = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -27,5 +27,3 @@ const FAQ = ({ title, content }) => {
     </div>
   );
 };
-
-export default FAQ;

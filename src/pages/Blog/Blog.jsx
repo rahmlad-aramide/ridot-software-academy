@@ -15,12 +15,13 @@ const Blog = () => {
   
   return (
     <Layout>
-        <div className='w-full pt-5'>
-            <div className='block my-2 bg-secondary w-20 h-1 mx-auto sm:mx-0'></div>
+        <div className='w-[90%] max-w-[1200px] mx-auto pt-5'>
+          <div className='block my-2 bg-secondary w-16 h-1 mx-auto sm:mx-0'></div>
           <div className='flex flex-col sm:flex-row justify-between pb-1 md:pb-0'>
             <div className='text-dark font-semibold text-xl text-center md:text-left uppercase text-primary'>Blog Posts</div>
             <div className="hidden md:flex gap-[10px]">
               <button onClick={()=>handleCategory('all')} className={currentCategory==='all' ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]": "px-[10px] py-[2px] text-[13px]"}>All Posts</button>
+              <button onClick={()=>handleCategory('general')} className={currentCategory==='general' ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]": "px-[10px] py-[2px] text-[13px]"}>General</button>
               <button onClick={()=>handleCategory('web')} className={currentCategory==='web' ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]": "px-[10px] py-[2px] text-[13px]"}>Web Design</button>
               <button onClick={()=>handleCategory('product')} className={currentCategory==='product' ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]": "px-[10px] py-[2px] text-[13px]"}>Product Design</button>
               <button onClick={()=>handleCategory('marketing')} className={currentCategory==='marketing' ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]": "px-[10px] py-[2px] text-[13px]"}>Digital Marketing</button>
@@ -31,6 +32,7 @@ const Blog = () => {
               </label>
               <select id='filter' value={selectedValue} onChange={handleSelect} className='ml-[10px] bg-[#CED4DC] rounded p-2'>
                 <option value="all">All Posts</option>
+                <option value="general">General</option>
                 <option value="web">Web Design</option>
                 <option value="product">Product Design</option>
                 <option value="marketing">Digital Marketing</option>

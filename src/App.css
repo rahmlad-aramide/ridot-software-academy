@@ -26,20 +26,13 @@
 Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
--webkit-appearance: none !important;
-margin: 0 !important;
+  -webkit-appearance: none !important;
+  margin: 0 !important;
 }
 
-.custom-underline {
-  position: relative;
-}
-.custom-underline::after {
-  content: '';
-  position: absolute;
-  width: 5rem;
-  margin-left: 48%;
-  height: 4px;
-  display: flex;
-  align-self: flex-end;
-  background-color: #fe0002;
+.beautify {
+  background: linear-gradient(44deg, #CD10FF 15.75%, #9F06FF 84.63%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

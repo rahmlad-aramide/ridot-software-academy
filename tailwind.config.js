@@ -16,12 +16,20 @@ export default {
       },
       animation: {
         'bounce': 'bounce 5s linear infinite',
+        'shake': 'shake 5s linear infinite',
       },
       keyframes: {
         bounce: {
           '0%, 100%': { transform: 'translateY(-3%)' },
           '50%': { transform: 'translateY(0)' },
+        },
+        shake: {
+          '0%, 100%': { transform: 'translateX(-2%)' },
+          '50%': { transform: 'translateX(0)' },
         }
+      },
+      backgroundImage: {
+        'acbg': "url('./src/assets/images/background.jpg')"
       }
     },
   },

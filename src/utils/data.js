@@ -61,66 +61,66 @@ export const pricingData = [
       },
     ],
   },
-  {
-    title: "Testing Dev",
-    subtitle:
-      "This is for testing the codeBackend engineers handle server-side technologies, manage databases, and build robust web applications.",
-    duration: "3 months",
-    times: "2 times",
-    installments: "70% down payment",
-    price: 1000,
-    discount: "35,000",
-    priceBg: "#020181",
-    buttonVal: "Enroll Now",
-    percent: "97%",
-    link: "/",
-    desc: [
-      {
-        icon: check,
-        text: "Introduction to frontend engineering career path",
-      },
-      {
-        icon: check,
-        text: "Overview of web Development- Learn how the web works and the different technologies that power the web",
-      },
-      {
-        icon: check,
-        text: "Fundamentals of HTML- learn how to structure web pages using HTML",
-      },
-      {
-        icon: check,
-        text: "Fundamentals of CSS- learn how to apply styles to Html documents using CSS",
-      },
-      {
-        icon: check,
-        text: "Developing Websites- Get acquainted with text editors and chrome DevTools to develop websites locally",
-      },
-      {
-        icon: check,
-        text: "Deploying websites- Learn how to deploy websites using GitHub pages and the commandline",
-      },
-      {
-        icon: check,
-        text: "Fundamentals of Web Design- Learn how to design websites using Figma",
-      },
-      {
-        icon: check,
-        text: "Making a website responsive- Learn how to utilize responsive web design practices using CSS grid, flexbox and media queries ",
-      },
-      {
-        icon: check,
-        text: "Making a website accessible- Learn how to make websites accessible to everyone",
-      },
-      {
-        icon: check,
-        text: "Free two months mentorship- Get paired with a mentor for two months to guide you on your journey",
-      },
-      {
-        icon: check,
-        text: "Certificate of completion- Get a certificate of completion after the program",
-      },
-    ],
-  },
+  // {
+  //   title: "Testing Dev",
+  //   subtitle:
+  //     "This is for testing the codeBackend engineers handle server-side technologies, manage databases, and build robust web applications.",
+  //   duration: "3 months",
+  //   times: "2 times",
+  //   installments: "70% down payment",
+  //   price: 1000,
+  //   discount: "35,000",
+  //   priceBg: "#020181",
+  //   buttonVal: "Enroll Now",
+  //   percent: "97%",
+  //   link: "/",
+  //   desc: [
+  //     {
+  //       icon: check,
+  //       text: "Introduction to frontend engineering career path",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Overview of web Development- Learn how the web works and the different technologies that power the web",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Fundamentals of HTML- learn how to structure web pages using HTML",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Fundamentals of CSS- learn how to apply styles to Html documents using CSS",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Developing Websites- Get acquainted with text editors and chrome DevTools to develop websites locally",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Deploying websites- Learn how to deploy websites using GitHub pages and the commandline",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Fundamentals of Web Design- Learn how to design websites using Figma",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Making a website responsive- Learn how to utilize responsive web design practices using CSS grid, flexbox and media queries ",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Making a website accessible- Learn how to make websites accessible to everyone",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Free two months mentorship- Get paired with a mentor for two months to guide you on your journey",
+  //     },
+  //     {
+  //       icon: check,
+  //       text: "Certificate of completion- Get a certificate of completion after the program",
+  //     },
+  //   ],
+  // },
   {
     title: "Product Design",
     subtitle:
@@ -274,6 +274,11 @@ export const pricingData = [
 export const faqData = [
   {
     title:
+      "Can I change the course I initially registered for?",
+    content: `Yes, you can change the course you have registered for, but you're advised to consult one of the admins first.`,
+  },
+  {
+    title:
       "How long does it take to complete a course at Ridot Software Academy?",
     content: `The duration of our courses varies depending on the program. Generally, our courses range from a few weeks to a few months, allowing you to learn at your own pace.`,
   },
@@ -287,7 +292,7 @@ export const faqData = [
   },
   {
     title: "Is there any financial aid or scholarships available?",
-    content: `We offer various financial aid options and scholarships to eligible students. Check our scholarship page for detailed information on the available opportunities.`,
+    content: `We offer various financial aid options and scholarships to eligible students. Check our blog page for detailed information on the available opportunities.`,
   },
   {
     title: "What kind of support do I receive during the course?",
