@@ -8,7 +8,20 @@ export default {
     extend: {
       colors: {
         primary: "#020181",
+        lightPrimary: '#37478d',
         secondary: "#fe0002"
+      },
+      fontFamily: {
+        'Montserrat': ['Montserrat', 'sans-serif']
+      },
+      animation: {
+        'bounce': 'bounce 5s linear infinite',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateY(-3%)' },
+          '50%': { transform: 'translateY(0)' },
+        }
       }
     },
   },

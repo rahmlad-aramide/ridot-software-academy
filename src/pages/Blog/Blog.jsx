@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "../../components";
+import { Layout } from "../../components";
 
-const Success = () => {
+const Blog = () => {
   return (
-    <>
-      <Navbar />
+    <Layout>
       <div className="flex h-screen items-center justify-center">
         <div className="max-w-lg text-center">
-          <h1 className="mb-8 text-9xl font-extrabold text-primary">✅</h1>
+          <h1 className="mb-8 text-9xl font-extrabold text-primary">🛠️ </h1>
           <h2 className="mb-4 text-gray-600 px-4 text-2xl">
-            Payment Successful 
+            Under Construction
           </h2>
-            <p className="mb-8 text-gray-600">
-              Thank you for your enrollment, kindly check your email for your invoice receipt.
-            </p>
+          <p className="mb-8 text-gray-600">
+            This page is currently under construction, check back later.
+          </p>
           <Link to="/">
             <button className="rounded-lg bg-primary py-2 px-6 font-bold text-white hover:scale-90 active:scale-100 transition duration-300">
               Go back Home
@@ -21,8 +20,8 @@ const Success = () => {
           </Link>
         </div>
       </div>
-    </>
+    </Layout>
   );
 };
 
-export default Success;
+export default Blog;

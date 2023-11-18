@@ -1,21 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-import { Error, Home, Pricing, Success } from "./pages";
+import { About, Blog, Contact, Error, Home, Pricing, Success } from "./pages";
 import { useEffect, useState } from "react";
 import { Loader } from "./utils";
-import { Footer } from "./components";
+import './App.css'
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setLoading(false);
-  //   };
-  //   window.addEventListener("load", handleLoad);
-  //   return () => {
-  //     window.removeEventListener("load", handleLoad);
-  //   };
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,13 +25,14 @@ export default function App() {
       ) : (
         <>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" exact element={<About />} />
+          <Route path="/contact" exact element={<Contact />} />
+          <Route path="/blog" exact element={<Blog />} />
           <Route path="/pricing" element={<Pricing />} />
-          {/* <Route path="/checkout" element={<Pricing />} /> */}
           <Route path="/success" element={<Success />} />
         </Routes>
-        <Footer />
         </>
       )}
     </>

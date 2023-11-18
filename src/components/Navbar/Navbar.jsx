@@ -44,16 +44,16 @@ const Navbar = () => {
                   Home
                 </NavLink>
                 </li>
-                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/" onClick={handleOpenNav}>
+                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/about" onClick={handleOpenNav}>
                   About us
                 </NavLink>
                 </li>
-                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/" onClick={handleOpenNav}>
-                  Testimonials
+                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/contact" onClick={handleOpenNav}>
+                  Contact us
                 </NavLink>
                 </li>
-                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/" onClick={handleOpenNav}>
-                  Contact us
+                <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/blog" onClick={handleOpenNav}>
+                  Our Blog
                 </NavLink>
                 </li>
                 <Link to="/pricing" className='bg-primary text-white rounded-lg px-2 sm:px-5 py-1.5 sm:py-2 text-sm font-medium flex shrink-0 transition duration-200 active:scale-100 hover:scale-90'>

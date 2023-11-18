@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar } from "../../components";
+import { Layout } from "../../components";
 import { pricingData } from "../../utils/data";
 import underline from "../../assets/images/underline.svg";
 import { useNavigate } from "react-router-dom";
@@ -20,9 +20,8 @@ const Pricing = () => {
   };
 
   return (
-    <div className="font-DMSans">
-      <Navbar />
-      <div className="pt-20 w-[90%] max-w-[1200px] mx-auto">
+    <Layout>
+      <div>
         <div className="flex flex-col w-full items-center mb-10 mt-10">
           <h1 className="font-DMSans font-bold text-primary text-4xl md:text-5xl w-[90%] max-w-[16ch] text-center mb-2">
             Pick a plan that&rsquo;s right for you
@@ -139,7 +138,7 @@ const Pricing = () => {
           <PaystackCheckout selectedPrice={selectedPrice} setSelectedPrice={setSelectedPrice} setOpenModal={setOpenModal} />
         </div>
       }
-    </div>
+    </Layout>
   );
 };
 

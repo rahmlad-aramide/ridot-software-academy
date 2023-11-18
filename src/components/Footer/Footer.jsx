@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <div className='bg-primary text-white'>
+    <footer className='bg-primary text-white'>
       <div className='w-[90%] max-w-[1200px] flex flex-col md:flex-row justify-between items-center py-10 mx-auto'>
         <div className='flex flex-col md:flex-row'>
           <div className=''>
@@ -45,7 +45,7 @@ const Footer = () => {
       <div className='pb-4 text-center text-xs font-medium font-poppins mt-5 md:mt-0'>
         &copy; Copyright 2023 Ridot Software Academy. All rights reserved.
       </div>
-    </div>
+    </footer>
   )
 }
 
