@@ -113,12 +113,13 @@ const Features = () => {
 const About = () => {
   return (
     <section className="flex flex-col md:flex-row gap-5 items-center h-full md:h-[80vh] md:max-h-[500px]">
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 mt-20 md:mt-0">
         <div className="relative">
           <img src={about} alt="About Ridot Software Academy" className="z-10 rounded-3xl mx-auto" />
         </div>
       </div>
-      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start my-10">
+      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start mt-8 mb-10">
+        <div className="h-1 w-20 bg-secondary mb-5"></div>
         <h1 className="text-primary text-2xl sm:text-3xl text-center md:text-left font-Montserrat font-bold">Solving Tech Phobia in females.</h1>
         <p className="text-[#4F596A] text-center text-lg md:text-left max-w-[40ch] md:max-w-full mt-5 mb-10">
           The brand is in itself a unique one as it solves the problem of technological phobia in most females, it will enable and encourage women to start a career in tech.
