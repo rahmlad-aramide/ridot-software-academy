@@ -3,7 +3,7 @@ import { faqData } from "../../utils/data";
 
 const FAQs = () => {
   return (
-      <section className="mt-20 ">
+      <section className="mt-20 mb-10">
         <div className="mx-auto w-16 h-1 bg-secondary group-hover:bg-white mb-5"></div>
         <h1 className="mb-10 text-center mx-4 text-2xl sm:text-3xl font-bold font-Montserrat text-primary">
           Frequently Asked Questions

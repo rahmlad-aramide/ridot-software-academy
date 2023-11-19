@@ -9,7 +9,7 @@ const Footer = () => {
             <img src={ridotLogo} alt="Logo white" className='bg-white p-2 rounded-lg max-w-[110px] md:max-w-[132px] mb-5 md:mb-0 mx-auto md:mr-[30px]' />
           </div>
           <div className='flex items-center max-w-[64ch] text-sm text-center md:text-justify font-poppins mb-5 md:mb-0'>
-            At Ridot Software Academy, we are empowering future developers with cutting-edge training in software development. Explore our comprehensive programs, expert instructors, and hands-on learning to kickstart your career in the world of coding.
+            At Ridot Software Academy, we are empowering future developers with cutting-edge training in software development. Explore our comprehensive programs, expert instructors, and hands-on learning to kickstart your career in the world of tech.
           </div>
         </div>
         <div className='mt-5 md:mt-0 ml-0 md:ml-8'>

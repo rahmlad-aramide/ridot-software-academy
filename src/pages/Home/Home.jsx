@@ -242,8 +242,8 @@ const Home = () => {
         <Features />
         <About />
         {/* <Testimonials /> */}
-        <FAQs />
         <Start />
+        <FAQs />
       </Layout>
     </>
   );

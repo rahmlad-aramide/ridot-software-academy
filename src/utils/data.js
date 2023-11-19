@@ -6,7 +6,7 @@ export const pricingData = [
     subtitle:
       "Front-end engineers work on the design interface of a website. They mostly work with designers to make beautiful and fast websites.",
     duration: "3 months",
-    times: "2 times",
+    times: "Twice a week",
     installments: "70% down payment",
     price: 25000,
     discount: "35,000",
@@ -66,7 +66,7 @@ export const pricingData = [
   //   subtitle:
   //     "This is for testing the codeBackend engineers handle server-side technologies, manage databases, and build robust web applications.",
   //   duration: "3 months",
-  //   times: "2 times",
+  //   times: "2 times a week",
   //   installments: "70% down payment",
   //   price: 1000,
   //   discount: "35,000",
@@ -126,7 +126,7 @@ export const pricingData = [
     subtitle:
       "Product design deals with the design of user interface and experience of a website for a better performance.",
     duration: "3 months",
-    times: "2 times",
+    times: "2 times a week",
     installments: "70% down payment",
     price: 25000,
     discount: "35,000",
@@ -182,7 +182,7 @@ export const pricingData = [
     subtitle:
       "Digital marketing deals with the electronic form of selling, advertising of goods and services across several online platforms.",
     duration: "3 months",
-    times: "2 times",
+    times: "2 times a week",
     installments: "70% down payment",
     price: 20000,
     discount: "30,000",
