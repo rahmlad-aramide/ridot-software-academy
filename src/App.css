@@ -30,9 +30,25 @@ input::-webkit-inner-spin-button {
   margin: 0 !important;
 }
 
-.beautify {
-  background: linear-gradient(44deg, #CD10FF 15.75%, #9F06FF 84.63%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Add this to your CSS */
+.crossed-bars {
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar {
+  transition: transform 0.3s ease-in-out;
+}
+
+.crossed-bars .bar:first-child {
+  transform: rotate(-45deg) translateY(5.5px);
+}
+
+.crossed-bars .bar:nth-child(2){
+  display: none;
+  transition: ease-in-out;
+}
+
+.crossed-bars .bar:last-child {
+  transform: rotate(45deg) translateY(-5.5px);
 }

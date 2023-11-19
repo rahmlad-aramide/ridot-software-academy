@@ -29,7 +29,7 @@ export default {
         }
       },
       backgroundImage: {
-        'acbg': "url('./src/assets/images/background.jpg')"
+        'acbg': "url('/src/assets/images/background.jpg')"
       }
     },
   },

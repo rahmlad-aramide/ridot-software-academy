@@ -14,10 +14,10 @@ const Navbar = () => {
 
     if (navClassList.contains("-translate-y-[calc(100%_+_200px)]")) {
       navClassList.remove("-translate-y-[calc(100%_+_200px)]")
-      togglerClassList.add("rotate-90")
+      togglerClassList.add("crossed-bars")
     } else {
       navClassList.add("-translate-y-[calc(100%_+_200px)]")
-      togglerClassList.remove("rotate-90")
+      togglerClassList.remove("crossed-bars")
     }
   }
 
@@ -31,14 +31,14 @@ const Navbar = () => {
                 <img src={ridotLogo} alt="Ridot software academy" className="max-w-[140px]" />
               </Link>
             </div>
-            <button ref={togglerRef} onClick={handleOpenNav} className='fixed md:hidden top-5 right-4 sm:right-8 z-50 transition duration-200 hover:scale-125 active:scale-100'>
-              <div className=''>
-                <div className='flex w-6 h-1 mb-1 bg-black/80'></div>
-                <div className='flex w-6 h-1 mb-1 bg-black/80'></div>
-                <div className='flex w-6 h-1 bg-black/80'></div>
+            <button ref={togglerRef} onClick={handleOpenNav} className='fixed md:hidden top-6 right-8 sm:right-8 z-50 transition duration-200 hover:scale-125 active:scale-100'>
+              <div>
+                <div className='bar w-6 h-1 mb-1 bg-black/80'></div>
+                <div className='bar w-6 h-1 mb-1 bg-black/80'></div>
+                <div className='bar w-6 h-1 mb-1 bg-black/80'></div>
               </div>
             </button>
-            <nav ref={navRef} className="bg-white -translate-y-[calc(100%_+_200px)] md:translate-y-0 fixed md:relative bg-light shadow-xl md:shadow-none rounded-lg border md:border-0 md:bg-transparent top-[10%] md:top-0 right-[180px] md:right-0 h-fit w-fit px-6 sm:px-8 py-4 md:px-0 translate-x-full md:translate-x-0 transition duration-200">
+            <nav ref={navRef} className="bg-white -translate-y-[calc(100%_+_200px)] md:translate-y-0 fixed md:relative bg-light shadow-xl md:shadow-none rounded-lg border md:border-0 md:bg-transparent top-16 md:top-0 right-[180px] md:right-0 h-fit w-fit px-6 sm:px-8 py-4 md:px-0 translate-x-full md:translate-x-0 transition duration-200">
               <ul className='flex items-center md:justify-center flex-col md:flex-row md:mt-0 w-full'>
                 <li className='mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2'><NavLink className={({ isActive }) => isActive ? "underline underline-offset-8" : ""} to="/" onClick={handleOpenNav}>
                   Home
