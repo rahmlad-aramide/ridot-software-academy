@@ -12,7 +12,7 @@ export const FAQ = ({ title, content }) => {
         }}
         className="my-4 flex min-w-[90%] items-center justify-between "
       >
-        <div className="w-full cursor-pointer text-base font-semibold text-primary transition delay-200 duration-300 ease-in-out md:text-[1.5rem]">
+        <div className="w-full cursor-pointer text-lg md:text-xl font-semibold text-primary transition delay-200 duration-300 ease-in-out">
           {title}
         </div>
         <div className="flex ml-2 w-10 bg-secondary/10 rounded-full cursor-pointer justify-end transition delay-200 duration-300 ease-in-out">
@@ -20,7 +20,7 @@ export const FAQ = ({ title, content }) => {
         </div>
       </div>
       {isActive && (
-        <div className="mb-5 cursor-pointer text-sm text-lightPrimary transition delay-200 duration-300 ease-in-out md:text-lg">
+        <div className="mb-5 cursor-pointer md:text-lg text-lightPrimary transition delay-200 duration-300 ease-in-out">
           {content}
         </div>
       )}
