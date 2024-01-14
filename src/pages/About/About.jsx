@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom"
-import { Layout } from "../../components";
+import { Layout, Team } from "../../components";
 import about from "../../assets/images/about-image.jpg";
 
 const About = () => {
@@ -19,7 +19,7 @@ const About = () => {
           <div className="flex flex-col items-center mx-1">
             <p className="text-black/90 text-left text-sm md:text-base my-2.5">
               Ridot Software Academy is a private and profitable business with
-              aim of equipping females (girls, ladies, women) with digital
+              aim of equipping females (girls, ladies, and women) with digital
               skills, focusing UI/UX design, digital marketing, web development,
               with a plan towards expanding the channel with time.
             </p>
@@ -42,7 +42,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="my-5 bg-primary w-full h-[1px] hidden md:block"></div>
+        <div className="my-10 bg-primary w-full h-[1px] hidden md:block"></div>
         <div className="relative flex flex-col md:flex-row justify-between mb-10 pt-5">
           <div className="w-full md:w-1/2">
             <div className="h-[320px] sm:h-[400px] md:h-full flex justify-center items-center relative ml-8">
@@ -61,7 +61,7 @@ const About = () => {
               </h2>
               <p className="text-gray-900 text-sm md:text-base text-justify my-2.5 md:my-5">
                 To produce students with distinct capabilities needed to succeed
-                in the tech echo system.
+                in the tech ecosystem.
               </p>
               <h2 className="text-primary uppercase font-semibold text-xl mt-5 md:mt-2.5">
                 Our Vision
@@ -85,6 +85,9 @@ const About = () => {
               className="fill-primary"
             />
           </svg>
+        </div>
+        <div className="mt-10 md:mt-20">
+          <Team />
         </div>
       </section>
     </Layout>

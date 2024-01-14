@@ -19,11 +19,14 @@ export const FAQ = ({ title, content }) => {
           <img src={icon} alt="Plus" className={!isActive? `p-1 w-10 rotate-180 transition duration-200`: `p-1 w-10 transition duration-200`} />
         </div>
       </div>
-      {isActive && (
-        <div className="mb-5 cursor-pointer md:text-lg text-lightPrimary transition delay-200 duration-300 ease-in-out">
+        {/* <div className={`grid ${isActive? 'grid-cols-[1fr] opacity-100': 'grid-cols-[0fr] opacity-0'} overflow-hidden mb-5 cursor-pointer md:text-lg text-lightPrimary transition-all duration-300 ease-in-out`}>
           {content}
-        </div>
-      )}
+        </div> */}
+        <div className={`${!isActive? 'transition-all duration-200 grid-rows-[0fr] opacity-0': 'transition-all duration-200 grid-rows-[1fr] opacity-100 pb-8'} overflow-hidden grid`}>
+          <p aria-hidden={isActive} className={`md:text-lg text-lightPrimary overflow-hidden mx-2.5 md:mx-0`}>
+            {content}
+          </p>
+      </div>
     </div>
   );
 };

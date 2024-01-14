@@ -32,7 +32,6 @@ input::-webkit-inner-spin-button {
 
 /* Add this to your CSS */
 .crossed-bars {
-  transform: rotate(45deg);
   transition: transform 0.3s ease-in-out;
 }
 

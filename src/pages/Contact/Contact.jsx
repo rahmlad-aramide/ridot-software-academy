@@ -25,7 +25,7 @@ const Contact = () => {
             <div className='sm:pl-5 md:pl-0 lg-pl-5'>
               <div className='text-lg font-medium text-gray-900 mb-4'><span className='font-semibold text-primary'>Location: </span> Lagos, Nigeria </div>
               <div className='text-lg font-medium text-gray-900 mb-4'><span className='font-semibold text-primary'>Email: </span><a href="mailto:ridotsoftwareacademy@gmail.com">ridotsoftwareacademy@gmail.com</a></div>
-              <div className='text-lg font-medium text-gray-900'><span className='font-semibold text-primary'>Phone: </span><a href="tel:+2347083143779">+234-708-314-3779</a></div>
+              <div className='text-lg font-medium text-gray-900'><span className='font-semibold text-primary'>Phone: </span><a href="tel:+2347083143779">+234-708-314-3779, </a> <a href="tel:+2347056025175">+234-705-602-5175</a></div>
             </div>
           </div>
           <div className="w-[90%] md:w-[65%] mx-auto py-8 md:pt-5 mt-5 md:mt-10 mb-0 md:mb-10 px-5 md:px-10 bg-light border border-secondary border-dotted rounded-lg">

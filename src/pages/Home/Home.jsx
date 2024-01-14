@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FAQs, Layout } from "../../components";
+import { FAQs, Layout, Testimonials } from "../../components";
 import hero from "../../assets/images/hero.jpg";
 import about from "../../assets/images/about-home.jpg";
 import redline from "../../assets/images/redline.svg";
@@ -166,7 +166,7 @@ const Features = () => {
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row gap-5 items-center h-full md:h-[80vh] md:max-h-[500px] w-[90%] max-w-[1200px] mx-auto">
+    <section className="flex flex-col md:flex-row gap-5 items-center h-full md:h-[80vh] md:max-h-[500px] w-[90%] max-w-[1200px] mx-auto md:mt-10">
       <div className="w-full md:w-1/2 mt-16 md:mt-0">
         <div className="h-full flex justify-center items-center relative ml-8">
           <img
@@ -198,7 +198,7 @@ const About = () => {
   );
 };
 
-const Testimonials = () => {
+const Testimonial = () => {
   return (
     //  <section className="bg-[linear-gradient(44deg,#37478d_15.75%,#37478d_15.76%,#020181_84.63%)] h-screen">
     //  <section className="bg-gradient-to-r from-primary via-lightPrimary to-secondary h-screen">
@@ -211,7 +211,7 @@ const Testimonials = () => {
     </section>
   );
 };
-console.log(Testimonials);
+console.log(Testimonial);
 
 const Start = () => {
   return (
@@ -241,7 +241,7 @@ const Home = () => {
         <Hero />
         <Features />
         <About />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <Start />
         <FAQs />
       </Layout>
