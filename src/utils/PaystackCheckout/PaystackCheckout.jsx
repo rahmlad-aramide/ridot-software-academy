@@ -3,14 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { PaystackConsumer } from "react-paystack";
 
 // eslint-disable-next-line react/prop-types
-const PaystackCheckout = ({selectedPrice, setSelectedPrice, setOpenModal}) => {
+const PaystackCheckout = ({selectedPrice, selectedPrices, setSelectedPrice, setOpenModal}) => {
   const navigateTo = useNavigate();
   const [paymentEmail, setPaymentEmail] = useState("");
+  const [fAmount, setFAmount] = useState(selectedPrice);
 
   const config = {
     reference: new Date().getTime().toString(),
     email: paymentEmail,
-    amount: selectedPrice*100, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+    amount: fAmount*100, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
     publicKey: "pk_live_81b0317cf2b2cb3fb4af1933c0bf27da9f2195ed",
     // publicKey: "pk_test_c865641c02971ec5d05a61916f33a4b861f80da5",
   };
@@ -36,6 +37,10 @@ const PaystackCheckout = ({selectedPrice, setSelectedPrice, setOpenModal}) => {
   const handleInputChange = (event) => {
     setPaymentEmail(event.target.value);
   };
+  const handleAmountChange = (event) => {
+    setFAmount(event.target.value)
+  }
+
 
   return (
       <div className="relative my-auto p-10 bg-white rounded-lg h-fit w-[90%] max-w-fit">
@@ -57,18 +62,14 @@ const PaystackCheckout = ({selectedPrice, setSelectedPrice, setOpenModal}) => {
           />
         </div>
         <div className="mb-4 flex flex-col">
-          <label htmlFor="name" className="my-2 text-lg text-[#808097]">
+          <label htmlFor="price" className="my-2 text-lg text-[#808097]">
             Amount to pay
           </label>
-          <input
-            className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none"
-            id="amount"
-            name="amount"
-            value={`₦${(config.amount / 100).toLocaleString()}.00K`}
-            type="text"
-            placeholder="Amount"
-            disabled
-          />
+          <select value={fAmount} onChange={handleAmountChange} name="price" id="price" className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none">
+            {selectedPrices?.map((s, idx)=>(
+              <option key={idx} value={s.price}><span>{s.percent}</span> <span className="text">= ₦{(s.price).toLocaleString()}.00K</span></option>
+            ))}
+          </select>
         </div>
         {
           <PaystackConsumer {...componentProps}>

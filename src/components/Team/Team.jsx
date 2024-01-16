@@ -9,20 +9,50 @@ const Team = () => {
       role: "CEO",
       linkedinUrl: "https://www.linkedin.com/in/aderogba-abibat-b26a36174",
     },
-    {
-      name: "Engr. AbdulLateef Olatayo",
-      role: "CTO",
-      linkedinUrl: "www.linkedin.com/in/engr-lateef-olatayo-0365a1165/",
-    },
+    // {
+    //   name: "Engr. AbdulLateef Olatayo",
+    //   role: "CTO",
+    //   linkedinUrl: "www.linkedin.com/in/engr-lateef-olatayo-0365a1165/",
+    // },
     {
       name: "Islamiyah Omisola",
       role: "Product Designer",
-      linkedinUrl: "www.linkedin.com/in/omisola-islamiyat-38a70515a",
+      linkedinUrl: "https://www.linkedin.com/in/omisola-islamiyat-38a70515a",
     },
     {
       name: "Huswat Lawal",
       role: "Program Manager",
       linkedinUrl: "https://www.linkedin.com/in/huswatlawal/",
+    },
+    {
+      name: "Abdrahman Oladimeji",
+      role: "Frontend Engineer",
+      linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
+    },
+    {
+      name: "Abdrahman Oladimeji",
+      role: "Frontend Engineer",
+      linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
+    },
+    // {
+    //   name: "Sarah",
+    //   linkedinUrl: "https://www.linkedin.com/in/",
+    // },
+    {
+      name: "Peculiar Babalola",
+      linkedinUrl: "https://www.linkedin.com/in/peculiar-babalola",
+    },
+    {
+      name: "Ayisat Adedokun",
+      linkedinUrl: "https://www.linkedin.com/in/ayisatadedokun",
+    },
+    // {
+    //   name: "Mubarak Bello",
+    //   linkedinUrl: "https://www.linkedin.com/in/",
+    // },
+    {
+      name: "Afeez Lawal",
+      linkedinUrl: "https://www.linkedin.com/in/lawal-afeez",
     },
   ]);
 

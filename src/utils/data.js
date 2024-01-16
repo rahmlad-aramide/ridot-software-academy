@@ -5,10 +5,11 @@ export const pricingData = [
     title: "Frontend Development",
     subtitle:
       "Front-end engineers work on the design interface of a website. They mostly work with designers to make beautiful and fast websites.",
-    duration: "3 months",
+    duration: "6 months",
     times: "Twice a week",
     installments: "70% down payment",
     price: 25000,
+    prices: [{percent: '70%',price: 17500}, {percent: 'Full', price: 25000}],
     discount: "35,000",
     priceBg: "#00CA72",
     buttonVal: "Enroll Now",
@@ -65,7 +66,7 @@ export const pricingData = [
   //   title: "Testing Dev",
   //   subtitle:
   //     "This is for testing the codeBackend engineers handle server-side technologies, manage databases, and build robust web applications.",
-  //   duration: "3 months",
+  //   duration: "6 months",
   //   times: "2 times a week",
   //   installments: "70% down payment",
   //   price: 1000,
@@ -125,10 +126,11 @@ export const pricingData = [
     title: "Product Design",
     subtitle:
       "Product design deals with the design of user interface and experience of a website for a better performance.",
-    duration: "3 months",
+    duration: "6 months",
     times: "2 times a week",
     installments: "70% down payment",
     price: 25000,
+    prices: [{percent: '70%',price: 17500}, {percent: 'Full', price: 25000}],
     discount: "35,000",
     priceBg: "#0085FF",
     buttonVal: "Enroll Now",
@@ -181,10 +183,11 @@ export const pricingData = [
     title: "Digital Marketing",
     subtitle:
       "Digital marketing deals with the electronic form of selling, advertising of goods and services across several online platforms.",
-    duration: "3 months",
+    duration: "6 months",
     times: "2 times a week",
     installments: "70% down payment",
     price: 20000,
+    prices: [{percent: '70%',price: 14000}, {percent: 'Full', price: 20000}],
     discount: "30,000",
     priceBg: "#A25DDC",
     buttonVal: "Enroll Now",
@@ -268,6 +271,263 @@ export const pricingData = [
         text: "-	Influencer marketing",
       },
     ],
+  },
+  {
+    title: "Video Editing",
+    subtitle:
+      "Video editing deals with crafting and enhancing visual stories for diverse media platforms.",
+    duration: "6 months",
+    times: "2 times a week",
+    installments: "70% down payment",
+    price: 20000,
+    prices: [{percent: '70%',price: 14000}, {percent: 'Full', price: 20000}],
+    discount: "30,000",
+    priceBg: "#00CA72",
+    buttonVal: "Enroll Now",
+    percent: "33%",
+    link: "/",
+    desc: [
+      {
+        icon: check,
+        text: "Why video editing?",
+      },
+      {
+        // icon: check,
+        text: "- Introduction to smartphone video editing",
+      },
+      {
+        // icon: check,
+        text: "- Career prospect in video editing",
+      },
+      {
+        // icon: check,
+        text: "- Best applications/softwares for video editing",
+      },
+      {
+        // icon: check,
+        text: "- Tips and hacks for faster edit",
+      },
+      {
+        // icon: check,
+        text: "- Sourcing for video editing resources",
+      },
+      {
+        // icon: check,
+        text: "- Editing videos professionally with cool transitions and effects",
+      },
+      {
+        icon: check,
+        text: "How to create:",
+      },
+      {
+        // icon: check,
+        text: "- Video Ad",
+      },
+      {
+        // icon: check,
+        text: "- Instagram reels",
+      },
+      {
+        // icon: check,
+        text: "- Mobile App videos",
+      },
+      {
+        // icon: check,
+        text: "- Felicitation Videos",
+      },
+      {
+        // icon: check,
+        text: "- Faceless videos",
+      },
+      {
+        // icon: check,
+        text: "- Clone videos",
+      },
+      {
+        // icon: check,
+        text: "- Tutorial videos",
+      },
+      {
+        // icon: check,
+        text: "- Viral captioned videos",
+      },
+      {
+        // icon: check,
+        text: "- Tracking Text videos",
+      },
+      {
+        // icon: check,
+        text: "- Progress bar videos",
+      },
+      {
+        // icon: check,
+        text: "- Video Templates",
+      },
+      {
+        // icon: check,
+        text: "- Stop motion videos",
+      },
+      {
+        // icon: check,
+        text: "- Podcast Videos",
+      },
+      {
+        // icon: check,
+        text: "- Trailer Videos",
+      },
+      {
+        icon: check,
+        text: "How to compress videos",
+      },
+      {
+        // icon: check,
+        text: "- How to generate/write script",
+      },
+      {
+        // icon: check,
+        text: "- How to record voice overs",
+      },
+      {
+        // icon: check,
+        text: "- How to remove background from videos",
+      },
+      {
+        // icon: check,
+        text: "- How to create a video cover and thumbnail",
+      },
+      {
+        // icon: check,
+        text: "- Text and icons",
+      },
+      {
+      icon: check,
+      text: "Introduction to PC video editing software. (Filmora)",
+      },
+      ],
+  },
+  {
+    title: "Data Science/Machine Learning",
+    subtitle:
+      "Data science focuses on extracting insights and knowledge from complex data using statistical, analytical, and programming methods, to inform decision-making and predictions.",
+    duration: "6 months",
+    times: "2 times a week",
+    installments: "70% down payment",
+    price: 33450,
+    prices: [{percent: '70%',price: 23415}, {percent: 'Full', price: 33450}],
+    discount: "50,000",
+    priceBg: "#0085FF",
+    buttonVal: "Enroll Now",
+    percent: "33%",
+    link: "/",
+    desc: [
+      {
+        icon: check,
+        text: "Python Core",
+      },
+      {
+        // icon: check,
+        text: "- Introduction of python and comparison with other programming languages",
+      },
+      {
+        // icon: check,
+        text: "- Installation of Anaconda Distribution and other python IDE",
+      },
+      {
+        // icon: check,
+        text: "- Python Objects, Numbers, Booleans, Strings, Container objects, Mutability of objects",
+      },
+      //... Continue in a similar manner for each sub-topic under "Python Core"
+    
+      {
+        icon: check,
+        text: "String objects and collections",
+      },
+      //... Sub-topics for "String objects and collections"
+    
+      {
+        icon: check,
+        text: "Tuples, Set, Dictionaries, and Functions",
+      },
+      //... Sub-topics for "Tuples, Set, Dictionaries, and Functions"
+    
+      {
+        icon: check,
+        text: "OOPS concepts and working with files",
+      },
+      //... Sub-topics for "OOPS concepts and working with files"
+    
+      {
+        icon: check,
+        text: "Modules, Exception Handling, and Data Classes",
+      },
+      //... Sub-topics for "Modules, Exception Handling, and Data Classes"
+    
+      {
+        icon: check,
+        text: "Python Projects",
+      },
+      //... Sub-topics for "Python Projects"
+    
+      {
+        icon: check,
+        text: "Database: SQL",
+      },
+      //... Sub-topics for "Database"
+    
+      {
+        icon: check,
+        text: "GitHub Basics",
+      },
+      //... Sub-topics for "GitHub"
+    
+      {
+        icon: check,
+        text: "Python pandas",
+      },
+      //... Sub-topics for "Python pandas"
+    
+      {
+        icon: check,
+        text: "Python Numpy",
+      },
+      //... Sub-topics for "Python Numpy"
+    
+      {
+        icon: check,
+        text: "Visualization",
+      },
+      //... Sub-topics for "Visualization"
+    
+      {
+        icon: check,
+        text: "Machine Learning 1",
+      },
+      //... Sub-topics for "Machine Learning 1"
+    
+      {
+        icon: check,
+        text: "Machine Learning 2",
+      },
+      //... Sub-topics for "Machine Learning 2"
+    
+      {
+        icon: check,
+        text: "Machine Learning 3",
+      },
+      //... Sub-topics for "Machine Learning 3"
+    
+      {
+        icon: check,
+        text: "Machine Learning Projects",
+      },
+      //... Sub-topics for "Machine Learning Projects"
+    
+      {
+        icon: check,
+        text: "Natural Language Processing",
+      },
+      //... Sub-topics for "Natural Language Processing"
+    ],    
   },
 ];
 

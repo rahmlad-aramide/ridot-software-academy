@@ -1,5 +1,5 @@
 // TeamMember.js
-const TeamMember = ({ name, role, linkedinUrl }) => {
+const TeamMember = ({ name, linkedinUrl }) => {
   // Function to extract initials from the name
   const getInitials = (name) => {
     return name
@@ -15,7 +15,7 @@ const TeamMember = ({ name, role, linkedinUrl }) => {
         {getInitials(name)}
       </div>
       <h3 className="text-xl font-semibold text-gray-800 mt-4">{name}</h3>
-      <p className="text-md text-primary font-medium">{role}</p>
+      {/* <p className="text-md text-primary font-medium">{role}</p> */}
       {linkedinUrl && (
         <a
           href={linkedinUrl}

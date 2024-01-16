@@ -9,6 +9,7 @@ const Pricing = () => {
   const navigateTo = useNavigate();
   const [selectedVal, setSelectedVal] = useState("Pick a plan");
   const [selectedPrice, setSelectedPrice] = useState(null);
+  const [selectedPrices, setSelectedPrices] = useState([]);
   const [openModal, setOpenModal] = useState(false);
   const handleChange = (e) => {
     setSelectedVal(e.target.value);
@@ -50,7 +51,7 @@ const Pricing = () => {
                       <p className="max-w-[60ch] mt-4">{data.subtitle}</p>
                       <div className="grid gap-2 md:gap-4 grid-cols-1 sm:grid-cols-2 mt-4">
                         <div>
-                          <span className="font-medium">Course Duration:</span> 3 months
+                          <span className="font-medium">Course Duration:</span> {data.duration}
                         </div>
                         <div>
                           <span className="font-medium">Class Type:</span> Virtual training
@@ -59,7 +60,7 @@ const Pricing = () => {
                           <span className="font-medium">Installment:</span> 70% on admission, 30% after one month
                         </div>
                         <div>
-                          <span className="font-medium">Class Times:</span> 2 times
+                          <span className="font-medium">Class Times:</span> {data.times}
                         </div>
                       </div>
                     </div>
@@ -100,7 +101,7 @@ const Pricing = () => {
                         {desc.icon &&
                           <img src={desc.icon} alt={desc.text} />
                         }
-                        <span className="ml-2">{desc.text}.</span>
+                        <span className="ml-2">{desc.text}</span>
                       </div>
                     ))}
                   </div>
@@ -119,6 +120,7 @@ const Pricing = () => {
                         <button onClick={()=>
                           {
                             setSelectedPrice(data.price)
+                            setSelectedPrices(data.prices)
                             setOpenModal(true)
                           }} 
                           style={{backgroundColor: data.priceBg}} className="bg-primary hover:scale-95 transition duration-200 rounded-lg text-white w-full py-2">
@@ -135,7 +137,7 @@ const Pricing = () => {
       {
         (openModal && selectedPrice !== null) &&
         <div className="h-screen w-full fixed z-50 top-0 left-0 bg-black/30 backdrop-blur-sm flex justify-center">
-          <PaystackCheckout selectedPrice={selectedPrice} setSelectedPrice={setSelectedPrice} setOpenModal={setOpenModal} />
+          <PaystackCheckout selectedPrice={selectedPrice} selectedPrices={selectedPrices} setSelectedPrice={setSelectedPrice} setOpenModal={setOpenModal} />
         </div>
       }
     </Layout>
