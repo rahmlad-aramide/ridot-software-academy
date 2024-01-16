@@ -1,5 +1,5 @@
 // TeamMember.js
-const TeamMember = ({ name, linkedinUrl }) => {
+const TeamMember = ({ name, image, linkedinUrl }) => {
   // Function to extract initials from the name
   const getInitials = (name) => {
     return name
@@ -12,7 +12,7 @@ const TeamMember = ({ name, linkedinUrl }) => {
   return (
     <div className="p-8 bg-white shadow-md rounded-lg border">
       <div className="w-24 h-24 flex items-center justify-center bg-gray-200 text-gray-700 rounded-full font-bold text-xl">
-        {getInitials(name)}
+        {image ? <img src={image} alt={image} className="rounded-full" /> : getInitials(name)}
       </div>
       <h3 className="text-xl font-semibold text-gray-800 mt-4">{name}</h3>
       {/* <p className="text-md text-primary font-medium">{role}</p> */}

@@ -18,22 +18,25 @@ const Team = () => {
       name: "Islamiyah Omisola",
       role: "Product Designer",
       linkedinUrl: "https://www.linkedin.com/in/omisola-islamiyat-38a70515a",
+      image: 'https://media.licdn.com/dms/image/C5603AQHhTEnhR6wbqA/profile-displayphoto-shrink_400_400/0/1644325489604?e=1710979200&v=beta&t=0f_hGv_PaxXDy3x-VeBorllTTM7DDuNgqXWPNq-HdpI'
     },
     {
       name: "Huswat Lawal",
       role: "Program Manager",
       linkedinUrl: "https://www.linkedin.com/in/huswatlawal/",
+      image: 'https://res.cloudinary.com/dh4rm7b7b/image/upload/v1705436033/Ridot%20Team/IMG-20240116-WA0002_qrhows.jpg'
     },
     {
       name: "Abdrahman Oladimeji",
       role: "Frontend Engineer",
       linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
+      image: 'https://media.licdn.com/dms/image/D4D03AQGAi2jpDhc5Pg/profile-displayphoto-shrink_200_200/0/1681496829934?e=1710979200&v=beta&t=FA8s8pY28PnLXCCUBYkXtaqV98Geh3KD2M9Gu3dap0o'
     },
-    {
-      name: "Abdrahman Oladimeji",
-      role: "Frontend Engineer",
-      linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
-    },
+    // {
+    //   name: "Abdrahman Oladimeji",
+    //   role: "Frontend Engineer",
+    //   linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
+    // },
     // {
     //   name: "Sarah",
     //   linkedinUrl: "https://www.linkedin.com/in/",
@@ -41,10 +44,12 @@ const Team = () => {
     {
       name: "Peculiar Babalola",
       linkedinUrl: "https://www.linkedin.com/in/peculiar-babalola",
+      image: 'https://media.licdn.com/dms/image/D4E03AQF10LQkYkO95w/profile-displayphoto-shrink_200_200/0/1697642859456?e=1710979200&v=beta&t=MBa70egfboglUxTzy8F15YJjx-Z28D9b2UZeCDmvF8g'
     },
     {
       name: "Ayisat Adedokun",
       linkedinUrl: "https://www.linkedin.com/in/ayisatadedokun",
+      image: 'https://media.licdn.com/dms/image/D4D03AQGQO1sDQVJ8WA/profile-displayphoto-shrink_200_200/0/1681555709317?e=1710979200&v=beta&t=arbc0MxDZFgUxxstXqBPuGulIvheifcBpD7eIIN7UuM'
     },
     // {
     //   name: "Mubarak Bello",
@@ -53,6 +58,7 @@ const Team = () => {
     {
       name: "Afeez Lawal",
       linkedinUrl: "https://www.linkedin.com/in/lawal-afeez",
+      image: 'https://media.licdn.com/dms/image/D4D03AQHSd0hUpuJgKQ/profile-displayphoto-shrink_200_200/0/1690731791974?e=1710979200&v=beta&t=Gjc3WveNSF6kEQjZugu0czjTLZo71qEtIac0hlSEldU'
     },
   ]);
 
@@ -68,6 +74,7 @@ const Team = () => {
             key={index}
             name={member.name}
             role={member.role}
+            image={member.image}
             linkedinUrl={member.linkedinUrl}
           />
         ))}
