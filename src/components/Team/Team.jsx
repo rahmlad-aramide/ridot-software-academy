@@ -51,14 +51,19 @@ const Team = () => {
       linkedinUrl: "https://www.linkedin.com/in/ayisatadedokun",
       image: 'https://media.licdn.com/dms/image/D4D03AQGQO1sDQVJ8WA/profile-displayphoto-shrink_200_200/0/1681555709317?e=1710979200&v=beta&t=arbc0MxDZFgUxxstXqBPuGulIvheifcBpD7eIIN7UuM'
     },
-    // {
-    //   name: "Mubarak Bello",
-    //   linkedinUrl: "https://www.linkedin.com/in/",
-    // },
+    {
+      name: "Mubarak Bello",
+      linkedinUrl: "https://www.linkedin.com/in/mubarak-bello-219977231",
+    },
     {
       name: "Afeez Lawal",
       linkedinUrl: "https://www.linkedin.com/in/lawal-afeez",
       image: 'https://media.licdn.com/dms/image/D4D03AQHSd0hUpuJgKQ/profile-displayphoto-shrink_200_200/0/1690731791974?e=1710979200&v=beta&t=Gjc3WveNSF6kEQjZugu0czjTLZo71qEtIac0hlSEldU'
+    },
+    {
+      name: "Adaobi Okerekeocha",
+      linkedinUrl: "https://www.linkedin.com/in/adaobiokerekeocha",
+      image: 'https://media.licdn.com/dms/image/D4D03AQFIEoYN25fPJQ/profile-displayphoto-shrink_200_200/0/1697930502628?e=1710979200&v=beta&t=IzrpVVk88J7u5TGJSV7xPctdmLtSqd4OyVj6loITWnY'
     },
   ]);
 

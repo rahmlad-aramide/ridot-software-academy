@@ -10,10 +10,10 @@ export const pricingData = [
     installments: "70% down payment",
     price: 25000,
     prices: [{percent: '70%',price: 17500}, {percent: 'Full', price: 25000}],
-    discount: "35,000",
+    discount: "40,000",
     priceBg: "#00CA72",
     buttonVal: "Enroll Now",
-    percent: "27%",
+    percent: "37.5%",
     link: "/",
     desc: [
       {
@@ -62,66 +62,6 @@ export const pricingData = [
       },
     ],
   },
-  // {
-  //   title: "Testing Dev",
-  //   subtitle:
-  //     "This is for testing the codeBackend engineers handle server-side technologies, manage databases, and build robust web applications.",
-  //   duration: "6 months",
-  //   times: "2 times a week",
-  //   installments: "70% down payment",
-  //   price: 1000,
-  //   discount: "35,000",
-  //   priceBg: "#020181",
-  //   buttonVal: "Enroll Now",
-  //   percent: "97%",
-  //   link: "/",
-  //   desc: [
-  //     {
-  //       icon: check,
-  //       text: "Introduction to frontend engineering career path",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Overview of web Development- Learn how the web works and the different technologies that power the web",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Fundamentals of HTML- learn how to structure web pages using HTML",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Fundamentals of CSS- learn how to apply styles to Html documents using CSS",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Developing Websites- Get acquainted with text editors and chrome DevTools to develop websites locally",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Deploying websites- Learn how to deploy websites using GitHub pages and the commandline",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Fundamentals of Web Design- Learn how to design websites using Figma",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Making a website responsive- Learn how to utilize responsive web design practices using CSS grid, flexbox and media queries ",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Making a website accessible- Learn how to make websites accessible to everyone",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Free two months mentorship- Get paired with a mentor for two months to guide you on your journey",
-  //     },
-  //     {
-  //       icon: check,
-  //       text: "Certificate of completion- Get a certificate of completion after the program",
-  //     },
-  //   ],
-  // },
   {
     title: "Product Design",
     subtitle:
@@ -131,10 +71,10 @@ export const pricingData = [
     installments: "70% down payment",
     price: 25000,
     prices: [{percent: '70%',price: 17500}, {percent: 'Full', price: 25000}],
-    discount: "35,000",
+    discount: "40,000",
     priceBg: "#0085FF",
     buttonVal: "Enroll Now",
-    percent: "27%",
+    percent: "37.5%",
     link: "/",
     desc: [
       {
@@ -188,10 +128,10 @@ export const pricingData = [
     installments: "70% down payment",
     price: 20000,
     prices: [{percent: '70%',price: 14000}, {percent: 'Full', price: 20000}],
-    discount: "30,000",
+    discount: "35,000",
     priceBg: "#A25DDC",
     buttonVal: "Enroll Now",
-    percent: "33%",
+    percent: "42.86%",
     link: "/",
     desc: [
       {
@@ -279,12 +219,12 @@ export const pricingData = [
     duration: "6 months",
     times: "2 times a week",
     installments: "70% down payment",
-    price: 20000,
-    prices: [{percent: '70%',price: 14000}, {percent: 'Full', price: 20000}],
-    discount: "30,000",
+    price: 25000,
+    prices: [{percent: '70%',price: 17500}, {percent: 'Full', price: 25000}],
+    discount: "38,000",
     priceBg: "#00CA72",
     buttonVal: "Enroll Now",
-    percent: "33%",
+    percent: "34.21%",
     link: "/",
     desc: [
       {
@@ -412,12 +352,12 @@ export const pricingData = [
     duration: "6 months",
     times: "2 times a week",
     installments: "70% down payment",
-    price: 33450,
-    prices: [{percent: '70%',price: 23415}, {percent: 'Full', price: 33450}],
-    discount: "50,000",
+    price: 50000,
+    prices: [{percent: '70%',price: 35000}, {percent: 'Full', price: 50000}],
+    discount: "90,000",
     priceBg: "#0085FF",
     buttonVal: "Enroll Now",
-    percent: "33%",
+    percent: "44.44%",
     link: "/",
     desc: [
       {
