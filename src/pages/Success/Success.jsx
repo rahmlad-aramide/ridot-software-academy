@@ -12,7 +12,7 @@ const Success = () => {
             Payment Successful 
           </h2>
             <p className="mb-8 text-gray-600">
-              Thank you for your enrollment, kindly check your email for your invoice receipt.
+              Thank you for your enrollment, kindly check your email for your invoice receipt. Then you can forward the receipt to one of the organizers on WhatsApp for confirmation via: <a href="https://wa.me/2347083143779" rel="noreferrer" target="_blank"></a>
             </p>
           <Link to="/">
             <button className="rounded-lg bg-primary py-2 px-6 font-bold text-white hover:scale-90 active:scale-100 transition duration-300">
