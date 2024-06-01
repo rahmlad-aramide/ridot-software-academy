@@ -103,11 +103,16 @@ const PaystackCheckout = ({selectedPrice, selectedPrices, setSelectedPrice, setO
             <div className="text-sm mb-1">
                 <span className="font-semibold">Account Name:</span> Ridot Software Academy
               </div>
-              <div className="text-sm mb-1">
-                <span className="font-semibold">Account Number:</span> 0914125201
+              <div className="text-sm mb-1 flex">
+                <span className="font-semibold">Account Numbers:</span> <span className="font-semibold ml-auto mr-1">Bank: </span> GTB 
               </div>
-              <div className="text-sm">
-                <span className="font-semibold">Bank:</span> GTB
+              <div className="text-sm flex justify-between">
+                <div>
+                  <span className="font-semibold">NGN:</span> 0914125201
+                </div>
+                <div>
+                  <span className="font-semibold">USD:</span> 0914125218
+                </div>
               </div>
               <h3 className="text-sm mt-2">For inquiries: <a href="tel:+2347083143779">+2347083143779</a> </h3>
           </div>
