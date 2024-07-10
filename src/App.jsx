@@ -3,6 +3,7 @@ import { About, Blog, Contact, Error, Home, Pricing, Success } from "./pages";
 import { useEffect, useState } from "react";
 import { Loader } from "./utils";
 import './App.css'
+import BlogPost from "./pages/Blog/BlogPost";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/about" exact element={<About />} />
           <Route path="/contact" exact element={<Contact />} />
           <Route path="/blog" exact element={<Blog />} />
+          <Route path="/blog/:id" exact element={<BlogPost />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/success" element={<Success />} />
         </Routes>
