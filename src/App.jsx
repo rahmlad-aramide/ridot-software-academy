@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Loader } from "./utils";
 import './App.css'
 import BlogPost from "./pages/Blog/BlogPost";
+import Bootcamp from "./pages/Bootcamp";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/blog/:id" exact element={<BlogPost />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/success" element={<Success />} />
+          <Route path="/t4g" element={<Bootcamp />} />
         </Routes>
         </>
       )}
