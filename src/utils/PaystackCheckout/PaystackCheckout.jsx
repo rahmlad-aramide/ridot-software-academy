@@ -3,11 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { PaystackConsumer } from "react-paystack";
 
 // eslint-disable-next-line react/prop-types
-const PaystackCheckout = ({selectedPrice, selectedPrices, setSelectedPrice, setOpenModal}) => {
+const PaystackCheckout = ({selectedPrice, selectedPrices=null, setSelectedPrice, setOpenModal}) => {
   const navigateTo = useNavigate();
   const [paymentEmail, setPaymentEmail] = useState("");
   const [fAmount, setFAmount] = useState(selectedPrice);
-  console.log(fAmount.toLocaleString())
 
   const config = {
     reference: new Date().getTime().toString(),
@@ -66,11 +65,16 @@ const PaystackCheckout = ({selectedPrice, selectedPrices, setSelectedPrice, setO
           <label htmlFor="price" className="my-2 text-sm text-[#808097]">
             Amount to pay
           </label>
+          {selectedPrices?
           <select value={fAmount} onChange={handleAmountChange} name="price" id="price" className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none text-sm">
             {selectedPrices?.map((s, idx)=>(
               <option key={idx} value={s.price}><span>{s.percent}</span> <span className="text">= ₦{(s.price).toLocaleString()}.00K</span></option>
             ))}
-          </select>
+          </select>: 
+          <select value={fAmount} onChange={handleAmountChange} name="price" id="price" className="w-full rounded border border-[#012F1C] py-1 px-3 outline-none text-sm">
+            <option value={selectedPrice}> <span className="text">₦{(selectedPrice).toLocaleString()}.00K</span></option>
+        </select>
+          }
         </div>
         {
           <PaystackConsumer {...componentProps}>

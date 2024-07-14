@@ -6,3 +6,6 @@ html, body {
     height: 100%;
     min-height: 100vh;
 }
+.tech-4-girls p, .tech-4-girls li {
+    text-align: justify;
+}
