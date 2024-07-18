@@ -72,7 +72,7 @@ export default function Bootcamp() {
               Enroll Now
             </button>
             <p className="hidden text-[#424E57] text-lg font-medium mb-3 md:mb-0 pt-4">
-              Contact us via:{" "}
+              For inquiries, contact us via:{" "}
               <a href="tel:++2347083143779">+234 708 314 3779</a>
             </p>
           </div>
