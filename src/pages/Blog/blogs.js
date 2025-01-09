@@ -87,7 +87,7 @@ export const blogPosts = [
           <li>Search Engine Optimization (SEO)</li>
           <li>Search Engine Marketing (SEM)</li>
         </ul>
-        <p>All the aforementioned are some of the tech career paths to be explored. To commence your journey, you can sign up at <a href="https://ridot.tech/pricing" class="text-blue-500 underline">ridot.tech/pricing</a> to enjoy the great offer.</p>
+        <p>All the aforementioned are some of the tech career paths to be explored. To commence your journey, you can sign up at <a href="https://ridot.org/pricing" class="text-blue-500 underline">ridot.org/pricing</a> to enjoy the great offer.</p>
       `,
       link: '/blog/3'
     },

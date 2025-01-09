@@ -1,6 +1,11 @@
 import ridotLogo from './../../assets/images/logo.png';
 
 const Footer = () => {
+  function getCurrentYear() {
+    const currentYear = new Date().getFullYear(); 
+    return currentYear;
+  }  
+  
   return (
     <footer className='bg-primary text-white'>
       <div className='w-[90%] max-w-[1200px] flex flex-col md:flex-row justify-between items-center py-10 mx-auto'>
@@ -42,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='pb-4 text-center text-xs font-medium font-poppins mt-5 md:mt-0'>
-        &copy; Copyright 2023 Ridot Software Academy. All rights reserved.
+        &copy; Copyright 2023 - {getCurrentYear()} Ridot Software Academy. All rights reserved.
       </div>
     </footer>
   )
