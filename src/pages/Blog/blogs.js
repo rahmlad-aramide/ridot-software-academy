@@ -1,7 +1,57 @@
 import blog1 from '../../assets/images/blog1.jpg';
 import blog2 from '../../assets/images/about-home.jpg';
 import blog3 from '../../assets/images/blog2.jpg';
+import blog4 from '../../assets/images/blog3.jpg';
 export const blogPosts = [
+  {
+    id: '4',
+    image: blog4,
+    title: 'How to Learn Data Science from Scratch',
+    category: 'data',
+    excerpt: 'Learning data science is one of the boldest steps you can take in 2025. As technology evolves, the demand for data-driven insights continues to grow, making data science an invaluable skill in the digital space...',
+    content: `
+      <p>Learning data science is one of the boldest steps you can take in 2025. As the world evolves, so does technology, and there is a need for every individual to level up in the digital space. Data science, as it is known, is a field that uses scientific methods to analyze data and extract insights. </p>
+      <p>It combines techniques from mathematics, statistics, computer engineering, and artificial intelligence. The knowledge of data science and machine learning is essential in building the next generation of robotic systems and AI-powered software. Thus, selecting a trusted learning platform is crucial for successful learning.</p>
+      <h2 class="text-2xl font-semibold mt-4 mb-2">Key Steps to Learning Data Science</h2>
+      <p>As someone learning from scratch, you must set priorities and follow a structured approach:</p>
+      <h3 class="text-xl font-semibold mt-3 mb-2">1. Learn the Basics of Programming</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Choose Python or R as your primary language.</li>
+        <li>Understand data structures, loops, functions, and libraries like NumPy and Pandas.</li>
+        <li>Recommended resource: <em>Python Data Science Handbook</em>.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-3 mb-2">2. Understand Mathematics & Statistics</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Linear Algebra (vectors, matrices, eigenvalues).</li>
+        <li>Probability & Statistics (mean, variance, distributions, hypothesis testing).</li>
+        <li>Calculus (derivatives, integrals for machine learning applications).</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-3 mb-2">3. Learn Data Wrangling & Visualization</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Pandas (for data manipulation).</li>
+        <li>Matplotlib & Seaborn (for data visualization).</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-3 mb-2">4. Study Machine Learning</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Supervised & Unsupervised Learning.</li>
+        <li>Regression, classification, clustering, and neural networks.</li>
+        <li>Libraries: Scikit-learn, TensorFlow, PyTorch.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-3 mb-2">5. Work on Real-World Projects</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Participate in Kaggle competitions.</li>
+        <li>Build projects like fraud detection systems.</li>
+        <li>Contribute to open-source projects.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-3 mb-2">6. Join a Community and Network</h3>
+      <ul class="list-disc list-inside mb-4">
+        <li>Engage in Kaggle, GitHub, LinkedIn, and local tech groups.</li>
+        <li>Follow top data scientists on Twitter and LinkedIn.</li>
+      </ul>
+      <p>To stay accountable throughout your journey, enrolling in a trusted tech school that offers structured courses in data science is recommended. I suggest exploring <a href="https://ridot.org" class="text-blue-500 underline">ridot.org</a>—a great place to advance your career in data science.</p>
+    `,
+    link: '/blog/4'
+  },
     {
       id: '1',
       image: blog1,

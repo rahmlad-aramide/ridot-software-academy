@@ -8,17 +8,21 @@ const Hero = () => {
   return (
     <section className="flex flex-col md:flex-row gap-5 items-center h-full md:h-[80vh] md:max-h-[500px] w-[90%] max-w-[1200px] mx-auto">
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start my-10">
-        <h1 className="text-primary text-4xl sm:text-6xl text-center md:text-left font-Montserrat font-bold">
-          Let&rsquo;s Build the Future, Together.
+        <h1 className="text-secondary text-xs sm:text-sm text-center md:text-left font-Montserrat font-medium flex gap-2">
+         <span className="w-6 h-0.5 bg-secondary inline-flex my-auto"></span> Welcome to Ridot Software Academy.
         </h1>
+        <h2 className="text-primary text-4xl sm:text-6xl text-center md:text-left font-Montserrat font-bold">
+        Let&rsquo;s Build the Future, Together.
+        </h2>
         <p className="text-[#4F596A] text-center text-xl md:text-left max-w-[40ch] md:max-w-full mt-5 mb-10">
-          Enabling and encouraging women to start a career in tech through{" "}
+          We are harnessing technology, especially AI to unlock opportunities and create a brighter future. We are dedicated to empowering{" "}
           <span className="relative inline-block">
-            our supportive platforms.
+             women and teenagers
             <span className="absolute left-6 -bottom-1.5">
               <img src={redline} alt="" className="w-28" />
             </span>
           </span>
+          {" "}with the skills and knowledge needed to thrive in the digital world.{" "}
         </p>
         <Link
           to="/pricing"

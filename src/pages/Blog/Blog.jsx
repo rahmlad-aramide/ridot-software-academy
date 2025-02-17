@@ -59,14 +59,14 @@ const Blog = () => {
               Engineering
             </button>
             <button
-              onClick={() => handleCategory("design")}
+              onClick={() => handleCategory("data")}
               className={
-                currentCategory === "design"
+                currentCategory === "data"
                   ? "px-[10px] py-[2px] bg-[#CED4DC] rounded text-[13px]"
                   : "px-[10px] py-[2px] text-[13px]"
               }
             >
-              Design
+              Data
             </button>
             <button
               onClick={() => handleCategory("product")}
