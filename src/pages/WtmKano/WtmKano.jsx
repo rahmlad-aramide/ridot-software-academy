@@ -19,6 +19,12 @@ const WtmKano = () => {
           <div className="-z-10 -mt-2 md:-mt-3">
             <img src={underline} alt="underline" />
           </div>
+          <p className="text-center max-w-2xl mt-4 text-lg">
+            Get up to a <strong>30%</strong> discount on all our courses—valid
+            until <strong>April 14 2025.</strong> Enroll now to enjoy flexible
+            learning, job support, LinkedIn visibility, real-life work
+            experience, and a supportive learning community.
+          </p>
         </div>
         <div className="flex items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mx-auto mb-8">
@@ -46,8 +52,10 @@ const WtmKano = () => {
                           Intermediate
                         </div>
                         <div>
-                          <span className="font-medium">Class Type:</span>{" "}
-                          Virtual training
+                          <span className="font-medium">Mode:</span> Online{" "}
+                          {data.title === "Digital Marketing"
+                            ? "& In-Person (Hybrid)"
+                            : ""}
                         </div>
                         <div>
                           <span className="font-medium">Installment:</span> 30%
@@ -85,12 +93,7 @@ const WtmKano = () => {
                     {data.desc.map((desc, index) => (
                       <div key={index} className={`flex items-center mb-4`}>
                         {desc.title && (
-                          <h2 className="text-2xl font-bold">{desc.title}</h2>
-                        )}
-                        {desc.subtitle && (
-                          <h3 className="text-xl font-medium">
-                            {desc.subtitle}
-                          </h3>
+                          <h2 className="text-xl font-medium">{desc.title}</h2>
                         )}
                         {desc.icon && <img src={desc.icon} alt={desc.text} />}
                         <span className="ml-2">{desc.text}</span>

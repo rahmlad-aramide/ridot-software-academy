@@ -10,11 +10,7 @@ export const pricingData = [
     installments: "70% down payment",
     price: 120000,
     discountPrice: 75000,
-    prices: [
-      { percent: "30%", price: 75000 * 0.3 },
-      { percent: "70%", price: 75000 * 0.7 },
-      { percent: "Full", price: 75000 },
-    ],
+    prices: calculateInstallment(75000, [30, 70]),
     discount: null,
     priceBg: "#00CA72",
     discountPriceBg: "#c7c7c7",
@@ -23,353 +19,74 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        title: "Week 1: Introduction to Data Analysis",
-      },
-      {
-        subtitle: "Topics Covered:",
+        title: "MODULE 1",
       },
       {
         icon: check,
-        text: "What is Data Analysis?",
+        text: "Introduction to Data Analysis",
+      },
+      {
+        title: "MODULE 2",
       },
       {
         icon: check,
-        text: "Overview of SQL, Excel, Python, and Power BI in Data Analysis",
+        text: "Data Cleaning and Manipulation in Excel",
+      },
+      {
+        title: "MODULE 3",
       },
       {
         icon: check,
-        text: "Understanding data types, structure, and workflow",
+        text: "Advanced Excel for Data Analysis",
+      },
+      {
+        title: "MODULE 4",
       },
       {
         icon: check,
-        text: "Installing necessary tools (MySQL/SQLite, Python environment, Excel, Power BI)",
+        text: "Introduction to SQL",
       },
       {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Setting up the tools and exploring sample datasets",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 2: Data Cleaning and Manipulation in Excel",
-      },
-      {
-        subtitle: "Topics Covered:",
+        title: "MODULE 5",
       },
       {
         icon: check,
-        text: "Basics of Excel: Interface, shortcuts, and formulas",
+        text: "Intermediate SQL",
+      },
+      {
+        title: "MODULE 6",
       },
       {
         icon: check,
-        text: "Sorting, filtering, and conditional formatting",
+        text: "Python for Data Analysis (Part 1)",
+      },
+      {
+        title: "MODULE 7",
       },
       {
         icon: check,
-        text: "Data cleaning techniques (removing duplicates, handling missing values)",
+        text: "Advanced Python for Data Analysis",
+      },
+      {
+        title: "MODULE 8",
       },
       {
         icon: check,
-        text: "Using pivot tables for data summarization",
+        text: "Introduction to Power BI",
       },
       {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Cleaning and summarizing a raw dataset",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 3: Advanced Excel for Data Analysis",
-      },
-      {
-        subtitle: "Topics Covered:",
+        title: "MODULE 9",
       },
       {
         icon: check,
-        text: "Data validation and lookup functions (VLOOKUP, HLOOKUP, XLOOKUP)",
+        text: "Intermediate Power BI",
+      },
+      {
+        title: "MODULE 10",
       },
       {
         icon: check,
-        text: "Advanced formulas: IF, AND, OR, nested functions",
-      },
-      {
-        icon: check,
-        text: "Introduction to Excel charts and visualization",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Creating interactive dashboards in Excel",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 4: Introduction to SQL",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Basics of relational databases and SQL syntax",
-      },
-      {
-        icon: check,
-        text: "SELECT, WHERE, ORDER BY, and LIMIT",
-      },
-      {
-        icon: check,
-        text: "Filtering data with comparison and logical operators",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Querying a sample database to retrieve specific information",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 5: Intermediate SQL",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Aggregate functions (COUNT, SUM, AVG, MIN, MAX)",
-      },
-      {
-        icon: check,
-        text: "GROUP BY and HAVING clauses",
-      },
-      {
-        icon: check,
-        text: "Joining tables: INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Writing complex queries with multiple joins",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 6: Python for Data Analysis (Part 1)",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Introduction to Python and Jupyter Notebook",
-      },
-      {
-        icon: check,
-        text: "Data structures in Python: Lists, tuples, dictionaries",
-      },
-      {
-        icon: check,
-        text: "Working with libraries: Pandas and NumPy",
-      },
-      {
-        icon: check,
-        text: "Importing datasets (CSV, Excel)",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Analyzing a dataset using Pandas",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 7: Python for Data Analysis (Part 2)",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Data cleaning with Pandas",
-      },
-      {
-        icon: check,
-        text: "Exploratory Data Analysis (EDA)",
-      },
-      {
-        icon: check,
-        text: "Basic data visualization with Matplotlib and Seaborn",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Creating charts and graphs to summarize insights",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 8: Advanced Python for Data Analysis",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Handling large datasets efficiently",
-      },
-      {
-        icon: check,
-        text: "Writing custom functions for data transformation",
-      },
-      {
-        icon: check,
-        text: "Advanced visualizations with Seaborn",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Developing a Python-based EDA report",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 9: Introduction to Power BI",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Power BI interface and workflow",
-      },
-      {
-        icon: check,
-        text: "Connecting to data sources",
-      },
-      {
-        icon: check,
-        text: "Creating tables, visuals, and basic dashboards",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Importing a dataset and creating a simple dashboard",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 10: Intermediate Power BI",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "DAX (Data Analysis Expressions): Basic formulas and calculations",
-      },
-      {
-        icon: check,
-        text: "Creating relationships between tables",
-      },
-      {
-        icon: check,
-        text: "Interactive filters and slicers",
-      },
-      {
-        icon: check,
-        text: "Publishing and sharing reports",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Building a multi-page dashboard with filters",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 11: Data Analysis Project",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Combining tools: Using SQL, Excel, Python, and Power BI together",
-      },
-      {
-        icon: check,
-        text: "Designing a data analysis workflow for a real-world problem",
-      },
-      {
-        icon: check,
-        text: "Communicating insights effectively",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Start a capstone project: Analyze a dataset and create reports",
-      },
-      {
-        space: true,
-      },
-      {
-        title: "Week 12: Capstone Project Presentations",
-      },
-      {
-        subtitle: "Topics Covered:",
-      },
-      {
-        icon: check,
-        text: "Refining your analysis and visualization",
-      },
-      {
-        icon: check,
-        text: "Preparing a presentation of your findings",
-      },
-      {
-        icon: check,
-        text: "Feedback and Q&A session with peers/instructor",
-      },
-      {
-        subtitle: "Hands-on Practice:",
-      },
-      {
-        icon: check,
-        text: "Present capstone projects and receive feedback",
+        text: "Data Analysis Project",
       },
       {
         space: true,
@@ -386,7 +103,7 @@ export const pricingData = [
         text: "A final capstone project integrating all tools",
       },
       {
-        subtitle: "TOOLS; PowerBI, SQL, Excel, Python",
+        title: "TOOLS; PowerBI, SQL, Excel, Python",
       },
     ],
   },
@@ -399,11 +116,7 @@ export const pricingData = [
     installments: "70% down payment",
     price: 120000,
     discountPrice: 75000,
-    prices: [
-      { percent: "30%", price: 75000 * 0.3 },
-      { percent: "70%", price: 75000 * 0.7 },
-      { percent: "Full", price: 75000 },
-    ],
+    prices: calculateInstallment(75000, [30, 70]),
     discount: null,
     priceBg: "#0085FF",
     discountPriceBg: "#c7c7c7",
@@ -412,42 +125,42 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        subtitle: "MODULE 1:",
+        title: "MODULE 1",
       },
       {
         icon: check,
         text: "Introduction to Data Science & Python",
       },
       {
-        subtitle: "MODULE 2:",
+        title: "MODULE 2",
       },
       {
         icon: check,
         text: " Data Collection & Cleaning ",
       },
       {
-        subtitle: "MODULE 3:",
+        title: "MODULE 3",
       },
       {
         icon: check,
         text: "Data Visualization & Storytelling",
       },
       {
-        subtitle: "MODULE 4:",
+        title: "MODULE 4",
       },
       {
         icon: check,
         text: "Introduction to Machine Learning",
       },
       {
-        subtitle: "MODULE 5:",
+        title: "MODULE 5",
       },
       {
         icon: check,
         text: "Working with Databases & SQL",
       },
       {
-        subtitle: "MODULE 6:",
+        title: "MODULE 6",
       },
       {
         icon: check,
@@ -485,11 +198,7 @@ export const pricingData = [
     installments: "70% down payment",
     price: 80000,
     discountPrice: 60000,
-    prices: [
-      { percent: "30%", price: 60000 * 0.3 },
-      { percent: "70%", price: 60000 * 0.7 },
-      { percent: "Full", price: 60000 },
-    ],
+    prices: calculateInstallment(60000, [30, 70]),
     discount: null,
     priceBg: "#A25DDC",
     discountPriceBg: "#c7c7c7",
@@ -498,42 +207,42 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        subtitle: "MODULE 1:",
+        title: "MODULE 1",
       },
       {
         icon: check,
         text: "Introduction to Front-End Development- (html, css, in overview)",
       },
       {
-        subtitle: "MODULE 2:",
+        title: "MODULE 2",
       },
       {
         icon: check,
         text: "Styling with CSS",
       },
       {
-        subtitle: "MODULE 3:",
+        title: "MODULE 3",
       },
       {
         icon: check,
         text: "JavaScript for Interactivity",
       },
       {
-        subtitle: "MODULE 4:",
+        title: "MODULE 4",
       },
       {
         icon: check,
         text: "Front-End Development with React.js",
       },
       {
-        subtitle: "MODULE 5:",
+        title: "MODULE 5",
       },
       {
         icon: check,
         text: "Advanced Front-End Techniques",
       },
       {
-        subtitle: "MODULE 6:",
+        title: "MODULE 6",
       },
       {
         icon: check,
@@ -561,17 +270,14 @@ export const pricingData = [
   },
   {
     title: "Backend Development",
-    subtitle: "No subtitle",
+    subtitle:
+      "Backend development focuses on the logic and infrastructure behind a website or application that users don’t directly see, including databases, APIs, and server-side programming.",
     duration: "10 weeks",
     times: " 2-3 times a week, (flexible)",
     installments: "70% down payment",
     price: 100000,
     discountPrice: 70000,
-    prices: [
-      { percent: "30%", price: 70000 * 0.3 },
-      { percent: "70%", price: 70000 * 0.7 },
-      { percent: "Full", price: 70000 },
-    ],
+    prices: calculateInstallment(70000, [30, 70]),
     discount: null,
     priceBg: "#00CA72",
     discountPriceBg: "#c7c7c7",
@@ -580,42 +286,42 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        subtitle: "MODULE 1:",
+        title: "MODULE 1",
       },
       {
         icon: check,
         text: " Introduction to Back-End Development",
       },
       {
-        subtitle: "MODULE 2:",
+        title: "MODULE 2",
       },
       {
         icon: check,
         text: "Programming with JavaScript & Node.js",
       },
       {
-        subtitle: "MODULE 3:",
+        title: "MODULE 3",
       },
       {
         icon: check,
         text: "Working with Databases (SQL & NoSQL)",
       },
       {
-        subtitle: "MODULE 4:",
+        title: "MODULE 4",
       },
       {
         icon: check,
         text: "RESTful APIs & Authentication",
       },
       {
-        subtitle: "MODULE 5:",
+        title: "MODULE 5",
       },
       {
         icon: check,
         text: "Advanced Back-End Concepts",
       },
       {
-        subtitle: "MODULE 6:",
+        title: "MODULE 6",
       },
       {
         icon: check,
@@ -653,11 +359,7 @@ export const pricingData = [
     installments: "70% down payment",
     price: 60000,
     discountPrice: 45000,
-    prices: [
-      { percent: "30%", price: 45000 * 0.3 },
-      { percent: "70%", price: 45000 * 0.7 },
-      { percent: "Full", price: 45000 },
-    ],
+    prices: calculateInstallment(45000, [30, 70]),
     discount: null,
     priceBg: "#0085FF",
     discountPriceBg: "#c7c7c7",
@@ -666,42 +368,42 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        subtitle: "MODULE 1:",
+        title: "MODULE 1",
       },
       {
         icon: check,
         text: "Introduction to Product Design",
       },
       {
-        subtitle: "MODULE 2:",
+        title: "MODULE 2",
       },
       {
         icon: check,
         text: "User Research & Competitive Analysis",
       },
       {
-        subtitle: "MODULE 3:",
+        title: "MODULE 3",
       },
       {
         icon: check,
         text: "UX Design Fundamentals",
       },
       {
-        subtitle: "MODULE 4:",
+        title: "MODULE 4",
       },
       {
         icon: check,
         text: "UI Design & Visual Aesthetics",
       },
       {
-        subtitle: "MODULE 5:",
+        title: "MODULE 5",
       },
       {
         icon: check,
         text: "Prototyping & Usability Testing",
       },
       {
-        subtitle: "MODULE 6:",
+        title: "MODULE 6",
       },
       {
         icon: check,
@@ -721,11 +423,7 @@ export const pricingData = [
     installments: "70% down payment",
     price: 50000,
     discountPrice: 35000,
-    prices: [
-      { percent: "30%", price: 15000 },
-      { percent: "70%", price: 35000 },
-      { percent: "Full", price: 50000 },
-    ],
+    prices: calculateInstallment(35000, [30, 70]),
     discount: null,
     priceBg: "#A25DDC",
     discountPriceBg: "#c7c7c7",
@@ -734,49 +432,49 @@ export const pricingData = [
     link: "/",
     desc: [
       {
-        subtitle: "MODULE 1:",
+        title: "MODULE 1",
       },
       {
         icon: check,
         text: " Introduction to Digital Marketing",
       },
       {
-        subtitle: "MODULE 2:",
+        title: "MODULE 2",
       },
       {
         icon: check,
         text: " Social Media Marketing (SMM)",
       },
       {
-        subtitle: "MODULE 3:",
+        title: "MODULE 3",
       },
       {
         icon: check,
         text: "Search Engine Optimization (SEO)",
       },
       {
-        subtitle: "MODULE 4:",
+        title: "MODULE 4",
       },
       {
         icon: check,
         text: "Pay-Per-Click (PPC) Advertising",
       },
       {
-        subtitle: "MODULE 5:",
+        title: "MODULE 5",
       },
       {
         icon: check,
         text: "Email & Content Marketing",
       },
       {
-        subtitle: "MODULE 6:",
+        title: "MODULE 6",
       },
       {
         icon: check,
         text: "Analytics & Conversion Optimization",
       },
       {
-        subtitle: "MODULE 7:",
+        title: "MODULE 7",
       },
       {
         icon: check,
@@ -806,3 +504,14 @@ export const pricingData = [
     ],
   },
 ];
+
+function calculateInstallment(actualPrice, discountPercentage = []) {
+  const installments = [];
+  discountPercentage.map((percentage) => {
+    const discountPrice = (actualPrice * percentage) / 100;
+    const installment = { percent: percentage + "%", price: discountPrice };
+    installments.push(installment);
+  });
+  installments.push({ percent: "full", price: actualPrice });
+  return installments;
+}
