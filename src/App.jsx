@@ -5,6 +5,7 @@ import { Loader } from "./utils";
 import './App.css'
 import BlogPost from "./pages/Blog/BlogPost";
 import Bootcamp from "./pages/Bootcamp";
+import WtmKano from "./pages/WtmKano/WtmKano";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/blog" exact element={<Blog />} />
           <Route path="/blog/:id" exact element={<BlogPost />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="//wtm-kano" element={<WtmKano />} />
           <Route path="/success" element={<Success />} />
           <Route path="/t4g" element={<Bootcamp />} />
         </Routes>
