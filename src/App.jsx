@@ -5,6 +5,7 @@ import { Loader } from "./utils";
 import './App.css'
 import BlogPost from "./pages/Blog/BlogPost";
 import Bootcamp from "./pages/Bootcamp";
+import DigiSkills from "./pages/DigiSkills";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/success" element={<Success />} />
           <Route path="/t4g" element={<Bootcamp />} />
+          <Route path="/digiskills-for-women" element={<DigiSkills />} />
         </Routes>
         </>
       )}

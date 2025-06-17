@@ -51,3 +51,7 @@ input::-webkit-inner-spin-button {
 .crossed-bars .bar:last-child {
   transform: rotate(45deg) translateY(-5.5px);
 }
+
+.sc-96a9560f-2, .sc-543a64a3-4, .fHZRYb, .bjcIFr, .tally-page, .tally-page-1 {
+ max-width: 700px !important;
+}
