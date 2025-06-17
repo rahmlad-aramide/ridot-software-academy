@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# Remove this if it's causing issues
+# npm test
+
+echo "🔍 Running eslint checks..."
+npm run lint
