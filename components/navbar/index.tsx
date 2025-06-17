@@ -10,7 +10,7 @@ const navItems = [
   {
     label: "Courses",
     submenu: [
-      { label: "Product Design", href: "#" },
+      { label: "Product Design", href: "/" },
       { label: "Front-end Development", href: "#" },
       { label: "Back-end Development", href: "#" },
       { label: "Data Analysis", href: "#" },
