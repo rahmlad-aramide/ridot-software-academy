@@ -6,6 +6,7 @@ import './App.css'
 import BlogPost from "./pages/Blog/BlogPost";
 import Bootcamp from "./pages/Bootcamp";
 import WtmKano from "./pages/WtmKano/WtmKano";
+import DigiSkills from "./pages/DigiSkills";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="//wtm-kano" element={<WtmKano />} />
           <Route path="/success" element={<Success />} />
           <Route path="/t4g" element={<Bootcamp />} />
+          <Route path="/digiskills-for-women" element={<DigiSkills />} />
         </Routes>
         </>
       )}
