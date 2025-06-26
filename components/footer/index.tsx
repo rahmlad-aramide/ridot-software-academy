@@ -18,7 +18,10 @@ const Footer = () => {
             development.
           </p>
           <div className="flex justify-start space-x-4">
-            <Link href="#" className=" rounded-full border p-2 lg:p-3 border-gray-300">
+            <Link
+              href="#"
+              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+            >
               <svg
                 width="24"
                 height="24"
@@ -43,7 +46,10 @@ const Footer = () => {
                 </g>
               </svg>
             </Link>
-            <Link href="#" className=" rounded-full border p-2 lg:p-3 border-gray-300">
+            <Link
+              href="#"
+              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+            >
               <svg
                 width="24"
                 height="24"
@@ -58,7 +64,10 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <Link href="#" className=" rounded-full border p-2 lg:p-3 border-gray-300">
+            <Link
+              href="#"
+              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+            >
               <svg
                 width="24"
                 height="24"
@@ -74,7 +83,10 @@ const Footer = () => {
                 </g>
               </svg>
             </Link>
-            <Link href="#" className=" rounded-full border p-2 lg:p-3 border-gray-300">
+            <Link
+              href="#"
+              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+            >
               <svg
                 width="24"
                 height="24"
