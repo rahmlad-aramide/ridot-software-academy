@@ -1,27 +1,10 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  /* --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
-
   --color-primary: #010080; /* e.g: the main color */
   --color-ridot-blue: #2B2BD0; /* e.g: learn more color */
   --color-ridot-gray: #F7F7FF; /* e.g: why choose ridot background */
   --color-ridot-pink: #FFE4E4; /* e.g: success story background */
   --color-ridot-accent-purple: #EFEFFF;  /* e.g: accordion background */
+  --font-onest: var(--font-onest);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-

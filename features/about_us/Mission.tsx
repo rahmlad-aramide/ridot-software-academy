@@ -4,7 +4,7 @@ import { FaCheck } from 'react-icons/fa';
 
 export default function Mission() {
   return (
-    <div className="relative w-full px-4 lg:flex lg:items-center lg:gap-20 lg:px-10 lg:py-10 xl:px-20">
+    <div className="relative w-full px-6 lg:flex lg:items-center lg:gap-20 lg:px-10 lg:py-10 xl:px-20">
       <div className="relative h-80 w-full pr-4 lg:w-1/2">
         <div className="absolute top-4 left-4 z-0 h-80 w-full rounded-xl border-4 border-dashed border-[#010080] shadow-md"></div>
         <Image
@@ -31,7 +31,7 @@ export default function Mission() {
           </div>
           <div className="mt-6 space-y-4">
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 text-white">
+              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
@@ -40,7 +40,7 @@ export default function Mission() {
               </div>
             </div>
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 text-white">
+              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
@@ -50,7 +50,7 @@ export default function Mission() {
               </div>
             </div>
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 text-white">
+              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">

@@ -10,7 +10,8 @@ const navItems = [
   {
     label: "Courses",
     submenu: [
-      { label: "Product Design", href: "/" },
+      { label: "All Courses", href: "/courses" },
+      { label: "Product Design", href: "/courses?course=product-design" },
       { label: "Front-end Development", href: "#" },
       { label: "Back-end Development", href: "#" },
       { label: "Data Analysis", href: "#" },
@@ -22,11 +23,11 @@ const navItems = [
   {
     label: "Blog",
     submenu: [
-      { label: "All posts", href: "#" },
-      { label: "General", href: "#" },
-      { label: "Engineering", href: "#" },
-      { label: "Data", href: "#" },
-      { label: "Product", href: "#" },
+      { label: "All posts", href: "/blogs" },
+      { label: "General", href: "/blogs?post=general" },
+      { label: "Engineering", href: "/blogs?post=engineering" },
+      { label: "Data", href: "/blogs?post=data" },
+      { label: "Product", href: "/blogs?post=product" },
     ],
   },
   { label: "Pricing", href: "/pricing" },
@@ -54,7 +55,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white border border-ridot-gray relative z-50">
+    <nav className="bg-white border border-ridot-gray z-50 sticky top-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           href="/"

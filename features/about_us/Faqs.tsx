@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     id: 2,
-    question: 'What If The Store I Want Is Not On Ethco?',
+    question: 'What is the duration of Ridot courses?',
     answer:
       'The duration of our courses varies depending on the program. Generally, our courses range from a few weeks to a few months, allowing you to learn at your own pace.',
   },
@@ -57,7 +57,7 @@ export default function Faqs() {
           <li key={faq.id} className="rounded-xl bg-indigo-50 px-6 py-4">
             <div className="flex items-start gap-8">
               <div className="flex-1">
-                <h3 className="text-sm leading-tight font-semibold text-zinc-900 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
+                <h3 onClick={() => handleSelectedQues(faq.id)} className="text-sm leading-tight font-semibold text-zinc-900 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 cursor-pointer">
                   {faq.question}
                 </h3>
                 {selectedQuesId === faq.id && (
@@ -67,7 +67,7 @@ export default function Faqs() {
                 )}
               </div>
               <button
-                className="text-indigo-700"
+                className="text-indigo-700 cursor-pointer"
                 onClick={() => handleSelectedQues(faq.id)}
               >
                 {selectedQuesId !== faq.id ? (
