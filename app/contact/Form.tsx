@@ -1,12 +1,12 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function Form() {
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log("Submitted Data:", name, email, message )
         setName("");
