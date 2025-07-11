@@ -24,7 +24,7 @@ const navItems = [
     label: "Blog",
     submenu: [
       { label: "All posts", href: "/blogs" },
-      { label: "General", href: "/blogs?post=general" },
+      { label: "General", href: "/blogs/general" },
       { label: "Engineering", href: "/blogs?post=engineering" },
       { label: "Data", href: "/blogs?post=data" },
       { label: "Product", href: "/blogs?post=product" },
