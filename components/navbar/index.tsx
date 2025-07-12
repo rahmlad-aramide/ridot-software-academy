@@ -42,7 +42,7 @@ const Navbar = () => {
     setDropdownOpen((prev) => (prev === label ? null : label));
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
+  const handleClickOutside = (event: React.MouseEvent<HTMLButtonElement, MouseEvent> | React.MouseEvent<HTMLDivElement, MouseEvent> | MouseEvent) => {
     const target = event.target as HTMLElement;
     if (!target.closest(".dropdown-wrapper")) {
       setDropdownOpen(null);
@@ -99,6 +99,7 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.label)}
+                      onMouseEnter={() => toggleDropdown(item.label)}
                       className="flex items-center justify-between cursor-pointer w-full py-2 px-3 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
                     >
                       {item.label}

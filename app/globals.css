@@ -7,4 +7,6 @@
   --color-ridot-pink: #FFE4E4; /* e.g: success story background */
   --color-ridot-accent-purple: #EFEFFF;  /* e.g: accordion background */
   --font-onest: var(--font-onest);
+  --breakpoint-xs: 36rem; /* 576px */
+  --breakpoint-xxs: 30rem; /* 480px */
 }

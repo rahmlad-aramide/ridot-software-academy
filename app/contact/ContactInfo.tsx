@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Page() {
@@ -8,30 +9,31 @@ export default function Page() {
   const [showPhoneTwoTooltip, setShowPhoneTwoTooltip] = useState(false);
 
   const copyToClipboard = (text: string): void => {
-  navigator.clipboard.writeText(text).then(() => {
-    showCopyMessage(`"${text}" copied to your clipboard`);
-  }).catch(err => {
-    console.error('Failed to copy!', err);
-  });
-};
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        showCopyMessage(`"${text}" copied to your clipboard`);
+      })
+      .catch((err) => {
+        console.error('Failed to copy!', err);
+      });
+  };
 
-const showCopyMessage = (message: string): void => {
-  const msgElement = document.getElementById('copy-message');
-  if (!msgElement) return;
-  msgElement.textContent = message;
-  msgElement.classList.remove('hidden', 'opacity-0');
-  msgElement.classList.add('opacity-100');
+  const showCopyMessage = (message: string): void => {
+    const msgElement = document.getElementById('copy-message');
+    if (!msgElement) return;
+    msgElement.textContent = message;
+    msgElement.classList.remove('hidden', 'opacity-0');
+    msgElement.classList.add('opacity-100');
 
-  setTimeout(() => {
-    msgElement.classList.remove('opacity-100');
-    msgElement.classList.add('opacity-0');
     setTimeout(() => {
-      msgElement.classList.add('hidden');
-    }, 300); 
-  }, 2000);
-};
-
-
+      msgElement.classList.remove('opacity-100');
+      msgElement.classList.add('opacity-0');
+      setTimeout(() => {
+        msgElement.classList.add('hidden');
+      }, 300);
+    }, 2000);
+  };
 
   return (
     <div className="relative space-y-4">
@@ -47,7 +49,7 @@ const showCopyMessage = (message: string): void => {
         >
           ridotsoftwareacademy@gmail.com
           {showEmailTooltip && (
-            <div className="absolute bottom-4 left-0 z-50 mt-1 flex w-80 gap-x-4 rounded-md bg-black p-2 text-[12px] text-white">
+            <div className="absolute bottom-5 left-0 z-50 mt-1 flex w-80 gap-x-4 rounded-md bg-black p-2 text-[12px] text-white">
               <p
                 className="cursor-pointer"
                 onClick={() =>
@@ -58,18 +60,19 @@ const showCopyMessage = (message: string): void => {
               </p>
 
               <div className="border border-white"></div>
-              <a
-                className="block cursor-default"
+              <Link
+                className="block cursor-pointer"
                 href="mailto:ridotsoftwareacademy@gmail.com"
+                target="_blank"
               >
                 Send Mail
-              </a>
+              </Link>
             </div>
           )}
         </span>
       </p>
 
-    <p className="relative text-sm font-semibold text-[rgb(43,43,208)] md:text-base">
+      <p className="relative text-sm font-semibold text-[rgb(43,43,208)] md:text-base">
         Phone:
         <span
           className="relative ml-1 cursor-pointer text-black underline hover:bg-blue-200"
@@ -85,11 +88,10 @@ const showCopyMessage = (message: string): void => {
               >
                 📞 Copy +2347083143779
               </p>
-              
               <div className="border border-white"></div>
-              <a className="block cursor-default" href="tel:+2347083143779">
+              <Link className="block cursor-pointer" href="tel:+2347083143779">
                 Call number
-              </a>
+              </Link>
             </div>
           )}
         </span>
@@ -108,20 +110,17 @@ const showCopyMessage = (message: string): void => {
                 📞 Copy +2347056025175
               </p>
               <div className="border border-white"></div>
-              <a className="block cursor-default" href="tel:+2347056025175">
+              <Link className="block cursor-pointer" href="tel:+2347056025175">
                 Call number
-              </a>
+              </Link>
             </div>
           )}
         </span>
       </p>
       <div
-  id="copy-message"
-  className="hidden fixed bottom-5 left-10 md:left-100 bg-gray-800 text-white text-sm px-4 py-2 rounded opacity-0 transition-opacity duration-300"
-></div>
-
+        id="copy-message"
+        className="fixed bottom-5 left-10 hidden rounded bg-gray-800 px-4 py-2 text-sm text-white opacity-0 transition-opacity duration-300 md:left-100"
+      ></div>
     </div>
-    
-    
   );
 }

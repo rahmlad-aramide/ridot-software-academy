@@ -15,7 +15,7 @@ export default function Form() {
     };
 
   return (
-   <div className="relative flex-1 max-w-xl">
+   <div className="relative flex-1 w-full md:max-w-xl">
     <div className="absolute w-[65%] h-[65%] bg-[#020181A1] blur-[50px] rounded-[10px] z-0"/>
     <div className="relative z-10 bg-white w-full rounded-[20px] shadow-2xl p-6">
       <h1 className="text-xl font-bold">Send us a message</h1>

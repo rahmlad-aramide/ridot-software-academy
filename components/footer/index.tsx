@@ -111,28 +111,28 @@ const Footer = () => {
           <h3 className="text-sm font-semibold text-gray-900 mb-4">PAGES</h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
-              <Link href="#" className="hover:text-primary">
+              <Link href="/" className="hover:text-primary">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-primary">
+              <Link href="/about" className="hover:text-primary">
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-primary">
+              <Link href="/courses" className="hover:text-primary">
                 Courses
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-primary">
+              <Link href="/contact" className="hover:text-primary">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link href="#" className="hover:text-primary">
-                Blog
+              <Link href="/blogs" className="hover:text-primary">
+                Blogs
               </Link>
             </li>
           </ul>
@@ -145,12 +145,12 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
-              <Link href="mailto:ridotsoftwareacademy@gmail.com">
+              <Link href="mailto:ridotsoftwareacademy@gmail.com" className="hover:text-primary">
                 ridotsoftwareacademy@gmail.com
               </Link>
             </li>
             <li>
-              <Link href="tel:+2347083143779">+2347083143779</Link>
+              <Link href="tel:+2347083143779" className="hover:text-primary">+2347083143779</Link>
             </li>
             <li>Lagos, Nigeria</li>
           </ul>

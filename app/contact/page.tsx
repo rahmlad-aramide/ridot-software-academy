@@ -13,12 +13,12 @@ export default function Page() {
         </div>
       </section>
 
-      <div className="mt-10 flex w-full flex-col items-center justify-center gap-6 px-5 sm:mt-20 md:mt-20 sm:flex-row md:flex-row">
+      <div className="mt-10 flex w-full flex-col items-center justify-center gap-6 px-5 sm:mt-20 sm:flex-row md:mt-20 md:flex-row">
         <Form />
-        <div className="flex max-w-xl flex-1 flex-col items-start">
+        <div className="flex w-full md:max-w-xl flex-1 flex-col items-start">
           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.46310731795!2d3.1191424086628525!3d6.5483693716861335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1752302904643!5m2!1sen!2sng"
             className="mb-4 h-[346px] w-full rounded-lg"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d252164.69368035524!2d7.4514432!3d9.0570752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1752084010145!5m2!1sen!2sng"
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
