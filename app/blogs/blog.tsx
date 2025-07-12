@@ -66,11 +66,17 @@ const blogPosts = [
     },
 ]
 
-export default function Blog() {
+interface BlogProps {
+  limit?: number;
+}
+
+export default function Blog({ limit }: BlogProps) {
+    const postsToDisplay = limit ? blogPosts.slice(0, limit) : blogPosts;
+
     return (
         <div className='w-full h-full p-4 lg:pt-10 xl:p-20'>
             <ul className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
-                {blogPosts.map((blog, i) => (
+                {postsToDisplay.map((blog, i) => (
                     <li key={i} className='w-full '>
                         <div className="relative w-full h-[342px]">
                          <Image
