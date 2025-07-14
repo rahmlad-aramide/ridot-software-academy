@@ -75,7 +75,7 @@ export default function Blog({ limit }: BlogProps) {
 
     return (
         <div className='w-full h-full p-4 lg:pt-10 xl:p-20'>
-            <ul className='grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+            <ul className='grid gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3'>
                 {postsToDisplay.map((blog, i) => (
                     <li key={i} className='w-full '>
                         <div className="relative w-full h-[342px]">
