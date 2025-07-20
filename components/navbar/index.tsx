@@ -11,7 +11,7 @@ const navItems = [
     label: "Courses",
     submenu: [
       { label: "All Courses", href: "/courses" },
-      { label: "Product Design", href: "/courses/product-design" },
+      { label: "Product Design", href: "/courses?course=product-design" },
       { label: "Front-end Development", href: "/courses/frontend-development" },
       { label: "Back-end Development", href: "/courses/backend-development" },
       { label: "Data Analysis", href: "/courses/data-analysis" },
@@ -24,7 +24,7 @@ const navItems = [
     label: "Blog",
     submenu: [
       { label: "All posts", href: "/blogs" },
-      { label: "General", href: "/blogs/general" },
+      { label: "General", href: "/blogs?post=general" },
       { label: "Engineering", href: "/blogs?post=engineering" },
       { label: "Data", href: "/blogs?post=data" },
       { label: "Product", href: "/blogs?post=product" },

@@ -18,3 +18,16 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.clip-top-right-notch {
+  position: relative;
+  border: 2px solid rgb(1, 0, 128);
+  border-radius: 10px;
+  clip-path: polygon(
+    0 0,
+    /* top-left */ calc(100% - 30px) 0,
+    /* just before the top-right corner */ 100% 25px,
+    /* cut inward */ 100% 100%,
+    /* bottom-right */ 0% 100%,
+    /* bottom-left */ 0 0 /* back to top-left */
+  );
+}

@@ -34,7 +34,7 @@ export default function Page() {
           </p>
           <button
             type="button"
-            className="mt-5 w-[103px] rounded-md bg-[rgb(1,0,128)] px-4 py-2 text-sm hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+            className="mt-5 w-[105px] rounded-md bg-[rgb(1,0,128)] px-4 py-2 text-sm hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
           >
             Enroll Now
           </button>
