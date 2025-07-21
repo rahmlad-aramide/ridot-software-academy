@@ -5,10 +5,15 @@ import { MdArrowBack } from 'react-icons/md';
 import blogPosts from '@/app/blogs/blogPosts';
 import Community from '@/features/about_us/Community';
 
-interface BlogPageProps {
-  params: { slug: string };
-};
-export default async function BlogPage({ params }: BlogPageProps) {
+interface Params {
+  slug: string;
+}
+
+interface PageProps {
+  params: Params;
+}
+
+export default async function BlogPage({ params }: PageProps) {
   const { slug } = params;
   const post = blogPosts.find((p) => p.id === slug);
 
