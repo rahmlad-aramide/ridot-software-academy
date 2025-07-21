@@ -10,7 +10,7 @@ interface Params {
 }
 
 interface PageProps {
-  params: Params;
+   params: Promise<Params>;
 }
 
 export default async function BlogPage({ params }: PageProps) {
