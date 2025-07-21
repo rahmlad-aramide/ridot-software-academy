@@ -66,10 +66,10 @@ export default function WhyChooseRidot() {
       <h1 className="xs:text-[40px] pb-12 xs:pl-3 text-xl font-bold md:text-5xl">
         Why Choose Ridot?
       </h1>
-      <div className="flex flex-col flex-wrap items-center gap-12 md:gap-7 md:flex-row md:justify-end lg:flex-row lg:justify-end lg:pr-[60px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-7 lg:gap-12 md:pl-[150px] lg:pl-[310px]">
           {labels.map(({ desc, content, image}, i) => (
             <div key={i} className="relative">
-              <div className="xs:max-w-[500px] xs:h-[220px] clip-top-right-notch xs:p-8 h-[204px] w-full max-w-[288px] space-y-3 px-5 pt-7 md:max-w-[325px] md:px-6 lg:max-w-[396px]">
+              <div className="mx-auto xs:h-[220px] clip-top-right-notch xs:p-8 h-[204px] w-full space-y-3 px-5 pt-7 md:px-6">
                 <div className="relative mb-5 h-[32px] w-[36px]">
                   <Image
                     className="object-cover"

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { onest } from "@/fonts";
+// import { onest } from "@/fonts";
 
 export const metadata: Metadata = {
   title: "Ridot Software Academy",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${onest.variable} font-(family-name:--font-onest) antialiased`}
+        // className={`${onest.variable} font-(family-name:--font-onest) antialiased`}
       >
         <Navbar />
         {children}
