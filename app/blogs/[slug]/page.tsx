@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 export default async function BlogPage({ params }: PageProps) {
-  const { slug } = params;
+  const { slug } = await params;
   const post = blogPosts.find((p) => p.id === slug);
 
   if (!post) {
