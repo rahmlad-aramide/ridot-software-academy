@@ -6,14 +6,14 @@ export default function Page() {
   return (
     <main>
       <section className="bg-[#010080] text-white">
-        <div className="flex h-[128px] w-full items-center justify-center sm:h-[218px] md:h-[270px]">
+        <div className="flex h-[128px] w-full items-center justify-center xs:h-[218px] md:h-[270px]">
           <h1 className="text-center text-[40px] font-bold md:text-6xl">
             Contact Us
           </h1>
         </div>
       </section>
 
-      <div className="mt-10 flex w-full flex-col items-center justify-center gap-6 px-5 sm:mt-20 sm:flex-row md:mt-20 md:flex-row">
+      <div className="mt-10 flex w-full flex-col items-center justify-center gap-6 px-5 xs:mt-20 xs:flex-row md:mt-20 md:flex-row">
         <Form />
         <div className="flex w-full md:max-w-xl flex-1 flex-col items-start">
           <iframe

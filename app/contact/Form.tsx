@@ -15,9 +15,8 @@ export default function Form() {
     };
 
   return (
-   <div className="relative flex-1 w-full md:max-w-xl">
-    <div className="absolute w-[65%] h-[65%] bg-[#020181A1] blur-[50px] rounded-[10px] z-0"/>
-    <div className="relative z-10 bg-white w-full rounded-[20px] shadow-2xl p-6">
+   <div className="w-full md:max-w-xl">
+      <div className="bg-white shadow-[0_4px_20px_rgba(2,1,129,0.63)] backdrop-blur-[25px] w-full rounded-[20px] p-6">
       <h1 className="text-xl font-bold">Send us a message</h1>
 
       <form onSubmit={handleSubmit}

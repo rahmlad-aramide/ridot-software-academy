@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { useFormStore } from '@/app/useFormStore';
 
 const navItems = [
   { label: "About Us", href: "/about" },
@@ -11,12 +12,12 @@ const navItems = [
     label: "Courses",
     submenu: [
       { label: "All Courses", href: "/courses" },
-      { label: "Product Design", href: "/courses?course=product-design" },
-      { label: "Front-end Development", href: "#" },
-      { label: "Back-end Development", href: "#" },
-      { label: "Data Analysis", href: "#" },
-      { label: "Data Science", href: "#" },
-      { label: "Digital Marketing", href: "#" },
+      { label: "Product Design", href: "/courses/product-design" },
+      { label: "Front-end Development", href: "/courses/frontend-development" },
+      { label: "Back-end Development", href: "/courses/backend-development" },
+      { label: "Data Analysis", href: "/courses/data-analysis" },
+      { label: "Data Science", href: "/courses/data-science" },
+      { label: "Digital Marketing", href: "/courses/digital-marketing" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
@@ -24,7 +25,7 @@ const navItems = [
     label: "Blog",
     submenu: [
       { label: "All posts", href: "/blogs" },
-      { label: "General", href: "/blogs/general" },
+      { label: "General", href: "/blogs?post=general" },
       { label: "Engineering", href: "/blogs?post=engineering" },
       { label: "Data", href: "/blogs?post=data" },
       { label: "Product", href: "/blogs?post=product" },
@@ -33,8 +34,11 @@ const navItems = [
   { label: "Pricing", href: "/pricing" },
 ];
 
+
 const Navbar = () => {
-  const pathname = usePathname();
+  const openForm = useFormStore((state) => state.openForm);
+
+   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
 
@@ -150,6 +154,7 @@ const Navbar = () => {
             ))}
             <li>
               <button
+              onClick={openForm}
                 type="button"
                 className="text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded text-sm px-4 py-2 text-center"
               >
