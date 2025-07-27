@@ -18,6 +18,13 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(1, 0, 128) !important;
+}
+.swiper-pagination-bullet {
+  background-color: rgb(1, 0, 128) !important;
+}
 .clip-top-right-notch {
   position: relative;
   border: 2px solid rgb(1, 0, 128);
