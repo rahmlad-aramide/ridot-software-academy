@@ -70,11 +70,11 @@ export default function AllCoursesPage() {
           {coursesSection.map(({ id, course, content, image, link }) => (
             <div
               key={id}
-              className="mx-auto xs:max-w-[528px] xs:h-[391px]  h-[417px] w-full space-y-5 rounded-[12px] bg-white px-5 py-5 xs:px-5 xs:py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:h-[360px] md:max-w-[305px] md:space-y-2 md:px-3 md:pt-3 lg:h-[548px] lg:max-w-[363px] lg:space-y-5 lg:px-8 lg:py-10"
+              className="mx-auto xs:max-w-[528px] xs:h-[391px] h-[417px] w-full space-y-5 rounded-[12px] bg-white px-5 py-5 xs:px-5 xs:py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:h-[360px] md:max-w-[305px] md:space-y-2 md:px-3 md:pt-3 lg:h-[548px] lg:max-w-[363px] lg:space-y-5 lg:px-8 lg:py-10"
             >
               <div className="relative w-full h-[170px] md:h-[200px] lg:h-[240px]">
                 <Image
-                  className="rounded-[20px] object-cover"
+                  className="rounded-[12px] object-cover"
                   src={image}
                   alt="img"
                   quality={100}
