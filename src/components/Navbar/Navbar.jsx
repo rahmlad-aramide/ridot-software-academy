@@ -80,10 +80,10 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       isActive ? "underline underline-offset-8" : ""
                     }
-                    to="/digiskills-for-women"
+                    to="/scholarship"
                     onClick={handleOpenNav}
                   >
-                    Digital Skills
+                    Scholarship
                   </NavLink>
                 </li>
                 <li className="mr-0 md:mr-6 lg:mr-11 mb-5 md:mb-0 hover:underline decoration-primary underline-offset-8 decoration-2">

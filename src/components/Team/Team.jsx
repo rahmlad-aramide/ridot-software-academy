@@ -9,11 +9,12 @@ const Team = () => {
       role: "CEO",
       linkedinUrl: "https://www.linkedin.com/in/aderogba-abibat-b26a36174",
     },
-    // {
-    //   name: "Engr. AbdulLateef Olatayo",
-    //   role: "CTO",
-    //   linkedinUrl: "www.linkedin.com/in/engr-lateef-olatayo-0365a1165/",
-    // },
+    {
+      name: "Engr. AbdulLateef Olatayo",
+      role: "CTO",
+      linkedinUrl: "www.linkedin.com/in/engr-lateef-olatayo-0365a1165/",
+      image: '/Olatayo.jpg'
+    },
     {
       name: "Islamiyah Omisola",
       role: "Product Designer",
@@ -21,18 +22,17 @@ const Team = () => {
       image: '/Islamiyat.jpg'
     },
     {
-      name: "Huswat Lawal",
-      role: "Program Manager",
-      linkedinUrl: "https://www.linkedin.com/in/huswatlawal/",
-      image: 'https://res.cloudinary.com/dh4rm7b7b/image/upload/v1705436033/Ridot%20Team/IMG-20240116-WA0002_qrhows.jpg'
-    },
-    {
       name: "Abdrahman Oladimeji",
       role: "Frontend Engineer",
       linkedinUrl: "https://www.linkedin.com/in/rahmlad/",
       image: '/Rahmlad.JPG'
     },
-    
+    {
+      name: "Huswat Lawal",
+      role: "Program Manager",
+      linkedinUrl: "https://www.linkedin.com/in/huswatlawal/",
+      image: 'https://res.cloudinary.com/dh4rm7b7b/image/upload/v1705436033/Ridot%20Team/IMG-20240116-WA0002_qrhows.jpg'
+    },
     {
       name: "Peculiar Babalola",
       linkedinUrl: "https://www.linkedin.com/in/peculiar-babalola",
