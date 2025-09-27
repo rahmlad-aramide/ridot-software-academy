@@ -36,7 +36,7 @@ const { isFormOpen, closeForm, openForm } = useFormStore();
           </button>
         </div>
 
-        <div className="mx-auto xs:h-[700px] relative h-[288px] w-full md:max-w-[465px] md:h-[465px] lg:max-w-[532px] lg:h-[532px]">
+        <div className="mx-auto xs:h-[700px] relative h-[320px] w-full md:max-w-[465px] md:h-[465px] lg:max-w-[532px] lg:h-[532px]">
           <Image
             className="rounded-[20px] object-cover"
             src="/home-image.png"
