@@ -62,36 +62,35 @@ export default function WhyChooseRidot() {
     </svg>
   );
   return (
-    <div className="xs:px-6 bg-[rgb(247,247,255)] px-4 py-10 pt-[50px] md:pt-[80px] lg:pt-[120px] pb-[80px] md:px-10 md:pb-[100px]">
-      <h1 className="xs:text-[40px] pb-12 xs:pl-3 text-xl font-bold md:text-5xl">
+    <div className="xs:px-6 bg-[rgb(247,247,255)] px-5 py-10 pt-[50px] pb-[80px] md:px-10 md:pt-[80px] md:pb-[100px] lg:px-15 lg:pt-[120px]">
+      <h1 className="xs:text-[40px] xs:pl-3 pb-12 text-xl font-bold md:text-5xl">
         Why Choose Ridot?
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-7 lg:gap-12 md:pl-[150px] lg:pl-[310px]">
-          {labels.map(({ desc, content, image}, i) => (
-            <div key={i} className="relative">
-              <div className="mx-auto xs:h-[220px] clip-top-right-notch xs:p-8 h-[204px] w-full space-y-3 px-5 pt-7 md:px-6">
-                <div className="relative mb-5 h-[32px] w-[36px]">
-                  <Image
-                    className="object-cover"
-                    src={image}
-                    alt="image"
-                    quality={100}
-                    fill
-                  />
-                </div>
-                <h3 className="xs:text-base text-base font-semibold md:text-xl">
-                  {desc}
-                </h3>
-                <p className="xs:text-base text-sm md:text-base">{content}</p>
+      <div className="grid grid-cols-1 items-center gap-12 md:gap-7 md:pl-[150px] lg:grid-cols-2 lg:gap-12 lg:pl-[310px]">
+        {labels.map(({ desc, content, image }, i) => (
+          <div key={i} className="relative">
+            <div className="xs:h-[220px] clip-top-right-notch xs:p-8 mx-auto h-[204px] w-full space-y-3 px-5 pt-7 md:px-6">
+              <div className="relative mb-5 h-[32px] w-[36px]">
+                <Image
+                  className="object-cover"
+                  src={image}
+                  alt="image"
+                  quality={100}
+                  fill
+                />
               </div>
-
-              <div className="absolute top-[-11px] right-[-0] z-10">
-                <LongArrow />
-              </div>
+              <h3 className="xs:text-base text-base font-semibold md:text-xl">
+                {desc}
+              </h3>
+              <p className="xs:text-base text-sm md:text-base">{content}</p>
             </div>
-          ))}
-        </div>
+
+            <div className="absolute top-[-11px] right-[-0] z-10">
+              <LongArrow />
+            </div>
+          </div>
+        ))}
       </div>
-    
+    </div>
   );
 }
