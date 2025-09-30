@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import image1 from '@/public/one.png';
@@ -27,43 +29,37 @@ export default function AnimatedLogo() {
     image11,
   ];
 
-  // Specify which icons should move toward the center
-  const movingIconsIndexes = [2, 5, 8]; // image5 and image7 (0-based)
-
-  const [orbitRadius, setOrbitRadius] = useState(13); // default radius
+  const [orbitRadius, setOrbitRadius] = useState(13);
   const [movingIndexes, setMovingIndexes] = useState<number[]>([]);
+  const [iconSize, setIconSize] = useState(32);
 
-  // Responsive orbit radius
   useEffect(() => {
     const handleResize = () => {
       setOrbitRadius(window.innerWidth >= 768 ? 13 : 9);
+      setIconSize(window.innerWidth >= 768 ? 48 : 32);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Trigger movement at intervals
   useEffect(() => {
+    const movingIconsIndexes = [2, 5, 8];
     const interval = setInterval(() => {
       setMovingIndexes(movingIconsIndexes);
-
-      // Return icons after 2 seconds
       setTimeout(() => setMovingIndexes([]), 2000);
-    }, 10000); // every 10s
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative flex h-[22rem] w-full items-center justify-center md:w-1/2">
-      {/* Orbit container spins */}
       <div className="animate-spin-slow absolute inset-0">
         {imagesArray.map((src, index) => {
           const angle = (360 / imagesArray.length) * index;
           const rad = (angle * Math.PI) / 180;
           const x = orbitRadius * Math.sin(rad);
           const y = -orbitRadius * Math.cos(rad);
-
           const isMoving = movingIndexes.includes(index);
 
           return (
@@ -74,15 +70,15 @@ export default function AnimatedLogo() {
                 left: '50%',
                 top: '50%',
                 transform: isMoving
-                  ? 'translate(-50%, -50%)' // move to center
+                  ? 'translate(-50%, -50%)'
                   : `translate(${x}rem, ${y}rem) translate(-50%, -50%)`,
               }}
             >
               <Image
                 src={src}
                 alt={`Orbit ${index + 1}`}
-                width={window.innerWidth >= 768 ? 48 : 32}
-                height={window.innerWidth >= 768 ? 48 : 32}
+                width={iconSize}
+                height={iconSize}
                 className="rounded-full shadow-md"
               />
             </div>
@@ -90,7 +86,6 @@ export default function AnimatedLogo() {
         })}
       </div>
 
-      {/* Center logo */}
       <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform">
         <Image
           src="/ridot.png"
@@ -107,7 +102,6 @@ export default function AnimatedLogo() {
           transform-origin: center center;
           animation-direction: reverse;
         }
-
         @keyframes spin {
           from {
             transform: rotate(0deg);
