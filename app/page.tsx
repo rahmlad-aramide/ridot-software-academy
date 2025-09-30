@@ -61,7 +61,7 @@ export default function Home() {
             <span className="relative inline-block">
               Women
               <span className="absolute top-full left-0 -translate-y-[3px]">
-                <div className="bg- relative h-[9px] md:w-[151px] lg:w-[160px]">
+                <div className="relative h-[9px] md:w-[151px] lg:w-[160px]">
                   <Image
                     className="object-cover"
                     src="/Vector.png"
