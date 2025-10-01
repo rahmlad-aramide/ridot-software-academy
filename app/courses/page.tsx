@@ -11,7 +11,7 @@ const coursesSection = [
     content:
       'Product design deals with the design of user interface and experience of a website for a better performance',
     image: '/hero-image.jpg',
-    link: '/courses/product-design',    
+    link: '/courses/product-design',
   },
 
   {
@@ -63,16 +63,16 @@ export default function AllCoursesPage() {
   return (
     <main>
       <div className="pt-20 pb-20">
-        <h1 className="xs:text-[34px] px-6 pb-10 text-[20px] font-bold md:px-2 md:text-[36px] lg:px-20 lg:text-[48px]">
+        <h1 className="xs:text-[34px] px-5 pb-10 text-[20px] font-bold md:px-2 md:text-[36px] lg:px-20 lg:text-[48px]">
           Courses
         </h1>
-        <div className="xs:grid-cols-2 grid grid-cols-1 gap-10 px-5 md:grid-cols-3 lg:gap-15 lg:px-20">
+        <div className="xs:grid-cols-2 grid grid-cols-1 gap-10 px-5 lg:grid-cols-3 lg:gap-15 lg:px-20">
           {coursesSection.map(({ id, course, content, image, link }) => (
             <div
               key={id}
-              className="mx-auto xs:max-w-[528px] xs:h-[391px] h-[417px] w-full space-y-5 rounded-[12px] bg-white px-5 py-5 xs:px-5 xs:py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:h-[360px] md:max-w-[305px] md:space-y-2 md:px-3 md:pt-3 lg:h-[548px] lg:max-w-[363px] lg:space-y-5 lg:px-8 lg:py-10"
+              className="xs:max-w-[528px] xs:h-[391px] xs:px-5 xs:py-5 mx-auto h-[417px] w-full space-y-5 rounded-[12px] bg-white px-5 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:h-[360px] md:max-w-[305px] md:space-y-2 md:px-3 md:pt-3 lg:h-[548px] lg:max-w-[363px] lg:space-y-5 lg:px-8 lg:py-10"
             >
-              <div className="relative w-full h-[170px] md:h-[200px] lg:h-[240px]">
+              <div className="relative h-[170px] w-full md:h-[200px] lg:h-[240px]">
                 <Image
                   className="rounded-[12px] object-cover"
                   src={image}
@@ -88,13 +88,13 @@ export default function AllCoursesPage() {
               </h3>
               <p className="xs:text-[12px] text-sm lg:text-[16px]">{content}</p>
               {link && (
-              <Link
-                href={link}
-                className="mt-1 flex items-center justify-start gap-2 text-sm font-semibold text-[rgb(43,43,208)] lg:text-base"
-              >
-                Learn more
-                <MdArrowForward className="text-xl" />
-              </Link>
+                <Link
+                  href={link}
+                  className="mt-1 flex items-center justify-start gap-2 text-sm font-semibold text-[rgb(43,43,208)] lg:text-base"
+                >
+                  Learn more
+                  <MdArrowForward className="text-xl" />
+                </Link>
               )}
             </div>
           ))}
