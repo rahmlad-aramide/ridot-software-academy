@@ -72,7 +72,7 @@ export default function section() {
                 className={`xs:max-w-[528px] xs:h-[580px] relative h-[324px] w-full max-w-[272px] md:h-[467px] md:max-w-[440px] lg:h-[467px] lg:max-w-[440px]`}
               >
                 <Image
-                  className="object-cover rounded-[16px]"
+                  className="rounded-[16px] object-cover"
                   src={image}
                   alt={`${module} image`}
                   quality={100}

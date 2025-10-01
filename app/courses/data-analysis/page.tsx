@@ -25,8 +25,11 @@ export default function Page() {
             Data Analysis
           </h1>
           <p className="xs:text-2xl text-sm md:text-xl">
-          Gain hands-on experience working with Excel and complex data. Explore the Python programming language, master data analysis and statistical modeling, and then progress into machine learning and algorithms.
-          </p>  
+            Gain hands-on experience working with Excel and complex data.
+            Explore the Python programming language, master data analysis and
+            statistical modeling, and then progress into machine learning and
+            algorithms.
+          </p>
           <button
             type="button"
             className="mt-5 w-[103px] rounded-md bg-[rgb(1,0,128)] px-4 py-2 text-sm hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"

@@ -31,7 +31,7 @@ export default function Mission() {
           </div>
           <div className="mt-6 space-y-4">
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
@@ -40,7 +40,7 @@ export default function Mission() {
               </div>
             </div>
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
@@ -50,7 +50,7 @@ export default function Mission() {
               </div>
             </div>
             <div className="flex items-start gap-3.5">
-              <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
                 <FaCheck fontSize={12} />
               </div>
               <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">

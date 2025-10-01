@@ -26,12 +26,12 @@ const howItWork = [
 
 export default function HowItWorks() {
   return (
-    <div className="xs:pt-[70px] pt-[50px] pb-[50px] xs:pb-[70px]">
+    <div className="xs:pt-[70px] xs:pb-[70px] pt-[50px] pb-[50px]">
       <h1 className="xs:px-6 px-5 text-[32px] font-semibold md:px-8 md:text-5xl lg:px-20 xl:text-[40px]">
         How it works
       </h1>
       <div className="xs:space-y-2 flex flex-col justify-center md:flex-row">
-        {howItWork.map(({ id, content, bgColor, shadowColor}, index) => (
+        {howItWork.map(({ id, content, bgColor, shadowColor }, index) => (
           <div
             key={index}
             className="xs:px-6 flex items-center gap-8 px-5 pt-[20px] text-center md:flex-col md:pt-[50px]"

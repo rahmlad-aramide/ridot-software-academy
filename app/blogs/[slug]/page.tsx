@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { MdArrowBack } from 'react-icons/md';
@@ -10,7 +9,7 @@ interface Params {
 }
 
 interface PageProps {
-   params: Promise<Params>;
+  params: Promise<Params>;
 }
 
 export default async function BlogPage({ params }: PageProps) {
@@ -28,10 +27,13 @@ export default async function BlogPage({ params }: PageProps) {
 
   return (
     <main>
-      <Link href="/blogs" className='flex items-center justify-center space-x-1 py-[6px] px-[8px] w-[85px] h-[40px] border border-[rgb(1,0,128)] rounded-[8px] md:ml-20 md:mt-20 cursor-pointer hover:text-[rgb(1,0,128)] hover:border-white'>
-         <MdArrowBack className="text-xl" />
-    <span>Back</span>
-    </Link>
+      <Link
+        href="/blogs"
+        className="flex h-[40px] w-[85px] cursor-pointer items-center justify-center space-x-1 rounded-[8px] border border-[rgb(1,0,128)] px-[8px] py-[6px] hover:border-white hover:text-[rgb(1,0,128)] md:mt-20 md:ml-20"
+      >
+        <MdArrowBack className="text-xl" />
+        <span>Back</span>
+      </Link>
       <div className="xs:h-[400px] relative h-[200px] w-full px-5 pt-3 md:h-[636px] md:px-20 md:pt-10">
         <div className="relative h-full w-full">
           <Image

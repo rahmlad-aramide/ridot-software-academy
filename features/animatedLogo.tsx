@@ -1,8 +1,7 @@
 'use client';
-
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import image1 from '@/public/one.png';
+import image1 from '@/public/node.png';
 import image2 from '@/public/two.png';
 import image3 from '@/public/three.png';
 import image4 from '@/public/four.png';
@@ -20,8 +19,8 @@ export default function AnimatedLogo() {
     image2,
     image3,
     image4,
-    image5,
     image6,
+    image5,
     image7,
     image8,
     image9,
@@ -32,6 +31,7 @@ export default function AnimatedLogo() {
   const [orbitRadius, setOrbitRadius] = useState(13);
   const [movingIndexes, setMovingIndexes] = useState<number[]>([]);
   const [iconSize, setIconSize] = useState(32);
+  const [rotation, setRotation] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -44,11 +44,27 @@ export default function AnimatedLogo() {
   }, []);
 
   useEffect(() => {
-    const movingIconsIndexes = [2, 5, 8];
+    const getRandomIndexes = () => {
+      const start = Math.floor(Math.random() * imagesArray.length);
+      return [
+        start,
+        (start + 3) % imagesArray.length,
+        (start + 6) % imagesArray.length,
+      ];
+    };
+
     const interval = setInterval(() => {
-      setMovingIndexes(movingIconsIndexes);
+      setMovingIndexes(getRandomIndexes());
       setTimeout(() => setMovingIndexes([]), 2000);
     }, 10000);
+
+    return () => clearInterval(interval);
+  }, [imagesArray.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation((prev) => (prev + 1) % 360);
+    }, 50); // ~20s for full rotation (360 * 55ms ≈ 20s)
     return () => clearInterval(interval);
   }, []);
 
@@ -65,13 +81,14 @@ export default function AnimatedLogo() {
           return (
             <div
               key={index}
-              className="absolute transition-all duration-1000 ease-in-out"
+              className="absolute transition-all duration-1000 ease-out"
               style={{
                 left: '50%',
                 top: '50%',
                 transform: isMoving
                   ? 'translate(-50%, -50%)'
-                  : `translate(${x}rem, ${y}rem) translate(-50%, -50%)`,
+                  : `translate(${x}rem, ${y}rem) translate(-50%, -50%) rotate(${-rotation + angle}deg)`,
+                willChange: 'transform',
               }}
             >
               <Image
@@ -79,7 +96,7 @@ export default function AnimatedLogo() {
                 alt={`Orbit ${index + 1}`}
                 width={iconSize}
                 height={iconSize}
-                className="rounded-full shadow-md"
+                className="rounded-md shadow-md"
               />
             </div>
           );

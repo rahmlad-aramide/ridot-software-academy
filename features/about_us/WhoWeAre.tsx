@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function WhoWeAre() {
   return (
-    <div className="relative flex h-80 md:h-96 xl:h-[34rem] w-full items-center overflow-hidden bg-white px-4 py-10 sm:px-12 lg:px-10 xl:px-20">
+    <div className="relative flex h-80 w-full items-center overflow-hidden bg-white px-4 py-10 sm:px-12 md:h-96 lg:px-10 xl:h-[34rem] xl:px-20">
       {/* CONTENT SECTION */}
       <div className="z-10 flex w-full flex-col gap-4 lg:w-[40rem]">
-        <h2 className="text-xl sm:text-4xl leading-tight sm:leading-[48px] font-bold text-zinc-950 xl:text-5xl">
+        <h2 className="text-xl leading-tight font-bold text-zinc-950 sm:text-4xl sm:leading-[48px] xl:text-5xl">
           Who We Are
         </h2>
-        <p className="lg:pt-4 sm:pt-2 pt-1 text-sm sm:text-base xl:text-2xl leading-tight md:leading-normal xl:leading-9 font-normal text-gray-800">
+        <p className="pt-1 text-sm leading-tight font-normal text-gray-800 sm:pt-2 sm:text-base md:leading-normal lg:pt-4 xl:text-2xl xl:leading-9">
           Ridot Software Academy is a forward-thinking learning platform
           designed to empower women and teenagers—particularly young, unmarried
           females—with the essential digital skills they need to unlock new

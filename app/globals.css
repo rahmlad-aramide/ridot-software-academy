@@ -11,6 +11,10 @@
   --breakpoint-xxs: 30rem; /* 480px */
 }
 
+button {
+  cursor: pointer;
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
