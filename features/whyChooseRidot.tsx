@@ -62,7 +62,7 @@ export default function WhyChooseRidot() {
     </svg>
   );
   return (
-    <div className="xs:px-6 bg-[rgb(247,247,255)] px-5 py-10 pt-[50px] pb-[80px] md:px-10 md:pt-[80px] md:pb-[100px] lg:px-15 lg:pt-[120px]">
+    <div className="xs:px-6 bg-[rgb(247,247,255)] px-5 py-10 pt-[50px] pb-[80px] md:px-10 md:pt-[80px] md:pb-[100px] lg:px-12 lg:pt-[120px]">
       <h1 className="xs:text-[40px] xs:pl-3 pb-12 text-xl font-bold md:text-5xl">
         Why Choose Ridot?
       </h1>

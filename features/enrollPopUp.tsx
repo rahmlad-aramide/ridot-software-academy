@@ -50,8 +50,6 @@ const naijaStates = [
 ];
 
 export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
-  if (!isOpen) return null;
-
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phone, setPhone] = useState('');
@@ -73,8 +71,11 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
     setLastName('');
     setPhone('');
     setEmail('');
-    (setCourse(''), setLocation(''));
+    setCourse('');
+    setLocation('');
   };
+
+  if (!isOpen) return null;
 
   return (
     <div className="bg-opacity-60 xs:p-10 fixed inset-0 z-50 flex items-center justify-center p-5 backdrop-blur-sm md:p-0">
@@ -190,7 +191,7 @@ export default function PopupForm({ isOpen, onClose }: PopupFormProps) {
           </div>
           <button
             type="submit"
-            className="mt-5 w-full cursor-pointer rounded-md bg-[rgb(1,0,128)] py-2 text-sm text-white"
+            className="mt-5 w-full cursor-pointer rounded-md bg-[rgb(1,0,128)] py-2 text-sm text-white hover:bg-blue-800"
           >
             Enroll Now
           </button>
