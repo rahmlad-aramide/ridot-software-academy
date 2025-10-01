@@ -1,10 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-ridot-gray py-10 px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-32 p-4">
+    <footer className="border-ridot-gray border-t bg-white px-4 py-10 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-10 p-4 md:grid-cols-3 md:gap-32">
         {/* Left Section */}
         <div className="space-y-4 text-left">
           <Image
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex justify-start space-x-4">
             <Link
               href="#"
-              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+              className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
                 width="24"
@@ -48,7 +48,7 @@ const Footer = () => {
             </Link>
             <Link
               href="#"
-              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+              className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
                 width="24"
@@ -66,7 +66,7 @@ const Footer = () => {
             </Link>
             <Link
               href="#"
-              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+              className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
                 width="24"
@@ -85,7 +85,7 @@ const Footer = () => {
             </Link>
             <Link
               href="#"
-              className=" rounded-full border p-2 lg:p-3 border-gray-300"
+              className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
                 width="24"
@@ -108,7 +108,7 @@ const Footer = () => {
 
         {/* Pages Section */}
         <div className="text-left">
-          <h3 className="text-sm font-semibold text-gray-900 mb-4">PAGES</h3>
+          <h3 className="mb-4 text-sm font-semibold text-gray-900">PAGES</h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
               <Link href="/" className="hover:text-primary">
@@ -140,17 +140,22 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div className="text-left">
-          <h3 className="text-sm font-semibold text-gray-900 mb-4">
+          <h3 className="mb-4 text-sm font-semibold text-gray-900">
             CONTACT INFORMATION
           </h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
-              <Link href="mailto:ridotsoftwareacademy@gmail.com" className="hover:text-primary">
+              <Link
+                href="mailto:ridotsoftwareacademy@gmail.com"
+                className="hover:text-primary"
+              >
                 ridotsoftwareacademy@gmail.com
               </Link>
             </li>
             <li>
-              <Link href="tel:+2347083143779" className="hover:text-primary">+2347083143779</Link>
+              <Link href="tel:+2347083143779" className="hover:text-primary">
+                +2347083143779
+              </Link>
             </li>
             <li>Lagos, Nigeria</li>
           </ul>

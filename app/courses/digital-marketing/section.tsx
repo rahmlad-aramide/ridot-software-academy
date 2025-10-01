@@ -34,7 +34,7 @@ const digitalMarketing = [
       'Paid advertising is an essential part of digital marketing. This module introduces students to PPC campaigns using platforms like Google Ads and Meta Ads. Topics include keyword bidding, ad copywriting, audience targeting, A/B testing, and budget optimization to create cost-effective campaigns that generate leads and conversions.',
     image: '/dm-image-four.png',
     bgColor: 'bg-[rgb(1,0,128)]',
-    textColor: 'text-white'
+    textColor: 'text-white',
   },
 
   {
@@ -52,7 +52,7 @@ const digitalMarketing = [
       'Measuring and optimizing marketing performance is essential for success. This module covers Google Analytics, social media insights, and conversion tracking tools to analyze campaign effectiveness. Students will learn how to interpret data, set key performance indicators (KPIs), and optimize landing pages and funnels for higher conversion rates.',
     image: '/dm-image-six.png',
     bgColor: 'bg-[rgb(1,0,128)]',
-    textColor: 'text-white'
+    textColor: 'text-white',
   },
 ];
 
@@ -60,7 +60,7 @@ export default function section() {
   return (
     <div className="h-full w-full">
       {digitalMarketing.map(
-        ({ module, heading, content, image, bgColor, textColor}, index) => (
+        ({ module, heading, content, image, bgColor, textColor }, index) => (
           <div
             key={index}
             className={`xs:p-5 xs:pt-[80px] xs:pb-[80px] w-full p-3 pt-[50px] pb-[40px] ${bgColor}`}
@@ -69,10 +69,10 @@ export default function section() {
               className={`flex flex-col items-center gap-6 md:flex-row md:flex-row-reverse md:justify-center md:gap-10 md:px-0 lg:gap-30 lg:px-10`}
             >
               <div
-                className={`relative h-[304px] w-full max-w-[288px] xs:max-w-[528px] xs:h-[485px] md:h-[400px] md:max-w-[408px] lg:h-[400px] lg:max-w-[438px]`}
+                className={`xs:max-w-[528px] xs:h-[485px] relative h-[304px] w-full max-w-[288px] md:h-[400px] md:max-w-[408px] lg:h-[400px] lg:max-w-[438px]`}
               >
                 <Image
-                  className="object-cover rounded-[16px]"
+                  className="rounded-[16px] object-cover"
                   src={image}
                   alt={`${module} image`}
                   quality={100}
@@ -83,13 +83,19 @@ export default function section() {
               </div>
 
               <div className="w-full space-y-2 text-left md:max-w-[470px] lg:max-w-[603px]">
-                <p className={`text-[12px] font-semibold text-[rgb(0,0,90)] ${textColor}`}>
+                <p
+                  className={`text-[12px] font-semibold text-[rgb(0,0,90)] ${textColor}`}
+                >
                   {module}
                 </p>
-                <h2 className={`text-[20px] xs:text-[32px] md:text-[32px] font-semibold text-[rgb(0,0,90)] ${textColor}`}>
+                <h2
+                  className={`xs:text-[32px] text-[20px] font-semibold text-[rgb(0,0,90)] md:text-[32px] ${textColor}`}
+                >
                   {heading}
                 </h2>
-                <p className={`text-sm xs:text-base md:text-[24px] text-gray ${textColor}`}>
+                <p
+                  className={`xs:text-base text-gray text-sm md:text-[24px] ${textColor}`}
+                >
                   {content}
                 </p>
               </div>

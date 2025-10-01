@@ -16,7 +16,7 @@ export default function Vision() {
         </p>
         <ul className="mb-10 space-y-4 text-sm">
           <li className="flex items-start gap-2">
-            <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
@@ -27,7 +27,7 @@ export default function Vision() {
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
@@ -36,7 +36,7 @@ export default function Vision() {
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
@@ -45,7 +45,7 @@ export default function Vision() {
             </p>
           </li>
           <li className="flex items-start gap-2">
-            <div className="rounded-md border bg-gray-900 p-0.5 mt-1 text-white">
+            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">

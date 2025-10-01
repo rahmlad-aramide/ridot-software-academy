@@ -58,7 +58,6 @@ export default function Team() {
                 sizes="100vw"
                 priority
               />
-              
             </div>
             <div className="mt-6">
               <h3 className="text-base leading-normal font-semibold text-[#010080]">

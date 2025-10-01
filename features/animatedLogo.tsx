@@ -33,7 +33,6 @@ export default function AnimatedLogo() {
   const [iconSize, setIconSize] = useState(32);
   const [rotation, setRotation] = useState(0);
 
-
   useEffect(() => {
     const handleResize = () => {
       setOrbitRadius(window.innerWidth >= 768 ? 13 : 9);
@@ -45,29 +44,29 @@ export default function AnimatedLogo() {
   }, []);
 
   useEffect(() => {
-  const getRandomIndexes = () => {
-    const start = Math.floor(Math.random() * imagesArray.length);
-    return [
-      start,
-      (start + 3) % imagesArray.length,
-      (start + 6) % imagesArray.length,
-    ];
-  };
+    const getRandomIndexes = () => {
+      const start = Math.floor(Math.random() * imagesArray.length);
+      return [
+        start,
+        (start + 3) % imagesArray.length,
+        (start + 6) % imagesArray.length,
+      ];
+    };
 
-  const interval = setInterval(() => {
-    setMovingIndexes(getRandomIndexes());
-    setTimeout(() => setMovingIndexes([]), 2000);
-  }, 10000);
+    const interval = setInterval(() => {
+      setMovingIndexes(getRandomIndexes());
+      setTimeout(() => setMovingIndexes([]), 2000);
+    }, 10000);
 
-  return () => clearInterval(interval);
-}, [imagesArray.length]);
+    return () => clearInterval(interval);
+  }, [imagesArray.length]);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setRotation((prev) => (prev + 1) % 360);
-  }, 50); // ~20s for full rotation (360 * 55ms ≈ 20s)
-  return () => clearInterval(interval);
-}, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation((prev) => (prev + 1) % 360);
+    }, 50); // ~20s for full rotation (360 * 55ms ≈ 20s)
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative flex h-[22rem] w-full items-center justify-center md:w-1/2">
@@ -88,7 +87,7 @@ useEffect(() => {
                 top: '50%',
                 transform: isMoving
                   ? 'translate(-50%, -50%)'
-                  : `translate(${x}rem, ${y}rem) translate(-50%, -50%) rotate(${- rotation + angle}deg)`,
+                  : `translate(${x}rem, ${y}rem) translate(-50%, -50%) rotate(${-rotation + angle}deg)`,
                 willChange: 'transform',
               }}
             >

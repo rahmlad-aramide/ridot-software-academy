@@ -25,10 +25,10 @@ export default function Page() {
             Back-end Development
           </h1>
           <p className="xs:text-2xl text-sm md:text-xl">
-            Let&apos;s help you become a professional Back-End Web Developer. You&apos;ll
-            master the skills needed to build powerful and scalable server-side
-            applications while developing a strong portfolio. Learn the
-            fundamentals of Node.js, Express, SQL & NoSQL databases, API
+            Let&apos;s help you become a professional Back-End Web Developer.
+            You&apos;ll master the skills needed to build powerful and scalable
+            server-side applications while developing a strong portfolio. Learn
+            the fundamentals of Node.js, Express, SQL & NoSQL databases, API
             development, authentication, and deployment using platforms like
             Vercel and AWS..
           </p>

@@ -16,7 +16,6 @@ const dataAnalysis = [
       'This module provides an overview of data analysis, its importance in decision-making, and the tools used in the industry. Students will learn key concepts such as data types, data structures, and the data analysis process. The module sets the foundation for working with data efficiently and drawing meaningful insights.',
     image: '/da-image-two.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
   {
@@ -34,7 +33,6 @@ const dataAnalysis = [
       'Structured Query Language (SQL) is essential for managing and querying databases. This week introduces SQL basics, including writing queries, filtering data, using SELECT statements, and understanding database structures. Students will gain hands-on experience querying real-world datasets.',
     image: '/da-image-four.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
   {
@@ -52,17 +50,15 @@ const dataAnalysis = [
       'Python is a powerful language for data analysis. This week covers the basics, including Python syntax, working with libraries like Pandas and NumPy, and performing essential data operations such as reading, cleaning, and transforming datasets.',
     image: '/da-image-six.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
-   {
+  {
     module: 'Module 7',
     heading: 'Python for Data Analysis (Part 2)',
     content:
       'Continuing with Python, students will learn more advanced techniques, including data visualization with Matplotlib and Seaborn, exploratory data analysis (EDA), and statistical analysis to uncover patterns and insights in data.',
     image: '/da-image-seven.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
   {
@@ -72,7 +68,6 @@ const dataAnalysis = [
       'This week focuses on handling large datasets, automating workflows, and working with advanced data manipulation techniques. Students will also explore real-world applications of Python in data science, including working with APIs and web scraping.',
     image: '/da-image-eight.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
   {
@@ -82,7 +77,6 @@ const dataAnalysis = [
       'Power BI is a leading business intelligence tool used for data visualization and reporting. This week introduces students to Power BI’s interface, data modeling, dashboard creation, and basic visualization techniques to present data effectively.',
     image: '/da-image-nine.png',
     bgColor: 'bg-[rgb(239,239,255)]',
-    
   },
 
   {
@@ -92,7 +86,6 @@ const dataAnalysis = [
       'Building on the previous week, students will dive deeper into Power BI, learning about DAX (Data Analysis Expressions), advanced data transformations, creating interactive reports, and connecting to multiple data sources for dynamic reporting.',
     image: '/da-image-ten.png',
     bgColor: 'bg-[rgb(239,239,255)',
-    
   },
 ];
 
@@ -100,7 +93,7 @@ export default function section() {
   return (
     <div className="h-full w-full">
       {dataAnalysis.map(
-        ({ module, heading, content, image, bgColor}, index) => (
+        ({ module, heading, content, image, bgColor }, index) => (
           <div
             key={index}
             className={`xs:p-5 xs:pt-[80px] xs:pb-[80px] w-full p-3 pt-[50px] pb-[40px] ${bgColor}`}
@@ -109,10 +102,10 @@ export default function section() {
               className={`flex flex-col items-center gap-6 md:flex-row md:flex-row-reverse md:justify-center md:gap-10 md:px-0 lg:gap-30 lg:px-10`}
             >
               <div
-                className={`relative h-[304px] w-full max-w-[288px] xs:max-w-[528px] xs:h-[485px] md:h-[400px] md:max-w-[408px] lg:h-[400px] lg:max-w-[438px]`}
+                className={`xs:max-w-[528px] xs:h-[485px] relative h-[304px] w-full max-w-[288px] md:h-[400px] md:max-w-[408px] lg:h-[400px] lg:max-w-[438px]`}
               >
                 <Image
-                  className="object-cover rounded-[16px]"
+                  className="rounded-[16px] object-cover"
                   src={image}
                   alt={`${module} image`}
                   quality={100}
@@ -126,10 +119,10 @@ export default function section() {
                 <p className="text-[12px] font-semibold text-[rgb(0,0,90)]">
                   {module}
                 </p>
-                <h2 className="text-[20px] xs:text-[32px] md:text-[32px] font-semibold text-[rgb(0,0,90)]">
+                <h2 className="xs:text-[32px] text-[20px] font-semibold text-[rgb(0,0,90)] md:text-[32px]">
                   {heading}
                 </h2>
-                <p className="text-sm xs:text-base md:text-[24px] text-gray">
+                <p className="xs:text-base text-gray text-sm md:text-[24px]">
                   {content}
                 </p>
               </div>

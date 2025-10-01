@@ -7,7 +7,7 @@ interface svgProps {
 export default function Svg4({ className }: svgProps) {
   return (
     <svg
-    className={className}
+      className={className}
       width="61"
       height="51"
       viewBox="0 0 61 51"

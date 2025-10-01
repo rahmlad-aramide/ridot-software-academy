@@ -67,7 +67,7 @@ export default function section() {
               className={`flex flex-col items-center gap-6 md:flex-row md:flex-row-reverse md:justify-center md:gap-10 md:px-0 lg:gap-30 lg:px-10`}
             >
               <div
-                className={`relative h-[288px] w-full max-w-[280px] xs:max-w-[430px] xs:h-[450px] md:h-[395px] md:max-w-[380px] lg:h-[450px] lg:max-w-[430px]`}
+                className={`xs:max-w-[430px] xs:h-[450px] relative h-[288px] w-full max-w-[280px] md:h-[395px] md:max-w-[380px] lg:h-[450px] lg:max-w-[430px]`}
               >
                 <Image
                   className="object-cover"

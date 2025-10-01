@@ -1,7 +1,7 @@
 echo "🔍 Running pre-commit checks..."
 
-# Remove this if it's causing issues
-# npm test
-
 echo "🔍 Running eslint checks..."
 npm run lint
+
+echo "🔍 Running format checks..."
+npm run format:check
