@@ -74,7 +74,7 @@ export default function WhyChooseRidot() {
                 <Image
                   className="object-cover"
                   src={image}
-                  alt="image"
+                  alt={desc}
                   quality={100}
                   fill
                 />

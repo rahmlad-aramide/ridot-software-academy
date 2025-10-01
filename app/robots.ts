@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://ridotsoftwareacademy.com/',
+    sitemap: 'https://ridotsoftwareacademy.com/sitemap.xml',
   }
 }
