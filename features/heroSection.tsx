@@ -1,15 +1,13 @@
 import AnimatedLogo from './animatedLogo';
 import { useFormStore } from '@/app/useFormStore';
-import PopupForm from '@/features/enrollPopUp';
 
 export default function HeroSection() {
-  const { isFormOpen, closeForm, openForm } = useFormStore();
+  const { openForm } = useFormStore();
   return (
     <div className="flex flex-col items-center justify-center gap-20 pt-10 pb-20 md:gap-7 md:px-5 lg:flex-row lg:gap-15 lg:px-10">
       <div className="mx-auto w-full max-w-[650px] space-y-6 px-5 text-center md:text-left">
         <h1 className="xs:text-5xl text-[32px] leading-tight font-bold md:text-[36px] lg:text-6xl lg:leading-[70px]">
-          Empowering{' '}
-          <span className="text-[rgb(43,43,208)]">Women & Teenagers</span>{' '}
+          Empowering <span className="text-blue-800">Women & Teenagers</span>{' '}
           Through Tech Education
         </h1>
         <p className="xs:text-2xl text-gray text-center text-sm md:text-justify md:text-base lg:text-xl">
@@ -31,7 +29,6 @@ export default function HeroSection() {
       <div className="flex w-full justify-center lg:w-1/2">
         <AnimatedLogo />
       </div>
-      <PopupForm isOpen={isFormOpen} onClose={closeForm} />
     </div>
   );
 }

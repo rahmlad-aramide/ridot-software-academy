@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import { useFormStore } from '@/app/useFormStore';
-import PopupForm from '@/features/enrollPopUp';
 
 export default function TechBarriers() {
-  const { isFormOpen, closeForm, openForm } = useFormStore();
+  const { openForm } = useFormStore();
   return (
     <div className="flex flex-col items-center justify-center gap-y-10 px-5 pt-[50px] pb-[20px] md:flex-row md:gap-6 md:px-10 lg:gap-10 lg:px-15">
       <div className="xs:h-[537px] relative mx-auto h-[537px] w-full rounded-[20px] shadow-[0_4px_20px_rgba(2,1,129,0.63)] backdrop-blur-[25px] md:h-[475px] lg:h-[575px]">
@@ -51,7 +50,6 @@ export default function TechBarriers() {
           Enroll Now
         </button>
       </div>
-      <PopupForm isOpen={isFormOpen} onClose={closeForm} />
     </div>
   );
 }

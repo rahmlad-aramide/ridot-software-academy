@@ -73,7 +73,7 @@ export default function AllCourses() {
               <Image
                 className="rounded-[12px] object-cover"
                 src={image}
-                alt="img"
+                alt="courses-image"
                 quality={100}
                 fill
                 sizes="100vw"

@@ -24,7 +24,7 @@ export default function SuccessStories() {
     {
       name: 'Funmilola Aremu',
       content:
-        "Real and interesting!  Not like those who only say what they can't do. I look forward to an impactful week with RIdot Software Academy.",
+        "Real and interesting!  Not like those who only say what they can't do. I look forward to an impactful week with Ridot Software Academy.",
     },
 
     {
@@ -36,11 +36,11 @@ export default function SuccessStories() {
     {
       name: 'Precious Adenopo',
       content:
-        'My sales within this short period with Ridot Software Academy has been high. I had new customers and the potential ones are maksing enquiries.',
+        'My sales within this short period with Ridot Software Academy has been high. I had new customers and the potential ones are making enquiries.',
     },
 
     {
-      name: '---------',
+      name: 'Anonymous',
       content:
         "Thanks for sharing your knowledge with us, before this class started, I was a novice, but now.. when giving thanks, I can't forget our great tutors",
     },

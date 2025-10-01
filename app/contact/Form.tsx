@@ -63,7 +63,7 @@ export default function Form() {
 
           <button
             type="submit"
-            className="mt-5 w-full cursor-pointer rounded-md bg-[rgb(1,0,128)] py-2 text-sm text-white hover:bg-blue-800"
+            className="bg-primary mt-5 w-full cursor-pointer rounded-md py-2 text-sm text-white hover:bg-blue-800"
           >
             Send Message
           </button>
