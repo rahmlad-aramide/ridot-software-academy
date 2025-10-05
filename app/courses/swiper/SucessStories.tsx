@@ -16,21 +16,33 @@ export default function SuccessStories() {
     },
 
     {
-      name: 'Ganiyu Sofiat',
+      name: 'Mrs Joseph',
       content:
-        "I attended the 4-days Microsoft office workshop, and I must say- It was fantastic, exciting, and educative. I am excited and lucky to have attended the workshop. It was a program one can't afford to miss.",
+        'The training waas fantastic, educating and challenging. Thanks for the innovation to involve women in tech. More grease to your elbows.',
     },
 
     {
-      name: 'Ganiyu Sofiat',
+      name: 'Funmilola Aremu',
       content:
-        "I attended the 4-days Microsoft office workshop, and I must say- It was fantastic, exciting, and educative. I am excited and lucky to have attended the workshop. It was a program one can't afford to miss.",
+        "Real and interesting!  Not like those who only say what they can't do. I look forward to an impactful week with Ridot Software Academy.",
     },
 
     {
-      name: 'Ganiyu Sofiat',
+      name: 'Enitan Badmus',
       content:
-        "I attended the 4-days Microsoft office workshop, and I must say- It was fantastic, exciting, and educative. I am excited and lucky to have attended the workshop. It was a program one can't afford to miss.",
+        "Thank you so much Ridot Software Academy for this great opportunity you're giving females, this is once in a time privilege and thanks to our great tutors.",
+    },
+
+    {
+      name: 'Precious Adenopo',
+      content:
+        'My sales within this short period with Ridot Software Academy has been high. I had new customers and the potential ones are making enquiries.',
+    },
+
+    {
+      name: 'Anonymous',
+      content:
+        "Thanks for sharing your knowledge with us, before this class started, I was a novice, but now.. when giving thanks, I can't forget our great tutors",
     },
   ];
 
