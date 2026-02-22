@@ -6,7 +6,7 @@ import blog5 from "../../assets/images/blog5.png";
 
 export const blogPosts = [
   {
-    id: "5",
+    id: "insights-from-free-digital-skills-training",
     image: blog5,
     title:
       "Insights from Our Ongoing Free Digital Skills Training for 150 Women",
@@ -52,11 +52,11 @@ export const blogPosts = [
       <h2 class="text-2xl font-semibold mt-4 mb-2">Donor Acknowledgement</h2>
       <p>We would like to express our sincere appreciation to the kind-hearted and growth-driven professionals who supported this initiative financially:</p>
       <ul class="list-disc list-inside mb-4">
-        <li>Dr. Dauda Monsur</li>
-        <li>Dr. Ayisat Adedokun</li>
+        <li>Dr. Dauda Monsur - PhD at Louisana State University, USA</li>
+        <li>Mrs. Ayisat Adedokun - Ph.D at University of Rochester, USA</li>
         <li>Dr. Kamil Ajagbe</li>
-        <li>AbdulRoqeeb Daramola</li>
-        <li>Ibrrahim AbdulAfeez</li>
+        <li>AbdulRoqeeb Daramola - PhD Student at the University of Calgary, CA</li>
+        <li>Ibrahim AbdulAfeez - CEO iBAF Global Enterprise</li>
       </ul>
 
       <h2 class="text-2xl font-semibold mt-4 mb-2">Continuity & Partnership</h2>
@@ -67,10 +67,10 @@ export const blogPosts = [
       
       <p class="mt-4">Together, we can transform the digital lives of African women through technology.</p>
     `,
-    link: "/blog/5",
+    link: "/blog/insights-from-free-digital-skills-training",
   },
   {
-    id: "4",
+    id: "how-to-learn-data-science-from-scratch",
     image: blog4,
     title: "How to Learn Data Science from Scratch",
     category: "data",
@@ -117,10 +117,10 @@ export const blogPosts = [
       </ul>
       <p>To stay accountable throughout your journey, enrolling in a trusted tech school that offers structured courses in data science is recommended. I suggest exploring <a href="https://ridot.org" class="text-blue-500 underline">ridot.org</a>—a great place to advance your career in data science.</p>
     `,
-    link: "/blog/4",
+    link: "/blog/how-to-learn-data-science-from-scratch",
   },
   {
-    id: "1",
+    id: "tech-or-non-tech-skill",
     image: blog1,
     title: "Program Manager: A Tech or Non-Tech Skill?",
     category: "general",
@@ -146,10 +146,10 @@ export const blogPosts = [
         </ul>
         <p>As you&apos;ve been able to read till this moment, you would realize that project management has gone beyond the old style of collating written projects, sending emails through the post office, and walking far distances to examine and approve a project. All of these and more could be achieved while sitting with your technological devices. As a program manager who wants to deliver up-to-date tasks, one should embrace tech skills applicable in this line.</p>
       `,
-    link: "/blog/1",
+    link: "/blog/tech-or-non-tech-skill",
   },
   {
-    id: "2",
+    id: "technology-development-in-nigeria",
     image: blog2,
     title: "Technology Development in Nigeria",
     category: "engineering",
@@ -164,10 +164,10 @@ export const blogPosts = [
         <p>In recent years, Nigeria has witnessed a surge in tech startups, particularly in sectors like fintech, e-commerce, and agritech. Initiatives like the Nigerian Communications Commission’s (NCC) licensing of spectrum bands for broadband internet have helped improve internet access and connectivity nationwide.</p>
         <p>Nigeria is still developing in the path of technology and we hope to see more wonderful innovations.</p>
       `,
-    link: "/blog/2",
+    link: "/blog/technology-development-in-nigeria",
   },
   {
-    id: "3",
+    id: "tech-careers-for-women",
     image: blog3,
     title: "Tech Careers for Women",
     category: "product",
@@ -209,6 +209,6 @@ export const blogPosts = [
         </ul>
         <p>All the aforementioned are some of the tech career paths to be explored. To commence your journey, you can sign up at <a href="https://ridot.org/pricing" class="text-blue-500 underline">ridot.org/pricing</a> to enjoy the great offer.</p>
       `,
-    link: "/blog/3",
+    link: "/blog/tech-careers-for-women",
   },
 ];
