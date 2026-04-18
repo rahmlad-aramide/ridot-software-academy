@@ -31,7 +31,6 @@ const navItems = [
       { label: 'Product', href: '/blogs?post=product' },
     ],
   },
-  { label: 'Pricing', href: '/pricing' },
 ];
 
 const Navbar = () => {

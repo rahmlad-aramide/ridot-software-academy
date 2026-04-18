@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="border-ridot-gray xs:px-8 border-t bg-white px-4 py-10 lg:px-14">
-      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-10 p-4 md:grid-cols-3 md:gap-32">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 p-4 md:grid-cols-3 md:gap-32">
         {/* Left Section */}
         <div className="space-y-4 text-left">
           <Image
@@ -13,10 +13,15 @@ const Footer = () => {
             height={34}
             alt="Ridot Logo"
           />
-          <p className="text-sm text-gray-600">
-            Empowering future developers with cutting-edge training in software
-            development.
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="text-sm text-gray-600">
+              Empowering future developers with cutting-edge training in
+              software development.
+            </p>
+            <p className="text-xs text-gray-600 italic">
+              Women in tech: opportunities abound
+            </p>
+          </div>
           <div className="flex justify-start space-x-4">
             <Link
               href="https://www.instagram.com/p/CbNH1zoIrag/?igshid=YmMyMTA2M2Y="
@@ -112,7 +117,7 @@ const Footer = () => {
 
         {/* Pages Section */}
         <div className="text-left">
-          <h3 className="mb-4 text-sm font-semibold text-gray-900">PAGES</h3>
+          <h3 className="mb-4 text-sm font-semibold text-gray-900">LINKS</h3>
           <ul className="space-y-2 text-sm text-gray-700">
             <li>
               <Link href="/" className="hover:text-primary">
