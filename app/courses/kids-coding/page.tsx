@@ -25,7 +25,8 @@ export default function Page() {
           </h1>
           <p className="xs:text-2xl text-sm md:text-xl">
             Early exposure to technology and coding for teenagers and kids.
-            Build a strong foundation in tech through fun and interactive projects.
+            Build a strong foundation in tech through fun and interactive
+            projects.
           </p>
           <button
             type="button"
@@ -43,37 +44,53 @@ export default function Page() {
               Target: <span className="font-normal">Teenagers & Kids</span>
             </p>
             <p className="font-bold">
-              Keywords: <span className="font-normal">coding for kids, teenagers in tech</span>
+              Keywords:{' '}
+              <span className="font-normal">
+                coding for kids, teenagers in tech
+              </span>
             </p>
           </div>
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 mt-5 flex flex-col space-y-5 md:mt-0 md:flex-col">
-             <p className="font-bold">
-              Outcome: <span className="font-normal">Early exposure to technology and coding</span>
+            <p className="font-bold">
+              Outcome:{' '}
+              <span className="font-normal">
+                Early exposure to technology and coding
+              </span>
             </p>
           </div>
         </div>
       </div>
 
-      <div className="py-20 px-6 lg:px-20 bg-gray-50">
-          <h2 className="text-3xl font-bold mb-10 text-center text-primary">Course Modules</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold mb-4">HTML & CSS Basics</h3>
-                  <p className="text-gray-600">Learn how to structure and style simple web pages.</p>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold mb-4">JavaScript Intro</h3>
-                  <p className="text-gray-600">Bring websites to life with basic programming logic.</p>
-              </div>
-              <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold mb-4">Scratch Programming</h3>
-                  <p className="text-gray-600">Visual programming to understand logic and creativity.</p>
-              </div>
-               <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                  <h3 className="text-xl font-bold mb-4">Fun Tech Projects</h3>
-                  <p className="text-gray-600">Apply what you&apos;ve learned to build exciting small projects.</p>
-              </div>
+      <div className="bg-gray-50 px-6 py-20 lg:px-20">
+        <h2 className="text-primary mb-10 text-center text-3xl font-bold">
+          Course Modules
+        </h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="mb-4 text-xl font-bold">HTML & CSS Basics</h3>
+            <p className="text-gray-600">
+              Learn how to structure and style simple web pages.
+            </p>
           </div>
+          <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="mb-4 text-xl font-bold">JavaScript Intro</h3>
+            <p className="text-gray-600">
+              Bring websites to life with basic programming logic.
+            </p>
+          </div>
+          <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="mb-4 text-xl font-bold">Scratch Programming</h3>
+            <p className="text-gray-600">
+              Visual programming to understand logic and creativity.
+            </p>
+          </div>
+          <div className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="mb-4 text-xl font-bold">Fun Tech Projects</h3>
+            <p className="text-gray-600">
+              Apply what you&apos;ve learned to build exciting small projects.
+            </p>
+          </div>
+        </div>
       </div>
 
       <HowItWorks />

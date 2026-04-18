@@ -60,7 +60,10 @@ export default function Page() {
               Mode: <span className="font-normal">Online</span>
             </p>
             <p className="font-bold">
-              Outcome: <span className="font-normal">Build backend systems and APIs</span>
+              Outcome:{' '}
+              <span className="font-normal">
+                Build backend systems and APIs
+              </span>
             </p>
           </div>
         </div>

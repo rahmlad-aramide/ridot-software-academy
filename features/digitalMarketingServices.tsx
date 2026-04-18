@@ -41,7 +41,7 @@ export default function DigitalMarketingServices() {
     <div className="bg-gray-50 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-primary text-lg font-semibold uppercase tracking-wide">
+          <h2 className="text-primary text-lg font-semibold tracking-wide uppercase">
             Digital Marketing & Website Services
           </h2>
           <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -59,21 +59,25 @@ export default function DigitalMarketingServices() {
         </div>
 
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-10">What We Offer</h3>
+          <h3 className="mb-10 text-center text-2xl font-bold text-gray-900">
+            What We Offer
+          </h3>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {offers.map((offer) => (
               <div
                 key={offer.title}
-                className="relative rounded-2xl bg-white p-8 shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                className="relative rounded-2xl border border-gray-100 bg-white p-8 shadow-md transition-shadow hover:shadow-lg"
               >
-                <h4 className="text-lg font-bold text-primary">{offer.title}</h4>
+                <h4 className="text-primary text-lg font-bold">
+                  {offer.title}
+                </h4>
                 <p className="mt-4 text-gray-600">{offer.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-20 rounded-3xl bg-primary p-8 lg:p-12 text-white shadow-xl">
+        <div className="bg-primary mt-20 rounded-3xl p-8 text-white shadow-xl lg:p-12">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="lg:w-1/2">
               <h3 className="text-3xl font-extrabold">
@@ -85,19 +89,21 @@ export default function DigitalMarketingServices() {
               <ul className="mt-8 space-y-4">
                 {benefits.map((benefit) => (
                   <li key={benefit} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-green-400 flex-shrink-0" />
+                    <FaCheckCircle className="flex-shrink-0 text-green-400" />
                     <span className="text-lg">{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="mt-10 lg:mt-0 lg:w-1/3 flex flex-col gap-4">
-              <div className="rounded-xl bg-white/10 p-6 backdrop-blur-sm border border-white/20">
-                 <p className="text-xl font-bold">Ready to grow?</p>
-                 <p className="mt-2 text-blue-50">Contact us today for a free consultation.</p>
-                 <button className="mt-6 w-full rounded-lg bg-white px-6 py-3 font-bold text-primary hover:bg-blue-50 transition-colors">
-                    Get Started
-                 </button>
+            <div className="mt-10 flex flex-col gap-4 lg:mt-0 lg:w-1/3">
+              <div className="rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
+                <p className="text-xl font-bold">Ready to grow?</p>
+                <p className="mt-2 text-blue-50">
+                  Contact us today for a free consultation.
+                </p>
+                <button className="text-primary mt-6 w-full rounded-lg bg-white px-6 py-3 font-bold transition-colors hover:bg-blue-50">
+                  Get Started
+                </button>
               </div>
             </div>
           </div>

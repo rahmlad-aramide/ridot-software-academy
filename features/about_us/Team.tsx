@@ -62,7 +62,7 @@ export default function Team() {
         {teamMembers.map((team, i) => (
           <li
             key={i}
-            className="flex-1 rounded-xl bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+            className="flex-1 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
           >
             <div className="relative h-80 w-full overflow-hidden rounded-lg">
               <Image
@@ -80,16 +80,14 @@ export default function Team() {
                 <h3 className="text-lg font-bold text-[#010080]">
                   {team.name}
                 </h3>
-                <p className="text-sm font-medium text-zinc-500">
-                  {team.role}
-                </p>
+                <p className="text-sm font-medium text-zinc-500">{team.role}</p>
               </div>
               {team.linkedin && team.linkedin !== '#' && (
                 <Link
                   href={team.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0a66c2] hover:text-blue-800 transition-colors"
+                  className="text-[#0a66c2] transition-colors hover:text-blue-800"
                 >
                   <FaLinkedin size={24} />
                 </Link>

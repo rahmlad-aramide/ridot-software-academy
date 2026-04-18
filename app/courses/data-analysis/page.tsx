@@ -60,7 +60,8 @@ export default function Page() {
               Mode: <span className="font-normal">Online</span>
             </p>
             <p className="font-bold">
-              Outcome: <span className="font-normal">Job-ready Data Analyst</span>
+              Outcome:{' '}
+              <span className="font-normal">Job-ready Data Analyst</span>
             </p>
           </div>
         </div>
