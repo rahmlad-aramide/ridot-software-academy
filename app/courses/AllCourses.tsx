@@ -62,7 +62,8 @@ const coursesSection = [
     course: 'Kids Coding Program',
     content:
       'Early exposure to technology and coding for teenagers and kids through HTML, CSS, JavaScript basics, and Scratch programming.',
-    image: '/logo.jpeg',
+    image:
+      'https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     link: '/courses/kids-coding',
   },
 ];

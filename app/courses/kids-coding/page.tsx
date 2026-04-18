@@ -6,11 +6,11 @@ import Faqs from '@/features/about_us/Faqs';
 export default function Page() {
   return (
     <main>
-      <div className="xs:h-[600px] relative h-[520px] w-full md:h-[530px]">
+      <div className="xs:h-150 relative h-130 w-full md:h-132.5">
         <div className="relative h-full w-full">
           <Image
             className="object-cover"
-            src="/logo.jpeg"
+            src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="kids-coding-img"
             quality={100}
             fill
@@ -19,7 +19,7 @@ export default function Page() {
           />
           <div className="bg-opacity-0 absolute inset-0 bg-[rgba(0,0,0,0.75)]"></div>
         </div>
-        <div className="xxs:px-[30px] xs:pt-[70px] absolute top-0 flex w-full flex-col space-y-5 px-[20px] pt-[50px] text-white md:max-w-[780px] md:px-0 md:pt-[100px] md:pl-[80px] lg:pl-[120px]">
+        <div className="xxs:px-7.5 xs:pt-17.5 absolute top-0 flex w-full flex-col space-y-5 px-5 pt-12.5 text-white md:max-w-[780px] md:px-0 md:pt-[100px] md:pl-[80px] lg:pl-[120px]">
           <h1 className="xs:text-5xl text-[36px] leading-tight font-bold md:text-6xl">
             Kids Coding Program
           </h1>
