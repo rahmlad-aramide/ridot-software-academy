@@ -64,7 +64,7 @@ const Navbar = () => {
 
   return (
     <nav className="border-ridot-gray sticky top-0 z-50 border bg-white">
-      <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between p-4">
         <Link
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"

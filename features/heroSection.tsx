@@ -5,7 +5,7 @@ export default function HeroSection() {
   const { openForm } = useFormStore();
   return (
     <div className="flex flex-col items-center justify-center gap-20 pt-10 pb-20 md:gap-7 md:px-5 lg:flex-row lg:gap-15 lg:px-10">
-      <div className="mx-auto w-full max-w-[650px] space-y-6 px-5 text-center md:text-left">
+      <div className="mx-auto w-full max-w-162.5 space-y-6 px-5 text-center md:text-left">
         <h1 className="xs:text-5xl text-[32px] leading-tight font-bold md:text-[36px] lg:text-6xl lg:leading-[70px]">
           Empowering <span className="text-blue-800">Women & Teenagers</span>{' '}
           Through Tech Education
