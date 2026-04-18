@@ -16,8 +16,7 @@ export default function WhyChooseUs() {
               <FaCheck fontSize={12} />
             </div>
             <p className="text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-              B2B Expertise: We partner with companies to create custom
-              solutions that upskill teams and foster workplace innovation.
+              Strong focus on women in tech and youth empowerment
             </p>
           </li>
           <li className="flex items-start gap-2">
@@ -25,8 +24,7 @@ export default function WhyChooseUs() {
               <FaCheck fontSize={12} />
             </div>
             <p className="text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-              Focus on Impact: Our courses are designed with inclusivity and
-              accessibility in mind, ensuring we reach those who need it most.
+              Lifetime mentorship from industry experts
             </p>
           </li>
           <li className="flex items-start gap-2">
@@ -34,7 +32,7 @@ export default function WhyChooseUs() {
               <FaCheck fontSize={12} />
             </div>
             <p className="text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-              Support in Internship placement and job opportunities.
+              Internship and job placement support
             </p>
           </li>
           <li className="flex items-start gap-2">
@@ -42,9 +40,16 @@ export default function WhyChooseUs() {
               <FaCheck fontSize={12} />
             </div>
             <p className="text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-              Community-Centric Approach: We are more than a learning platform;
-              we are a supportive network that celebrates every milestone of our
-              learners.
+              Community-driven tech learning
+            </p>
+          </li>
+          <li className="flex items-start gap-2">
+            <div className="rounded-md border bg-gray-900 p-0.5 text-white">
+              <FaCheck fontSize={12} />
+            </div>
+            <p className="text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
+              We combine technology, strategy, and creativity to deliver real
+              results.
             </p>
           </li>
         </ul>

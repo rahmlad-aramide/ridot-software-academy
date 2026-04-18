@@ -5,56 +5,65 @@ import { MdArrowForward } from 'react-icons/md';
 const coursesSection = [
   {
     id: '1',
-    course: 'Product Design',
+    course: 'Data Analytics',
     content:
-      'Product design deals with the design of user interface and experience of a website for a better performance',
-    image: '/product-design-img.png',
-    link: '/courses/product-design',
-  },
-
-  {
-    id: '2',
-    course: 'Front-end Development',
-    content:
-      'Front-end engineers work on the design interface of a website. They mostly work with designers to make beautiful and fast websites',
-    image: '/front-end-image.png',
-    link: '/courses/frontend-development',
-  },
-
-  {
-    id: '3',
-    course: 'Digital Marketing',
-    content:
-      'Digital Marketing deals with the electronic form of selling, advertising of goods and services across several online platforms',
-    image: '/digital-marketing-img.png',
-    link: '/courses/digital-marketing',
-  },
-
-  {
-    id: '4',
-    course: 'Data Science/Machine Learning',
-    content:
-      'Data Science focuses on extracting insights and knowledge from complex data using statistical, analytical and programming methods, to inform decision-making and predictions.',
-    image: '/data-science-img.png',
-    link: '/courses/data-science',
-  },
-
-  {
-    id: '5',
-    course: 'Data Analysis',
-    content:
-      'Data Analysis focuses on cleaning and interpreting of data to discover useful information and support decision-making with the use of statistical tools and programming methods.',
+      'Learn how to analyze and interpret data using industry tools like Excel, SQL, Python, and Power BI. Become a job-ready Data Analyst.',
     image: '/data-analysis-img.png',
     link: '/courses/data-analysis',
   },
 
   {
-    id: '6',
+    id: '2',
+    course: 'Data Science',
+    content:
+      'Master data collection, visualization, and machine learning using Python and SQL to build a strong data science portfolio.',
+    image: '/data-science-img.png',
+    link: '/courses/data-science',
+  },
+
+  {
+    id: '3',
+    course: 'Front-End Web Development',
+    content:
+      'Build modern, responsive user interfaces using HTML, CSS, JavaScript, and React.js. Start your career as a Front-End Developer.',
+    image: '/front-end-image.png',
+    link: '/courses/frontend-development',
+  },
+
+  {
+    id: '4',
     course: 'Back-End Development',
     content:
-      'Back-end engineers work on the server-side of a website or application. They focus on how the site works behind the scenes..',
+      'Focus on server-side logic, databases, and APIs using Node.js and SQL/NoSQL to build robust backend systems.',
     image: '/back-end-image.png',
     link: '/courses/backend-development',
+  },
+
+  {
+    id: '5',
+    course: 'Digital Marketing',
+    content:
+      'Master SEO, social media marketing, PPC, and email marketing to become a Digital Marketing Specialist.',
+    image: '/digital-marketing-img.png',
+    link: '/courses/digital-marketing',
+  },
+
+  {
+    id: '6',
+    course: 'Product Design (UI/UX)',
+    content:
+      'Learn user research, wireframing, and prototyping to create intuitive digital products and build a strong design portfolio.',
+    image: '/product-design-img.png',
+    link: '/courses/product-design',
+  },
+
+  {
+    id: '7',
+    course: 'Kids Coding Program',
+    content:
+      'Early exposure to technology and coding for teenagers and kids through HTML, CSS, JavaScript basics, and Scratch programming.',
+    image: '/logo.jpeg',
+    link: '/courses/kids-coding',
   },
 ];
 export default function AllCourses() {

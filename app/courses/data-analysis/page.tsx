@@ -22,17 +22,15 @@ export default function Page() {
         </div>
         <div className="xs:max-w-[600px] xs:px-[30px] xs:pt-[50px] absolute top-0 flex w-full flex-col space-y-5 px-[20px] pt-[50px] text-white md:max-w-[700px] md:px-0 md:pt-[60px] md:pt-[100px] md:pl-[40px] lg:pl-[80px]">
           <h1 className="xs:text-5xl text-[40px] leading-tight font-bold md:text-6xl">
-            Data Analysis
+            Data Analytics
           </h1>
           <p className="xs:text-2xl text-sm md:text-xl">
-            Gain hands-on experience working with Excel and complex data.
-            Explore the Python programming language, master data analysis and
-            statistical modeling, and then progress into machine learning and
-            algorithms.
+            Learn how to analyze and interpret data using industry tools. Master
+            Excel, SQL, Python, and Power BI to become a job-ready Data Analyst.
           </p>
           <button
             type="button"
-            className="mt-5 w-[103px] rounded-md bg-[rgb(1,0,128)] px-4 py-2 text-sm hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+            className="mt-5 w-max rounded-md bg-[rgb(1,0,128)] px-6 py-2 text-sm font-semibold hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
           >
             Enroll Now
           </button>
@@ -43,7 +41,7 @@ export default function Page() {
         <div className="xs:max-w-[430px] mx-auto flex max-w-[288px] flex-col rounded-[10px] bg-white p-[24px] text-base text-[rgb(1,0,128)] shadow-[0_4px_20px_rgba(0,0,0,0.1)] backdrop-blur-[15px] md:max-w-[698px] md:flex-row md:gap-5">
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 flex flex-col space-y-5 md:flex-col">
             <p className="font-bold">
-              Duration: <span className="font-normal">12 weeks</span>
+              Duration: <span className="font-normal">16 weeks</span>
             </p>
             <p className="font-bold">
               Days: <span className="font-normal">2-3 times a week</span>
@@ -62,8 +60,7 @@ export default function Page() {
               Mode: <span className="font-normal">Online</span>
             </p>
             <p className="font-bold">
-              Level:{' '}
-              <span className="font-normal">Beginner to Intermediate</span>
+              Outcome: <span className="font-normal">Job-ready Data Analyst</span>
             </p>
           </div>
         </div>

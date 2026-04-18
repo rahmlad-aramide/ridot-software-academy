@@ -10,6 +10,21 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 export default function SuccessStories() {
   const successStories = [
     {
+      name: 'Success Story',
+      content:
+        '“The Microsoft Office workshop was fantastic, exciting, and highly educative. It’s a program everyone interested in tech should attend.”',
+    },
+    {
+      name: 'Success Story',
+      content:
+        '“The Microsoft Office workshop was fantastic, exciting, and highly educative. It’s a program everyone interested in tech should attend.”',
+    },
+    {
+      name: 'Success Story',
+      content:
+        '“The Microsoft Office workshop was fantastic, exciting, and highly educative. It’s a program everyone interested in tech should attend.”',
+    },
+    {
       name: 'Ganiyu Sofiat',
       content:
         "I attended the 4-days Microsoft office workshop, and I must say- It was fantastic, exciting, and educative. I am excited and lucky to have attended the workshop. It was a program one can't afford to miss.",
@@ -53,10 +68,19 @@ export default function SuccessStories() {
           Success Stories
         </h2>
 
-        <p className="xs:text-base xs:w-[462px] text-sm md:w-[462px] md:text-[20px]">
-          Meet some of our graduates who have transformed their lives and
-          careers with Ridot Software Academy.
-        </p>
+        <div className="flex flex-col gap-4">
+          <p className="xs:text-base xs:w-[462px] text-sm md:w-[462px] md:text-[20px]">
+            Meet some of our graduates who have transformed their lives and
+            careers with Ridot Software Academy.
+          </p>
+          <div className="max-w-md rounded-lg bg-white/50 p-4 italic shadow-sm">
+            Join a fast-growing community of tech learners, women in tech, and
+            teenagers building careers in technology.
+            <div className="mt-2 text-right">
+              <span className="font-bold">Register Now</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Swiper

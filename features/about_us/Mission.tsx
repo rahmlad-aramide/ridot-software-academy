@@ -24,40 +24,8 @@ export default function Mission() {
         </h3>
         <div className="">
           <div className="text-sm leading-tight font-medium text-zinc-900 sm:text-base sm:leading-snug lg:text-xl lg:leading-7">
-            To empower women and teenagers with high-demand tech skills needed
-            to succeed in the tech echo system. 
-            <br />
-            We aim to:
-          </div>
-          <div className="mt-6 space-y-4">
-            <div className="flex items-start gap-3.5">
-              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
-                <FaCheck fontSize={12} />
-              </div>
-              <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-                Empower Women and Youth: Providing access to life-changing
-                digital skills for underserved demographics.
-              </div>
-            </div>
-            <div className="flex items-start gap-3.5">
-              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
-                <FaCheck fontSize={12} />
-              </div>
-              <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-                Bridge the Tech Gap: Offering industry-relevant training
-                tailored to the needs of businesses and the evolving tech
-                landscape.
-              </div>
-            </div>
-            <div className="flex items-start gap-3.5">
-              <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
-                <FaCheck fontSize={12} />
-              </div>
-              <div className="flex-1 justify-start text-sm leading-tight font-normal text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7">
-                Foster Confidence: Building a community that supports personal
-                and professional growth for every learne
-              </div>
-            </div>
+            To empower women and teenagers in tech with the skills needed to
+            thrive in the global technology ecosystem.
           </div>
         </div>
       </div>

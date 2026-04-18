@@ -19,7 +19,8 @@ const Footer = () => {
           </p>
           <div className="flex justify-start space-x-4">
             <Link
-              href="#"
+              href="https://www.instagram.com/p/CbNH1zoIrag/?igshid=YmMyMTA2M2Y="
+              target="_blank"
               className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
@@ -47,7 +48,8 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://www.facebook.com/profile.php?id=100077122898842"
+              target="_blank"
               className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
@@ -65,7 +67,8 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://twitter.com/Ridot_software?s=20"
+              target="_blank"
               className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
@@ -84,7 +87,8 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/ridot-software-academy"
+              target="_blank"
               className="rounded-full border border-gray-300 p-2 lg:p-3"
             >
               <svg
@@ -153,8 +157,12 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="tel:+2347083143779" className="hover:text-primary">
-                +2347083143779
+              <Link href="tel:07083143779" className="hover:text-primary">
+                07083143779
+              </Link>
+              {', '}
+              <Link href="tel:07056025175" className="hover:text-primary">
+                07056025175
               </Link>
             </li>
             <li>Lagos, Nigeria</li>

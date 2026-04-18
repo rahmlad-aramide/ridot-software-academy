@@ -5,8 +5,10 @@ import Footer from '@/components/footer';
 import { onest } from '@/fonts';
 
 export const metadata: Metadata = {
-  title: 'Ridot Software Academy',
-  description: 'Official Ridot Software Academy Website',
+  title:
+    'Ridot Software Academy | Tech Training for Women & Teenagers in Data Analytics, Web Development & Digital Marketing',
+  description:
+    'Ridot Software Academy empowers women and teenagers with in-demand tech skills including data science, data analytics, web development, and digital marketing. Start your tech journey today.',
 };
 
 export default function RootLayout({

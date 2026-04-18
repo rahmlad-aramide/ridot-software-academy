@@ -79,17 +79,17 @@ export default function Page() {
           onMouseOver={() => setShowPhoneOneTooltip(true)}
           onMouseLeave={() => setShowPhoneOneTooltip(false)}
         >
-          +234-708-314-3779
+          07083143779
           {showPhoneOneTooltip && (
             <div className="absolute bottom-4 z-50 mt-1 flex w-70 gap-x-4 rounded-md bg-black p-2 text-[12px] text-white">
               <p
                 className="cursor-pointer"
-                onClick={() => copyToClipboard('+2347083143779')}
+                onClick={() => copyToClipboard('07083143779')}
               >
-                📞 Copy +2347083143779
+                📞 Copy 07083143779
               </p>
               <div className="border border-white"></div>
-              <Link className="block cursor-pointer" href="tel:+2347083143779">
+              <Link className="block cursor-pointer" href="tel:07083143779">
                 Call number
               </Link>
             </div>
@@ -100,17 +100,17 @@ export default function Page() {
           onMouseOver={() => setShowPhoneTwoTooltip(true)}
           onMouseLeave={() => setShowPhoneTwoTooltip(false)}
         >
-          +234-705-602-5175
+          07056025175
           {showPhoneTwoTooltip && (
             <div className="absolute bottom-4 left-0 z-50 mt-1 flex w-70 gap-x-4 rounded-md bg-black p-2 text-[12px] text-white">
               <p
                 className="cursor-pointer"
-                onClick={() => copyToClipboard('+2347056025175')}
+                onClick={() => copyToClipboard('07056025175')}
               >
-                📞 Copy +2347056025175
+                📞 Copy 07056025175
               </p>
               <div className="border border-white"></div>
-              <Link className="block cursor-pointer" href="tel:+2347056025175">
+              <Link className="block cursor-pointer" href="tel:07056025175">
                 Call number
               </Link>
             </div>
