@@ -9,13 +9,17 @@ export default function WhoWeAre() {
           Who We Are
         </h2>
         <p className="pt-1 text-sm leading-tight font-normal text-gray-800 sm:pt-2 sm:text-base md:leading-normal lg:pt-4 xl:text-2xl xl:leading-9">
-          Ridot Software Academy is a forward-thinking learning platform
-          designed to empower women and teenagers—particularly young, unmarried
-          females—with the essential digital skills they need to unlock new
-          opportunities in technology and beyond. We pride ourselves on creating
-          a welcoming and inclusive community where learners can grow, innovate,
-          and realize their full potential.
+          Ridot Software Academy is a leading technology training platform
+          dedicated to empowering women and teenagers with practical and
+          in-demand tech skills. We focus on building careers in:
         </p>
+        <ul className="grid grid-cols-2 gap-2 text-sm font-medium text-gray-700 sm:text-base xl:text-xl">
+          <li>• Data Analytics</li>
+          <li>• Data Science</li>
+          <li>• Web Development (Front-End & Back-End)</li>
+          <li>• Product Design</li>
+          <li>• Digital Marketing</li>
+        </ul>
       </div>
 
       {/* SVG BACKGROUND SECTION */}

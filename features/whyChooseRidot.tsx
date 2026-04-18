@@ -2,32 +2,32 @@ import Image from 'next/image';
 
 const labels = [
   {
-    desc: 'Inclusive Environment',
+    desc: 'Women in Tech Focus',
     content:
-      'We foster a supportive and inclusive community where everyone can thrive.',
+      'We are passionate about empowering women in tech and supporting teenagers entering the tech space.',
     image: '/label-one.png',
     backgroundImage: '/label-card.png',
   },
 
   {
-    desc: 'Experienced Instructors',
-    content: 'Learn from industry experts who are passionate about teaching.',
+    desc: 'Hands-On Tech Training',
+    content:
+      'Learn data analytics, web development, and digital marketing through real-world projects.',
     image: '/label-two.png',
     backgroundImage: '/label-card.png',
   },
 
   {
-    desc: 'Hands-On Learning',
+    desc: 'Industry-Relevant Skills',
     content:
-      'Gain practical experience through real-world projects and collaborations.',
+      'Our programs are designed to meet current demands in the technology industry.',
     image: '/label-three.png',
     backgroundImage: '/label-card.png',
   },
 
   {
-    desc: 'Career Support',
-    content:
-      'Access mentorship, networking opportunities, and job placement assistance.',
+    desc: 'Career Growth Opportunities',
+    content: 'Access mentorship, internships, and job opportunities in tech.',
     image: '/label-four.png',
     backgroundImage: '/label-card.png',
   },
@@ -64,7 +64,7 @@ export default function WhyChooseRidot() {
   return (
     <div className="xs:px-6 bg-[rgb(247,247,255)] px-5 py-10 pt-[50px] pb-[80px] md:px-10 md:pt-[80px] md:pb-[100px] lg:px-12 lg:pt-[120px]">
       <h1 className="xs:text-[40px] xs:pl-3 pb-12 text-xl font-bold md:text-5xl">
-        Why Choose Ridot?
+        Why Choose Ridot Software Academy?
       </h1>
       <div className="grid grid-cols-1 items-center gap-12 md:gap-7 md:pl-[150px] lg:grid-cols-2 lg:gap-12 lg:pl-[310px]">
         {labels.map(({ desc, content, image }, i) => (

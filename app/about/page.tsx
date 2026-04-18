@@ -8,6 +8,8 @@ import React from 'react';
 import Faqs from '@/features/about_us/Faqs';
 import Community from '@/features/about_us/Community';
 import { onest } from '@/fonts';
+import Partners from '@/features/about_us/Partners';
+import Trustees from '@/features/about_us/Trustees';
 
 export default function About() {
   return (
@@ -17,7 +19,9 @@ export default function About() {
       <Mission />
       <Vision />
       <WhyChooseUs />
+      <Partners />
       <Team />
+      <Trustees />
       <Faqs />
       <Community />
     </main>

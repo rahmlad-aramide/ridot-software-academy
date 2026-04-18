@@ -10,8 +10,8 @@ export default function Vision() {
           Vision
         </h3>
         <p className="mb-4 text-sm leading-tight font-medium text-zinc-900 sm:text-base sm:leading-snug lg:text-xl lg:leading-7 lg:font-semibold">
-          To be Africa’s best trainer of ICT skills, idea generator and tech
-          schemer for women. <br />
+          To become Africa’s leading hub for technology education and
+          innovation, especially for women in tech. <br />
           What We Do:
         </p>
         <ul className="mb-10 space-y-4 text-sm">
@@ -19,11 +19,23 @@ export default function Vision() {
             <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
               <FaCheck fontSize={12} />
             </div>
+            <div className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
+              Provide hands-on training in:
+              <ul className="mt-2 ml-4 list-disc space-y-1">
+                <li>Data Analytics & Data Science</li>
+                <li>Web Development (Front-End & Back-End)</li>
+                <li>Digital Marketing</li>
+                <li>Product Design</li>
+                <li>Cybersecurity</li>
+              </ul>
+            </div>
+          </li>
+          <li className="flex items-start gap-2">
+            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
+              <FaCheck fontSize={12} />
+            </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
-              Hands-On Training: Practical, project-based courses in software
-              development, web design, and other in-demand digital skills such
-              as; data analysis, data science, digital marketing, product
-              design.
+              Offer tech solutions to businesses
             </p>
           </li>
           <li className="flex items-start gap-2">
@@ -31,8 +43,7 @@ export default function Vision() {
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
-              Customized Programs: Tailored courses designed for businesses and
-              individuals looking to upskill or reskill.
+              Build professional websites
             </p>
           </li>
           <li className="flex items-start gap-2">
@@ -40,17 +51,7 @@ export default function Vision() {
               <FaCheck fontSize={12} />
             </div>
             <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
-              Mentorship & Support: Guidance from industry professionals who are
-              committed to seeing our learners succeed.
-            </p>
-          </li>
-          <li className="flex items-start gap-2">
-            <div className="mt-1 rounded-md border bg-gray-900 p-0.5 text-white">
-              <FaCheck fontSize={12} />
-            </div>
-            <p className="flex-1 text-sm leading-tight font-medium text-zinc-600 sm:text-base sm:leading-normal lg:text-xl lg:leading-7 lg:font-normal">
-              Real-World Exposure: Opportunities to work on live projects and
-              collaborate with tech savvies to gain real-world experience.
+              Deliver digital marketing services
             </p>
           </li>
         </ul>

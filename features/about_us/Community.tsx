@@ -5,6 +5,7 @@ import Svg4 from '@/components/svgs/Svg4';
 import Svg5 from '@/components/svgs/Svg5';
 import Svg6 from '@/components/svgs/Svg6';
 import React from 'react';
+import Link from 'next/link';
 
 export default function Community() {
   return (
@@ -26,17 +27,17 @@ export default function Community() {
         <p className="mt-2 text-center text-sm leading-tight font-normal text-gray-700 sm:mt-4 sm:text-base sm:leading-normal lg:m-auto lg:mt-6 lg:w-[75%] lg:text-xl lg:leading-7">
           Be a part of a dynamic and inspiring community of learners, mentors,
           and professionals. Together, we are breaking barriers and building a
-          future where everyone can succeed in tech.
+          future where everyone can succeed in tech. Join our growing community
+          of women in tech, tech beginners, data analysts & developers.
         </p>
-        <div className="mt-8 flex flex-col items-center sm:mt-12 sm:mb-4 sm:flex-row sm:gap-2 sm:px-16">
-          <input
-            type="text"
-            className="mx-auto w-9/10 rounded-md bg-white p-2 text-sm shadow-sm outline-0 sm:px-6 sm:py-3"
-            placeholder="Enter email"
-          />
-          <button className="mt-6 rounded-md bg-[#010080] px-6 py-3 text-sm leading-tight font-normal text-stone-50 sm:mt-0">
-            Subscribe
-          </button>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-12 sm:mb-4 sm:flex-row">
+          <Link
+            href="https://chat.whatsapp.com/GisS6795f3n08Q3G6U7e4L"
+            target="_blank"
+            className="rounded-md bg-[#010080] px-8 py-4 text-lg font-bold text-white shadow-lg transition-transform hover:scale-105"
+          >
+            Join Here
+          </Link>
         </div>
       </div>
     </div>

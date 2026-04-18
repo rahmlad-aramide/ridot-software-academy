@@ -8,6 +8,7 @@ import SuccessStories from './courses/swiper/SucessStories';
 import Faqs from '@/features/about_us/Faqs';
 import { useFormStore } from './useFormStore';
 import PopupForm from '@/features/enrollPopUp';
+import DigitalMarketingServices from '@/features/digitalMarketingServices';
 
 export default function Home() {
   const { isFormOpen, closeForm } = useFormStore();
@@ -17,6 +18,7 @@ export default function Home() {
       <WhyChooseRidot />
       <TechBarriers />
       <AllCourses />
+      <DigitalMarketingServices />
       <SuccessStories />
       <Faqs />
 
