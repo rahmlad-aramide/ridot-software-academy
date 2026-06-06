@@ -1,8 +1,7 @@
 import AnimatedLogo from './animatedLogo';
-import { useFormStore } from '@/app/useFormStore';
+import Link from 'next/link';
 
 export default function HeroSection() {
-  const { openForm } = useFormStore();
   return (
     <div className="flex flex-col items-center justify-center gap-20 py-20 md:gap-7 md:px-5 lg:flex-row lg:gap-15 lg:px-10">
       <div className="mx-auto w-full max-w-162.5 space-y-6 px-5 text-center md:text-left">
@@ -20,13 +19,12 @@ export default function HeroSection() {
           to help them succeed in today's digital economy.
         </p>
 
-        <button
-          type="button"
-          onClick={openForm}
-          className="bg-primary xs:py-3 mt-5 w-full rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none md:max-w-max"
+        <Link
+          href="/enroll"
+          className="bg-primary xs:py-3 mt-5 block w-full rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none md:max-w-max"
         >
           Start Your Tech Journey Today
-        </button>
+        </Link>
       </div>
 
       <div className="flex w-full justify-center lg:w-1/2">
