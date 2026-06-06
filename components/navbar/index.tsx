@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import { useFormStore } from '@/app/useFormStore';
 
 const navItems = [
   { label: 'About Us', href: '/about' },
@@ -34,11 +33,10 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  const openForm = useFormStore((state) => state.openForm);
-
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
+  const [user, setUser] = useState<any>(null);
 
   const toggleDropdown = (label: string) => {
     setDropdownOpen((prev) => (prev === label ? null : label));
@@ -60,6 +58,23 @@ const Navbar = () => {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    async function checkUser() {
+      try {
+        const res = await fetch('/api/auth/me');
+        const data = await res.json();
+        if (res.ok && data.user) {
+          setUser(data.user);
+        } else {
+          setUser(null);
+        }
+      } catch (err) {
+        setUser(null);
+      }
+    }
+    checkUser();
+  }, [pathname]);
 
   return (
     <nav className="border-ridot-gray sticky top-0 z-50 border bg-white">
@@ -156,13 +171,21 @@ const Navbar = () => {
               </li>
             ))}
             <li>
-              <button
-                onClick={openForm}
-                type="button"
-                className="bg-primary rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
-              >
-                Enroll Now
-              </button>
+              {user ? (
+                <Link
+                  href="/dashboard"
+                  className="bg-primary block rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                >
+                  Dashboard
+                </Link>
+              ) : (
+                <Link
+                  href="/login"
+                  className="bg-primary block rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                >
+                  Sign In
+                </Link>
+              )}
             </li>
           </ul>
         </div>

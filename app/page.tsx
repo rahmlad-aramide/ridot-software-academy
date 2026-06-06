@@ -6,12 +6,9 @@ import TechBarriers from '@/features/techBarriers';
 import AllCourses from './courses/AllCourses';
 import SuccessStories from './courses/swiper/SucessStories';
 import Faqs from '@/features/about_us/Faqs';
-import { useFormStore } from './useFormStore';
-import PopupForm from '@/features/enrollPopUp';
 import DigitalMarketingServices from '@/features/digitalMarketingServices';
 
 export default function Home() {
-  const { isFormOpen, closeForm } = useFormStore();
   return (
     <main className="min-h-screen overflow-x-hidden">
       <HeroSection />
@@ -21,8 +18,6 @@ export default function Home() {
       <DigitalMarketingServices />
       <SuccessStories />
       <Faqs />
-
-      <PopupForm isOpen={isFormOpen} onClose={closeForm} />
     </main>
   );
 }
