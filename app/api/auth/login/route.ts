@@ -5,7 +5,11 @@ import jwt from 'jsonwebtoken';
 import dbConnect from '@/lib/db';
 import User from '@/models/User';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret_key';
+const JWT_SECRET: string = String(process.env.JWT_SECRET);
+
+if (!JWT_SECRET) {
+  throw new Error('Please set JWT_SECRET in your environment variables');
+}
 
 export async function POST(req: Request) {
   try {
