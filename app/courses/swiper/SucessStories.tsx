@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import Link from 'next/link';
+import { BiRightArrow } from 'react-icons/bi';
 
 export default function SuccessStories() {
   const successStories = [
@@ -77,7 +79,9 @@ export default function SuccessStories() {
             Join a fast-growing community of tech learners, women in tech, and
             teenagers building careers in technology.
             <div className="mt-2 text-right">
-              <span className="font-bold">Register Now</span>
+              <Link href="/enroll" className="font-bold underline">
+                Enroll Now <BiRightArrow className="inline" />
+              </Link>
             </div>
           </div>
         </div>

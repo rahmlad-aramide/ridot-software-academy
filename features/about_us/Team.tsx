@@ -5,48 +5,59 @@ import Link from 'next/link';
 
 const teamMembers = [
   {
-    name: 'Abibat Aderogba',
-    image: '/hero-image.jpg',
-    role: 'Founder',
-    linkedin: 'https://www.linkedin.com/in/aderogba-abibat-b26a36174',
+    name: 'Abibat Adeola Aderogba',
+    role: 'Founder & CEO',
+    linkedinUrl: 'https://www.linkedin.com/in/aderogba-abibat-b26a36174',
   },
   {
-    name: 'Islamiyat Omisola',
-    image: '/hero-image.jpg',
-    role: 'Product Designer/Trainer',
-    linkedin: 'https://www.linkedin.com/in/omisola-islamiyat-38a705151',
+    name: 'Engr. AbdulLateef Olatayo',
+    role: 'CTO',
+    linkedinUrl: 'www.linkedin.com/in/engr-lateef-olatayo-0365a1165/',
+    image: '/team/Olatayo.jpg',
   },
   {
-    name: 'Huswat Lawal',
-    image: '/hero-image.jpg',
-    role: 'Program Coordinator',
-    linkedin: 'https://www.linkedin.com/in/huswatlawal',
-  },
-  {
-    name: 'Afeez Lawal',
-    image: '/hero-image.jpg',
-    role: 'Back-end Engineer',
-    linkedin: 'https://www.linkedin.com/in/lawal-afeez',
+    name: 'Islamiyah Omisola',
+    role: 'Product Designer',
+    linkedinUrl: 'https://www.linkedin.com/in/omisola-islamiyat-38a70515a',
+    image: '/team/Islamiyat.jpg',
   },
   {
     name: 'Abdrahman Oladimeji',
-    image: '/hero-image.jpg',
     role: 'Software Engineer',
-    linkedin: 'https://linkedin.com/in/rahmlad',
+    linkedinUrl: 'https://www.linkedin.com/in/rahmlad/',
+    image: '/team/Rahmlad.JPG',
   },
   {
-    name: 'Mubaraq Bello',
-    image: '/hero-image.jpg',
-    role: 'Web developer/graphics designer',
-    linkedin: 'https://linkedin.com/in/mubarak-bello-219977231',
+    name: 'Huswat Lawal',
+    role: 'Program Coordinator',
+    linkedinUrl: 'https://www.linkedin.com/in/huswatlawal/',
+    image:
+      'https://res.cloudinary.com/dh4rm7b7b/image/upload/v1705436033/Ridot%20Team/IMG-20240116-WA0002_qrhows.jpg',
+  },
+  {
+    name: 'Mubarak Bello',
+    linkedinUrl: 'https://www.linkedin.com/in/mubarak-bello-219977231',
+    role: 'Web Developer/Graphics Designer',
+  },
+  {
+    name: 'Afeez Lawal',
+    role: 'Backend Engineer',
+    linkedinUrl: 'https://www.linkedin.com/in/lawal-afeez',
+    image: '/team/Afees.jpg',
   },
   {
     name: 'Abeeb Afolabi',
-    image: '/hero-image.jpg',
-    role: 'Data Scientist and Machine learning expert',
-    linkedin: '#',
+    role: 'Data Scientist and Machine Learning Expert.',
   },
 ];
+
+// const trustees = [
+//   {
+//     name: 'Ayisat Adedokun',
+//     linkedinUrl: 'https://www.linkedin.com/in/ayisatadedokun',
+//     image: '/team/Ayisat.jpg',
+//   },
+// ];
 
 export default function Team() {
   return (
@@ -67,7 +78,7 @@ export default function Team() {
             <div className="relative h-80 w-full overflow-hidden rounded-lg">
               <Image
                 className="z-10 object-cover"
-                src={team.image}
+                src={team.image ? team.image : '/team/logo.jpeg'}
                 alt={team.name}
                 quality={100}
                 fill
@@ -82,9 +93,9 @@ export default function Team() {
                 </h3>
                 <p className="text-sm font-medium text-zinc-500">{team.role}</p>
               </div>
-              {team.linkedin && team.linkedin !== '#' && (
+              {team.linkedinUrl && team.linkedinUrl !== '#' && (
                 <Link
-                  href={team.linkedin}
+                  href={team.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#0a66c2] transition-colors hover:text-blue-800"

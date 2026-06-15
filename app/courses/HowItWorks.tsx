@@ -25,6 +25,7 @@ const howItWork = [
 ];
 
 export default function HowItWorks() {
+  return null;
   return (
     <div className="xs:pt-[70px] xs:pb-[70px] pt-[50px] pb-[50px]">
       <h1 className="xs:px-6 px-5 text-[32px] font-semibold md:px-8 md:text-5xl lg:px-20 xl:text-[40px]">
