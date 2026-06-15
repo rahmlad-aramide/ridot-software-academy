@@ -47,8 +47,8 @@ export default function WhoWeAre() {
                 y2="919.264"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.37" stop-color="#E2E2E2" stop-opacity="0.2" />
-                <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                <stop offset="0.37" stopColor="#E2E2E2" stopOpacity="0.2" />
+                <stop offset="1" stopColor="white" stopOpacity="0.5" />
               </linearGradient>
             </defs>
           </svg>
@@ -77,8 +77,8 @@ export default function WhoWeAre() {
                 y2="976.555"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.37" stop-color="#E2E2E2" stop-opacity="0.2" />
-                <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                <stop offset="0.37" stopColor="#E2E2E2" stopOpacity="0.2" />
+                <stop offset="1" stopColor="white" stopOpacity="0.5" />
               </linearGradient>
             </defs>
           </svg>
@@ -105,8 +105,8 @@ export default function WhoWeAre() {
                 y2="850.668"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.37" stop-color="#E2E2E2" stop-opacity="0.2" />
-                <stop offset="1" stop-color="white" stop-opacity="0.5" />
+                <stop offset="0.37" stopColor="#E2E2E2" stopOpacity="0.2" />
+                <stop offset="1" stopColor="white" stopOpacity="0.5" />
               </linearGradient>
             </defs>
           </svg>

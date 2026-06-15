@@ -73,11 +73,11 @@ export default function AllCourses() {
       <h1 className="px-5 pb-10 text-xl text-[20px] font-bold md:px-2 md:text-2xl md:text-[36px] lg:px-14 lg:text-3xl lg:text-[48px] xl:text-4xl">
         Courses
       </h1>
-      <div className="xs:grid-cols-2 grid grid-cols-1 gap-10 px-5 lg:grid-cols-3 lg:gap-14 lg:px-12">
+      <div className="xs:grid-cols-2 grid grid-cols-1 gap-8 px-5 lg:grid-cols-3 lg:px-12 xl:gap-14 2xl:grid-cols-4">
         {coursesSection.map(({ id, course, content, image, link }) => (
           <div
             key={id}
-            className="xs:max-w-[528px] xs:h-[391px] xs:px-5 xs:py-5 mx-auto h-[417px] w-full space-y-5 rounded-[12px] bg-white px-5 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:h-[360px] md:max-w-[305px] md:space-y-2 md:px-3 md:pt-3 lg:h-[548px] lg:max-w-[363px] lg:space-y-5 lg:px-8 lg:py-10"
+            className="xs:px-5 xs:py-5 mx-auto w-full space-y-5 rounded-[12px] bg-white px-5 py-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] backdrop-blur-[15px] md:space-y-2 md:px-3 md:pt-3 lg:space-y-5 lg:px-6 lg:py-6"
           >
             <div className="relative h-[170px] w-full md:h-[200px] lg:h-[240px]">
               <Image

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import blogPosts from '@/app/blogs/blogPosts';
+import { blogPosts } from '@/app/blogs/blogPosts';
 import Community from '@/features/about_us/Community';
 
 export default function FilteredBlogs() {
@@ -28,7 +28,7 @@ export default function FilteredBlogs() {
 
       <div className="h-full w-full p-4 lg:pt-10 xl:p-20">
         <ul className="xs:grid-cols-2 grid grid-cols-1 gap-6 md:grid-cols-3">
-          {filteredPosts.map(({ id, category, image, title, excerpt }) => (
+          {filteredPosts.map(({ id, image, title, excerpt }) => (
             <li key={id} className="w-full">
               <div className="relative h-[342px] w-full">
                 <Image
@@ -43,7 +43,7 @@ export default function FilteredBlogs() {
               </div>
               <div className="mt-7 space-y-5">
                 <h3 className="text-base font-semibold text-gray-900 md:text-[20px]">
-                  {title} {category}
+                  {title}
                 </h3>
                 <p className="text-sm font-medium text-gray-700 md:text-base">
                   {excerpt}

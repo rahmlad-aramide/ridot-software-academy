@@ -50,14 +50,6 @@ export default function Page() {
           </div>
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 mt-5 flex flex-col space-y-5 md:mt-0 md:flex-col">
             <p className="font-bold">
-              Start Date: <span className="font-normal">March 2025</span>
-            </p>
-            <p className="font-bold">
-              End Date: <span className="font-normal">May 2025</span>
-            </p>
-          </div>
-          <div className="xs:space-y-2 xs:flex-row xs:gap-5 mt-5 flex flex-col space-y-5 md:mt-0 md:flex-col">
-            <p className="font-bold">
               Mode: <span className="font-normal">Online</span>
             </p>
             <p className="font-bold">

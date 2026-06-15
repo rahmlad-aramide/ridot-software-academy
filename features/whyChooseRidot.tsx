@@ -11,8 +11,7 @@ const labels = [
 
   {
     desc: 'Hands-On Tech Training',
-    content:
-      'Learn data analytics, web development, and digital marketing through real-world projects.',
+    content: 'Learn tech skills through real-world projects.',
     image: '/label-two.png',
     backgroundImage: '/label-card.png',
   },
