@@ -81,29 +81,58 @@ export default function DigitalMarketingServices() {
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="lg:w-1/2">
               <h3 className="text-3xl font-extrabold">
-                Why Your Business Needs a Website
+                Join the Ridot Software Academy Tech Support Group
               </h3>
+
               <p className="mt-4 text-lg text-blue-100">
-                A professional business website helps you:
+                Become part of a growing tech community where knowledge is
+                shared, questions are answered, and opportunities for growth are
+                created.
               </p>
+
               <ul className="mt-8 space-y-4">
-                {benefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-3">
-                    <FaCheckCircle className="flex-shrink-0 text-green-400" />
-                    <span className="text-lg">{benefit}</span>
-                  </li>
-                ))}
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="flex-shrink-0 text-green-400" />
+                  <span className="text-lg">
+                    Connect with fellow tech enthusiasts and learners.
+                  </span>
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="flex-shrink-0 text-green-400" />
+                  <span className="text-lg">
+                    Get support on your learning journey.
+                  </span>
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="flex-shrink-0 text-green-400" />
+                  <span className="text-lg">
+                    Learn from shared resources, tips, and discussions.
+                  </span>
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <FaCheckCircle className="flex-shrink-0 text-green-400" />
+                  <span className="text-lg">
+                    Stay updated on trainings, events, and opportunities.
+                  </span>
+                </li>
               </ul>
             </div>
+
             <div className="mt-10 flex flex-col gap-4 lg:mt-0 lg:w-1/3">
               <div className="rounded-xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
-                <p className="text-xl font-bold">Ready to grow?</p>
-                <p className="mt-2 text-blue-50">
-                  Contact us today for a free consultation.
-                </p>
-                <button className="text-primary mt-6 w-full rounded-lg bg-white px-6 py-3 font-bold transition-colors hover:bg-blue-50">
-                  Get Started
-                </button>
+                <p className="text-xl font-bold">Ready to Join?</p>
+
+                <a
+                  href="https://forms.gle/eNGJAgAybGkJWsYCA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary mt-6 inline-flex w-full justify-center rounded-lg bg-white px-6 py-3 font-bold transition-colors hover:bg-blue-50"
+                >
+                  Join the Community
+                </a>
               </div>
             </div>
           </div>

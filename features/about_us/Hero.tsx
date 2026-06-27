@@ -13,11 +13,10 @@ export default function Hero() {
           About Us
         </h1>
         <p className="max-w-3xl text-base leading-relaxed font-normal sm:text-xl">
-          Ridot Software Academy is a forward-thinking learning platform
-          designed to empower women and teenagers—particularly young, unmarried
-          females—with the essential digital skills they need to unlock new
-          opportunities in technology and beyond. We pride ourselves on creating
-          a welcoming and inclusive community where learners can grow, innovate,
+          Ridot Software Academy is a forward-thinking technology platform that
+          harnesses AI to impact women and teenagers with in-demand practical
+          tech skills transforming Africa. We pride ourselves on creating a
+          welcoming and inclusive community where learners can grow, innovate,
           and realize their full potential.
         </p>
       </div>
