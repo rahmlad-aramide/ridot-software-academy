@@ -29,13 +29,6 @@ const offers = [
   },
 ];
 
-const benefits = [
-  'Attract more customers and increase sales',
-  'Build credibility and trust',
-  'Make your business accessible anytime, anywhere',
-  'Showcase your brand, products, and services effectively',
-];
-
 export default function DigitalMarketingServices() {
   return (
     <div className="bg-gray-50 py-16 lg:py-24">

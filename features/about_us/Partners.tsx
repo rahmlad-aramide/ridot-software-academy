@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const partners = [
@@ -58,7 +56,7 @@ export default function Partners() {
                 />
               ) : (
                 <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold text-white">
-                  {partner.initials}
+                  {partner.initials || partner.name.slice(0, 2).toUpperCase()}
                 </div>
               )}
               <span className="text-lg font-semibold text-gray-700">
