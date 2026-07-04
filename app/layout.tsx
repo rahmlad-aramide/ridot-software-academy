@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Ridot Software Academy',
   description:
     'Ridot Software Academy: Empowering Future Developers with Cutting-edge Training in Software Development. Explore our comprehensive programs, expert instructors, and hands-on learning to kickstart your career in the world of coding. Join us for a transformative journey in software education.',
+  metadataBase: new URL('https://ridot.org'),
   openGraph: {
     type: 'website',
     title: 'Ridot Software Academy',
