@@ -153,6 +153,7 @@ const Navbar = () => {
                             <li key={sub.label}>
                               <Link
                                 href={sub.href}
+                                onClick={closeMobileMenu}
                                 className="block px-4 py-2 hover:cursor-pointer hover:bg-gray-100"
                               >
                                 {sub.label}
