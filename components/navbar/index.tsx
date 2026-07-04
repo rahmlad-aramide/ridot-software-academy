@@ -38,6 +38,11 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
   const [user, setUser] = useState<any>(null);
 
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setDropdownOpen(null);
+  };
+
   const toggleDropdown = (label: string) => {
     setDropdownOpen((prev) => (prev === label ? null : label));
   };
@@ -161,6 +166,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href}
+                    onClick={closeMobileMenu}
                     className={`block rounded-sm px-3 py-2 md:p-0 ${
                       pathname === item.href ? 'text-primary font-semibold' : ''
                     }`}
