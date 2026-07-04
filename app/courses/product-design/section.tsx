@@ -64,7 +64,7 @@ export default function section() {
             className={`xs:p-5 xs:pt-[80px] xs:pb-[80px] w-full p-3 pt-[80px] pb-[80px] ${bgColor}`}
           >
             <div
-              className={`flex flex-col items-center gap-6 md:flex-row md:flex-row-reverse md:justify-center md:gap-10 md:px-0 lg:gap-30 lg:px-10`}
+              className={`flex flex-col items-center gap-6 md:flex-row-reverse md:justify-center md:gap-10 md:px-0 lg:gap-32 lg:px-10`}
             >
               <div
                 className={`xs:max-w-[430px] xs:h-[450px] relative h-[288px] w-full max-w-[280px] md:h-[395px] md:max-w-[380px] lg:h-[450px] lg:max-w-[430px]`}

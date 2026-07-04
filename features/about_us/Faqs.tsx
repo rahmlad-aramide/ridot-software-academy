@@ -31,8 +31,7 @@ const faqs = [
   {
     id: 5,
     question: 'Is there any financial aid or scholarships available?',
-    answer:
-      'We offer various financial aid options and scholarships to eligible students. Check our blog page for detailed information on the available opportunities.',
+    answer: 'We offer scholarships but this is periodical and upon merit.',
   },
   {
     id: 6,
