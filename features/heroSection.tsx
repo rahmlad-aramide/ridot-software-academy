@@ -5,9 +5,10 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col items-center justify-center gap-20 py-20 md:gap-7 md:px-5 lg:flex-row lg:gap-15 lg:px-10">
       <div className="mx-auto w-full max-w-162.5 space-y-6 px-5 text-center md:text-left">
-        <p className="text-primary bg-primary/5 border-primary/50 w-fit rounded-full border px-3 py-1 text-sm leading-none font-semibold tracking-wider uppercase">
+        <p className="text-primary bg-primary/5 border-primary/50 mx-auto w-fit rounded-full border px-3 py-1 text-sm leading-none font-semibold tracking-wider uppercase md:mx-0">
           Welcome to Ridot
         </p>
+
         <h1 className="xs:text-5xl text-[32px] leading-tight font-bold md:text-[36px] lg:text-5xl 2xl:text-6xl">
           Transform <span className="text-primary">Your Future</span> with
           Technology
