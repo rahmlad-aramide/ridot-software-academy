@@ -10,7 +10,6 @@ import {
   MdLaunch,
   MdSchool,
   MdPayment,
-  MdAssignmentTurnedIn,
   MdInfo,
 } from 'react-icons/md';
 
@@ -466,12 +465,92 @@ function DashboardContent() {
                         </p>
                       </div>
                     </div>
-                    <button
-                      onClick={handleRetryPayment}
-                      className="w-full rounded-lg bg-[rgb(1,0,128)] py-2.5 text-center text-sm font-bold text-white shadow transition-all hover:bg-blue-800"
-                    >
-                      Pay Now
-                    </button>
+
+                    {/* Payment Methods */}
+                    <div className="space-y-5">
+                      {/* Paystack Payment */}
+                      <div>
+                        <button
+                          onClick={handleRetryPayment}
+                          className="w-full rounded-lg bg-[rgb(1,0,128)] py-2.5 text-center text-sm font-bold text-white shadow transition-all hover:bg-blue-800"
+                        >
+                          Pay Now
+                        </button>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="relative flex items-center">
+                        <div className="flex-grow border-t border-gray-200"></div>
+                        <span className="mx-4 shrink-0 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                          Or
+                        </span>
+                        <div className="flex-grow border-t border-gray-200"></div>
+                      </div>
+
+                      {/* Bank Transfer */}
+                      <div className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
+                        <div className="mb-4">
+                          <h3 className="text-base font-bold text-gray-900">
+                            Pay via Bank Transfer
+                          </h3>
+                          <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                            Transfer the amount due to the account below and
+                            contact us for payment confirmation.
+                          </p>
+                        </div>
+
+                        <div className="space-y-3 text-sm">
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="text-gray-500">Amount Due</span>
+                            <span className="font-bold text-[rgb(1,0,128)]">
+                              ₦{pricing?.amountToPay?.toLocaleString() || '0'}
+                            </span>
+                          </div>
+
+                          <div className="border-t border-gray-200"></div>
+
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="text-gray-500">Account Name</span>
+                            <span className="text-right font-semibold text-gray-900">
+                              Ridot Software Academy
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="text-gray-500">NGN Account</span>
+                            <span className="font-semibold text-gray-900">
+                              0914125201
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="text-gray-500">USD Account</span>
+                            <span className="font-semibold text-gray-900">
+                              0914125218
+                            </span>
+                          </div>
+
+                          <div className="flex items-center justify-between gap-4">
+                            <span className="text-gray-500">Bank</span>
+                            <span className="font-semibold text-gray-900">
+                              GTBank
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="mt-5 rounded-lg border border-blue-100 bg-blue-50 p-3 text-center">
+                          <p className="text-xs text-gray-600">
+                            For payment confirmation or inquiries
+                          </p>
+                          <a
+                            href="tel:+2347083143779"
+                            className="mt-1 inline-block text-sm font-bold text-[rgb(1,0,128)] hover:underline"
+                          >
+                            +234 708 314 3779
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
 

@@ -3,6 +3,7 @@ import Section from '@/app/courses/backend-development/section';
 import HowItWorks from '@/app/courses/HowItWorks';
 import SucessStories from '@/app/courses/swiper/SucessStories';
 import Faqs from '@/features/about_us/Faqs';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -28,12 +29,12 @@ export default function Page() {
             Build backend systems and APIs. Master Node.js, Databases (SQL &
             NoSQL), APIs & Authentication to become a Back-End Developer.
           </p>
-          <button
-            type="button"
+          <Link
+            href="/enroll"
             className="mt-5 w-max rounded-md bg-[rgb(1,0,128)] px-6 py-2 text-sm font-semibold hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
           >
             Enroll Now
-          </button>
+          </Link>
         </div>
       </div>
 
