@@ -6,7 +6,7 @@ import { getCurrentUser, hasRole } from '@/lib/auth';
 
 export async function POST(
   req: Request,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     await dbConnect();
@@ -20,7 +20,7 @@ export async function POST(
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
 
-    const { id } = params;
+    const { id } = await params;
     const body = await req.json().catch(() => ({}));
 
     const enrollment = await Enrollment.findById(id);
