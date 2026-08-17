@@ -44,12 +44,6 @@ export default function Page() {
             <p className="font-bold">
               Target: <span className="font-normal">Teenagers & Kids</span>
             </p>
-            <p className="font-bold">
-              Keywords:{' '}
-              <span className="font-normal">
-                coding for kids, teenagers in tech
-              </span>
-            </p>
           </div>
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 mt-5 flex flex-col space-y-5 md:mt-0 md:flex-col">
             <p className="font-bold">
