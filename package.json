@@ -16,6 +16,7 @@
     "bcryptjs": "^3.0.3",
     "framer-motion": "^12.23.6",
     "jsonwebtoken": "^9.0.3",
+    "lucide-react": "^1.31.0",
     "mongoose": "^9.6.3",
     "naija-state-local-government": "^1.1.2",
     "next": "15.4.11",

@@ -18,14 +18,15 @@ const partners = [
   },
   {
     id: 4,
-    name: 'Women Techmakers Ilorin',
-    initials: 'WTI',
-  },
-  {
-    id: 5,
     name: 'Lola Cater Foundation',
     initials: 'LCF',
   },
+  {
+    id: 5,
+    name: 'Women Techmakers Ilorin',
+    initials: 'WTI',
+  },
+
   {
     id: 6,
     name: 'Women Techmakers Kano',

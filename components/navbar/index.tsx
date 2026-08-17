@@ -17,6 +17,7 @@ const navItems = [
       { label: 'Data Analysis', href: '/courses/data-analysis' },
       { label: 'Data Science', href: '/courses/data-science' },
       { label: 'Digital Marketing', href: '/courses/digital-marketing' },
+      { label: 'Kids Coding', href: '/courses/kids-coding' },
     ],
   },
   { label: 'Contact Us', href: '/contact' },

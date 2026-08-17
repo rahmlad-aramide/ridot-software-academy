@@ -2,6 +2,7 @@ import Image from 'next/image';
 import HowItWorks from '@/app/courses/HowItWorks';
 import SucessStories from '@/app/courses/swiper/SucessStories';
 import Faqs from '@/features/about_us/Faqs';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -28,12 +29,12 @@ export default function Page() {
             Build a strong foundation in tech through fun and interactive
             projects.
           </p>
-          <button
-            type="button"
+          <Link
+            href="/enroll"
             className="mt-5 w-max rounded-md bg-[rgb(1,0,128)] px-6 py-2 text-sm font-semibold hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
           >
             Enroll Your Child Now
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -42,12 +43,6 @@ export default function Page() {
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 flex flex-col space-y-5 md:flex-col">
             <p className="font-bold">
               Target: <span className="font-normal">Teenagers & Kids</span>
-            </p>
-            <p className="font-bold">
-              Keywords:{' '}
-              <span className="font-normal">
-                coding for kids, teenagers in tech
-              </span>
             </p>
           </div>
           <div className="xs:space-y-2 xs:flex-row xs:gap-5 mt-5 flex flex-col space-y-5 md:mt-0 md:flex-col">
