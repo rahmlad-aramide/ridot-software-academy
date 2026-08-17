@@ -13,6 +13,12 @@ const UserSchema = new Schema(
       type: String,
       required: [true, 'Password is required'],
     },
+    role: {
+      type: String,
+      enum: ['user', 'admin', 'super_admin'],
+      default: 'user',
+      index: true,
+    },
   },
   { timestamps: true },
 );

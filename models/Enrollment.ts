@@ -43,6 +43,11 @@ const EnrollmentSchema = new Schema(
       enum: ['part', 'full'],
       required: [true, 'Payment option is required'],
     },
+    paymentMode: {
+      type: String,
+      enum: ['online', 'transfer'],
+      default: 'online',
+    },
     careerPath: {
       type: String,
       required: [true, 'Career path is required'],

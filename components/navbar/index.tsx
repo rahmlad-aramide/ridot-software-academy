@@ -87,6 +87,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between p-4">
         <Link
           href="/"
+          onClick={closeMobileMenu}
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
@@ -182,6 +183,7 @@ const Navbar = () => {
               {user ? (
                 <Link
                   href="/dashboard"
+                  onClick={closeMobileMenu}
                   className="bg-primary block rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
                 >
                   Dashboard
@@ -189,6 +191,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   href="/login"
+                  onClick={closeMobileMenu}
                   className="bg-primary block rounded px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none"
                 >
                   Sign In

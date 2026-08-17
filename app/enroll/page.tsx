@@ -29,6 +29,7 @@ export default function EnrollPage() {
   const [twitterHandle, setTwitterHandle] = useState('');
   const [linkedInHandle, setLinkedInHandle] = useState('');
   const [paymentOption, setPaymentOption] = useState<'full' | 'part'>('full');
+  const [paymentMode, setPaymentMode] = useState<'online' | 'bank'>('online');
   const [careerPath, setCareerPath] = useState('Frontend Web development');
   const [expectations, setExpectations] = useState('');
 
@@ -71,6 +72,7 @@ export default function EnrollPage() {
             setTwitterHandle(e.twitterHandle || '');
             setLinkedInHandle(e.linkedInHandle || '');
             setPaymentOption(e.paymentOption || 'full');
+            setPaymentMode(e.paymentMode === 'transfer' ? 'bank' : 'online');
             setCareerPath(e.careerPath || 'Frontend Web development');
             setExpectations(e.expectations || '');
           }
@@ -132,6 +134,7 @@ export default function EnrollPage() {
           twitterHandle,
           linkedInHandle,
           paymentOption,
+          paymentMode: paymentMode === 'bank' ? 'transfer' : 'online',
           careerPath,
           expectations,
         }),
@@ -143,7 +146,6 @@ export default function EnrollPage() {
         throw new Error(data.error || 'Failed to submit enrollment');
       }
 
-      // Success - Redirect to Paystack Checkout URL
       if (data.authorization_url) {
         router.push(data.authorization_url);
       } else {
@@ -360,57 +362,166 @@ export default function EnrollPage() {
                 className="mt-2 block w-full rounded-lg border border-gray-200 bg-gray-50/50 p-3 text-sm focus:border-[rgb(43,43,208)] focus:bg-white focus:ring-2 focus:ring-[rgba(43,43,208,0.2)] focus:outline-none"
               />
             </div>
-
             <div>
               <label className="block text-sm font-semibold text-gray-700">
-                Payment Option <span className="text-red-500">*</span>
+                Payment Mode <span className="text-red-500">*</span>
               </label>
               <div className="mt-3 grid grid-cols-2 gap-4">
                 <label
-                  className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentOption === 'full' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
+                  className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentMode === 'online' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
                 >
                   <input
                     type="radio"
-                    name="paymentOption"
-                    value="full"
-                    checked={paymentOption === 'full'}
-                    onChange={() => setPaymentOption('full')}
+                    name="paymentMode"
+                    value="online"
+                    checked={paymentMode === 'online'}
+                    onChange={() => setPaymentMode('online')}
                     className="sr-only"
                   />
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-gray-900">
-                      Full Payment
+                      Online Payment
                     </span>
                     <span className="mt-1 text-xs text-gray-500">
-                      Pay 100% upfront
+                      Pay on the site, easy and secure
                     </span>
                   </div>
                 </label>
 
                 <label
-                  className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentOption === 'part' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
+                  className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentMode === 'bank' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
                 >
                   <input
                     type="radio"
-                    name="paymentOption"
-                    value="part"
-                    checked={paymentOption === 'part'}
-                    onChange={() => setPaymentOption('part')}
+                    name="paymentMode"
+                    value="transfer"
+                    checked={paymentMode === 'bank'}
+                    onChange={() => setPaymentMode('bank')}
                     className="sr-only"
                   />
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-gray-900">
-                      Part Payment
+                      Bank Transfer
                     </span>
                     <span className="mt-1 text-xs text-gray-500">
-                      Pay 30% upfront, 70% balance
+                      Pay to our USD or NGN bank account
                     </span>
                   </div>
                 </label>
               </div>
             </div>
+            {paymentMode === 'bank' ? (
+              <div className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
+                <div className="mb-4">
+                  <h3 className="text-base font-bold text-gray-900">
+                    Pay via Bank Transfer
+                  </h3>
+                  <p className="mt-1 text-xs leading-relaxed text-gray-500">
+                    Transfer the amount due to the account below, then submit
+                    the form. An admin will confirm the transfer manually.
+                  </p>
+                </div>
 
-            {/* Premium Pricing Dynamic Calculator Display */}
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-500">Amount Due</span>
+                    <span className="font-bold text-[rgb(1,0,128)]">
+                      ₦{pricing?.amountToPay?.toLocaleString() || '0'}
+                    </span>
+                  </div>
+
+                  <div className="border-t border-gray-200"></div>
+
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-500">Account Name</span>
+                    <span className="text-right font-semibold text-gray-900">
+                      Ridot Software Academy
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-500">NGN Account</span>
+                    <span className="font-semibold text-gray-900">
+                      0914125201
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-500">USD Account</span>
+                    <span className="font-semibold text-gray-900">
+                      0914125218
+                    </span>
+                  </div>
+
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="text-gray-500">Bank</span>
+                    <span className="font-semibold text-gray-900">GTBank</span>
+                  </div>
+                </div>
+
+                <div className="mt-5 rounded-lg border border-blue-100 bg-blue-50 p-3 text-center">
+                  <p className="text-xs text-gray-600">
+                    For payment confirmation or inquiries
+                  </p>
+                  <a
+                    href="tel:+2347083143779"
+                    className="mt-1 inline-block text-sm font-bold text-[rgb(1,0,128)] hover:underline"
+                  >
+                    +234 708 314 3779
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div>
+                <label className="block text-sm font-semibold text-gray-700">
+                  Payment Option <span className="text-red-500">*</span>
+                </label>
+                <div className="mt-3 grid grid-cols-2 gap-4">
+                  <label
+                    className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentOption === 'full' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="paymentOption"
+                      value="full"
+                      checked={paymentOption === 'full'}
+                      onChange={() => setPaymentOption('full')}
+                      className="sr-only"
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-gray-900">
+                        Full Payment
+                      </span>
+                      <span className="mt-1 text-xs text-gray-500">
+                        Pay 100% upfront
+                      </span>
+                    </div>
+                  </label>
+
+                  <label
+                    className={`relative flex cursor-pointer rounded-lg border p-4 shadow-sm focus:outline-none ${paymentOption === 'part' ? 'border-[rgb(1,0,128)] bg-blue-50/30' : 'border-gray-200'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="paymentOption"
+                      value="part"
+                      checked={paymentOption === 'part'}
+                      onChange={() => setPaymentOption('part')}
+                      className="sr-only"
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-sm font-bold text-gray-900">
+                        Part Payment
+                      </span>
+                      <span className="mt-1 text-xs text-gray-500">
+                        Pay 30% upfront, 70% balance
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            )}
+
             {pricing && (
               <div className="space-y-3 rounded-xl border border-blue-100 bg-blue-50/50 p-5">
                 <h4 className="text-sm font-bold text-[rgb(1,0,128)]">
@@ -455,92 +566,29 @@ export default function EnrollPage() {
             )}
           </div>
 
-          {/* Payment Methods */}
-          <div className="space-y-5">
-            {/* Paystack Payment */}
-            <div>
-              <button
-                type="submit"
-                disabled={submitting}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[rgb(1,0,128)] px-4 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
-              >
-                {submitting
-                  ? 'Redirecting to checkout...'
+          <div>
+            <button
+              type="submit"
+              disabled={submitting}
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[rgb(1,0,128)] px-4 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
+            >
+              {submitting
+                ? paymentMode === 'bank'
+                  ? 'Submitting enrollment...'
+                  : 'Redirecting to checkout...'
+                : paymentMode === 'bank'
+                  ? 'I have paid, Submit'
                   : 'Proceed to Payment'}
-                {!submitting && <MdOutlinePayment className="text-lg" />}
-              </button>
-            </div>
-
-            {/* Divider */}
-            <div className="relative flex items-center">
-              <div className="flex-grow border-t border-gray-200"></div>
-              <span className="mx-4 shrink-0 text-xs font-semibold tracking-wider text-gray-400 uppercase">
-                Or
-              </span>
-              <div className="flex-grow border-t border-gray-200"></div>
-            </div>
-
-            {/* Bank Transfer */}
-            <div className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
-              <div className="mb-4">
-                <h3 className="text-base font-bold text-gray-900">
-                  Pay via Bank Transfer
-                </h3>
-                <p className="mt-1 text-xs leading-relaxed text-gray-500">
-                  Transfer the amount due to the account below and contact us
-                  for payment confirmation.
-                </p>
-              </div>
-
-              <div className="space-y-3 text-sm">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-gray-500">Amount Due</span>
-                  <span className="font-bold text-[rgb(1,0,128)]">
-                    ₦{pricing?.amountToPay?.toLocaleString() || '0'}
-                  </span>
-                </div>
-
-                <div className="border-t border-gray-200"></div>
-
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-gray-500">Account Name</span>
-                  <span className="text-right font-semibold text-gray-900">
-                    Ridot Software Academy
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-gray-500">NGN Account</span>
-                  <span className="font-semibold text-gray-900">
-                    0914125201
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-gray-500">USD Account</span>
-                  <span className="font-semibold text-gray-900">
-                    0914125218
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-gray-500">Bank</span>
-                  <span className="font-semibold text-gray-900">GTBank</span>
-                </div>
-              </div>
-
-              <div className="mt-5 rounded-lg border border-blue-100 bg-blue-50 p-3 text-center">
-                <p className="text-xs text-gray-600">
-                  For payment confirmation or inquiries
-                </p>
-                <a
-                  href="tel:+2347083143779"
-                  className="mt-1 inline-block text-sm font-bold text-[rgb(1,0,128)] hover:underline"
-                >
-                  +234 708 314 3779
-                </a>
-              </div>
-            </div>
+              {!submitting && paymentMode !== 'bank' && (
+                <MdOutlinePayment className="text-lg" />
+              )}
+            </button>
+            {paymentMode === 'bank' && (
+              <p className="mt-3 text-center text-xs text-gray-500">
+                Your enrollment will be sent now. An admin will confirm your
+                transfer and you will be assigned a student number afterwards.
+              </p>
+            )}
           </div>
         </form>
       </div>

@@ -57,6 +57,7 @@ export async function POST(req: Request) {
       twitterHandle,
       linkedInHandle,
       paymentOption,
+      paymentMode,
       careerPath,
       expectations,
     } = data;
@@ -69,6 +70,7 @@ export async function POST(req: Request) {
       !twitterHandle ||
       !linkedInHandle ||
       !paymentOption ||
+      !paymentMode ||
       !careerPath ||
       !expectations
     ) {
@@ -111,6 +113,7 @@ export async function POST(req: Request) {
       enrollment.twitterHandle = twitterHandle;
       enrollment.linkedInHandle = linkedInHandle;
       enrollment.paymentOption = paymentOption;
+      enrollment.paymentMode = paymentMode;
       enrollment.careerPath = careerPath;
       enrollment.expectations = expectations;
       enrollment.paymentReference = paymentReference;
@@ -126,11 +129,25 @@ export async function POST(req: Request) {
         twitterHandle,
         linkedInHandle,
         paymentOption,
+        paymentMode,
         careerPath,
         expectations,
         paymentReference,
         paymentStatus: 'pending',
       });
+    }
+
+    if (paymentMode === 'transfer') {
+      return NextResponse.json(
+        {
+          success: true,
+          paymentMode: 'transfer',
+          paymentStatus: 'pending',
+          message:
+            'Enrollment submitted successfully. An admin will confirm your payment.',
+        },
+        { status: 200 },
+      );
     }
 
     // Initialize Paystack payment

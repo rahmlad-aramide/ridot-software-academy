@@ -1,15 +1,22 @@
 import { NextResponse } from 'next/server';
-import { cookies } from 'next/headers';
 import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
 import dbConnect from '@/lib/db';
 import User from '@/models/User';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'fallback_secret_key';
+import { getCurrentUser, hasRole } from '@/lib/auth';
 
 export async function POST(req: Request) {
   try {
     await dbConnect();
+
+    const currentUser = await getCurrentUser();
+    if (!currentUser) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    if (!hasRole(currentUser.role, ['super_admin'])) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+
     const { email, password } = await req.json();
 
     if (!email || !password) {
@@ -26,7 +33,6 @@ export async function POST(req: Request) {
       );
     }
 
-    // Check if user already exists
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return NextResponse.json(
@@ -35,39 +41,23 @@ export async function POST(req: Request) {
       );
     }
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 12);
 
-    // Create user
-    const user = await User.create({
+    const admin = await User.create({
       email,
       password: hashedPassword,
-    });
-
-    // Generate JWT
-    const token = jwt.sign({ userId: user._id }, JWT_SECRET, {
-      expiresIn: '7d',
-    });
-
-    // Set cookie
-    const cookieStore = await cookies();
-    cookieStore.set('token', token, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      maxAge: 7 * 24 * 60 * 60,
-      path: '/',
+      role: 'admin',
     });
 
     return NextResponse.json(
       {
-        message: 'User created successfully',
-        user: { id: user._id, email: user.email, role: user.role },
+        message: 'Admin created successfully',
+        user: { id: admin._id, email: admin.email, role: admin.role },
       },
       { status: 201 },
     );
   } catch (error: any) {
-    console.error('Signup error:', error);
+    console.error('Create admin error:', error);
     return NextResponse.json(
       { error: error.message || 'Internal Server Error' },
       { status: 500 },
