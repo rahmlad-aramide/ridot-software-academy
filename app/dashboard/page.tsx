@@ -12,6 +12,7 @@ import {
   MdPayment,
   MdInfo,
 } from 'react-icons/md';
+import { MdOutlinePayment } from 'react-icons/md';
 
 function DashboardContent() {
   const router = useRouter();
@@ -21,6 +22,9 @@ function DashboardContent() {
   const [loading, setLoading] = useState(true);
   const [confirmingPayment, setConfirmingPayment] = useState(false);
   const [error, setError] = useState('');
+  const [paymentMode, setPaymentMode] = useState<'online' | 'bank'>('online');
+  const [submitting, setSubmitting] = useState(false);
+  const [paymentOption, setPaymentOption] = useState<'full' | 'part'>('full');
 
   // Fetch auth and enrollment details
   const fetchDashboardData = async () => {
@@ -445,20 +449,23 @@ function DashboardContent() {
               </div>
 
               <div className="space-y-6">
-                {/* Pending State Banner */}
+                {/* Pending State */}
                 {!isCompleted && (
-                  <div className="no-print flex flex-col gap-4 rounded-xl border border-amber-100 bg-amber-50 p-5">
-                    <div className="flex gap-3">
+                  <div className="no-print space-y-6">
+                    {/* Payment Required Banner */}
+                    <div className="flex gap-3 rounded-xl border border-amber-100 bg-amber-50 p-5">
                       <MdPayment className="mt-0.5 shrink-0 text-3xl text-amber-600" />
+
                       <div>
                         <h4 className="text-sm font-bold text-amber-800">
                           Payment Required
                         </h4>
-                        <p className="mt-1 text-xs text-amber-600">
+
+                        <p className="mt-1 text-xs leading-relaxed text-amber-600">
                           Your enrollment is currently pending. Please complete
                           your upfront payment of{' '}
                           <strong className="text-amber-800">
-                            ₦{pricing?.amountToPay.toLocaleString()}
+                            ₦{pricing?.amountToPay?.toLocaleString() || '0'}
                           </strong>{' '}
                           to activate your student profile and access course
                           materials or your dashboard.
@@ -466,42 +473,76 @@ function DashboardContent() {
                       </div>
                     </div>
 
-                    {/* Payment Methods */}
-                    <div className="space-y-5">
-                      {/* Paystack Payment */}
-                      <div>
+                    {/* Payment Mode */}
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700">
+                        Payment Mode
+                      </label>
+
+                      <div className="mt-3 grid grid-cols-2 gap-4">
+                        {/* Online Payment */}
                         <button
-                          onClick={handleRetryPayment}
-                          className="w-full rounded-lg bg-[rgb(1,0,128)] py-2.5 text-center text-sm font-bold text-white shadow transition-all hover:bg-blue-800"
+                          type="button"
+                          onClick={() => setPaymentMode('online')}
+                          className={`relative flex cursor-pointer rounded-lg border p-4 text-left shadow-sm transition-all ${
+                            paymentMode === 'online'
+                              ? 'border-[rgb(1,0,128)] bg-blue-50/30'
+                              : 'border-gray-200 bg-white hover:border-gray-300'
+                          }`}
                         >
-                          Pay Now
+                          <div className="flex flex-col">
+                            <span className="text-sm font-bold text-gray-900">
+                              Online Payment
+                            </span>
+
+                            <span className="mt-1 text-xs text-gray-500">
+                              Pay on the site, easy and secure
+                            </span>
+                          </div>
+                        </button>
+
+                        {/* Bank Transfer */}
+                        <button
+                          type="button"
+                          onClick={() => setPaymentMode('bank')}
+                          className={`relative flex cursor-pointer rounded-lg border p-4 text-left shadow-sm transition-all ${
+                            paymentMode === 'bank'
+                              ? 'border-[rgb(1,0,128)] bg-blue-50/30'
+                              : 'border-gray-200 bg-white hover:border-gray-300'
+                          }`}
+                        >
+                          <div className="flex flex-col">
+                            <span className="text-sm font-bold text-gray-900">
+                              Bank Transfer
+                            </span>
+
+                            <span className="mt-1 text-xs text-gray-500">
+                              Pay to our USD or NGN bank account
+                            </span>
+                          </div>
                         </button>
                       </div>
+                    </div>
 
-                      {/* Divider */}
-                      <div className="relative flex items-center">
-                        <div className="flex-grow border-t border-gray-200"></div>
-                        <span className="mx-4 shrink-0 text-xs font-semibold tracking-wider text-gray-400 uppercase">
-                          Or
-                        </span>
-                        <div className="flex-grow border-t border-gray-200"></div>
-                      </div>
-
-                      {/* Bank Transfer */}
+                    {/* Bank Transfer */}
+                    {paymentMode === 'bank' ? (
                       <div className="rounded-xl border border-gray-200 bg-gray-50/70 p-5">
                         <div className="mb-4">
                           <h3 className="text-base font-bold text-gray-900">
                             Pay via Bank Transfer
                           </h3>
+
                           <p className="mt-1 text-xs leading-relaxed text-gray-500">
-                            Transfer the amount due to the account below and
-                            contact us for payment confirmation.
+                            Transfer the amount due to the account below, then
+                            submit the form. An admin will confirm the transfer
+                            manually.
                           </p>
                         </div>
 
                         <div className="space-y-3 text-sm">
                           <div className="flex items-center justify-between gap-4">
                             <span className="text-gray-500">Amount Due</span>
+
                             <span className="font-bold text-[rgb(1,0,128)]">
                               ₦{pricing?.amountToPay?.toLocaleString() || '0'}
                             </span>
@@ -511,6 +552,7 @@ function DashboardContent() {
 
                           <div className="flex items-center justify-between gap-4">
                             <span className="text-gray-500">Account Name</span>
+
                             <span className="text-right font-semibold text-gray-900">
                               Ridot Software Academy
                             </span>
@@ -518,6 +560,7 @@ function DashboardContent() {
 
                           <div className="flex items-center justify-between gap-4">
                             <span className="text-gray-500">NGN Account</span>
+
                             <span className="font-semibold text-gray-900">
                               0914125201
                             </span>
@@ -525,6 +568,7 @@ function DashboardContent() {
 
                           <div className="flex items-center justify-between gap-4">
                             <span className="text-gray-500">USD Account</span>
+
                             <span className="font-semibold text-gray-900">
                               0914125218
                             </span>
@@ -532,6 +576,7 @@ function DashboardContent() {
 
                           <div className="flex items-center justify-between gap-4">
                             <span className="text-gray-500">Bank</span>
+
                             <span className="font-semibold text-gray-900">
                               GTBank
                             </span>
@@ -542,6 +587,7 @@ function DashboardContent() {
                           <p className="text-xs text-gray-600">
                             For payment confirmation or inquiries
                           </p>
+
                           <a
                             href="tel:+2347083143779"
                             className="mt-1 inline-block text-sm font-bold text-[rgb(1,0,128)] hover:underline"
@@ -550,6 +596,145 @@ function DashboardContent() {
                           </a>
                         </div>
                       </div>
+                    ) : (
+                      /* Online Payment */
+                      <div className="space-y-6">
+                        {/* Payment Option - DISPLAY ONLY */}
+                        <div>
+                          <label className="block text-sm font-semibold text-gray-700">
+                            Payment Option
+                          </label>
+
+                          <div className="mt-3 grid grid-cols-2 gap-4">
+                            {/* Full Payment */}
+                            <div
+                              className={`relative flex rounded-lg border p-4 shadow-sm ${
+                                enrollment?.paymentOption === 'full'
+                                  ? 'border-[rgb(1,0,128)] bg-blue-50/30'
+                                  : 'border-gray-200 bg-white'
+                              }`}
+                            >
+                              <div className="flex flex-col">
+                                <span className="text-sm font-bold text-gray-900">
+                                  Full Payment
+                                </span>
+
+                                <span className="mt-1 text-xs text-gray-500">
+                                  Pay 100% upfront
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Part Payment */}
+                            <div
+                              className={`relative flex rounded-lg border p-4 shadow-sm ${
+                                enrollment?.paymentOption === 'part'
+                                  ? 'border-[rgb(1,0,128)] bg-blue-50/30'
+                                  : 'border-gray-200 bg-white'
+                              }`}
+                            >
+                              <div className="flex flex-col">
+                                <span className="text-sm font-bold text-gray-900">
+                                  Part Payment
+                                </span>
+
+                                <span className="mt-1 text-xs text-gray-500">
+                                  Pay 30% upfront, 70% balance
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Payment Breakdown */}
+                        {pricing && (
+                          <div className="space-y-3 rounded-xl border border-blue-100 bg-blue-50/50 p-5">
+                            <h4 className="text-sm font-bold text-[rgb(1,0,128)]">
+                              Payment Breakdown
+                            </h4>
+
+                            <div className="space-y-2 text-sm">
+                              <div className="flex justify-between text-gray-600">
+                                <span>Course Fee:</span>
+
+                                <span className="font-semibold text-gray-900">
+                                  ₦{pricing.totalPrice?.toLocaleString() || '0'}
+                                </span>
+                              </div>
+
+                              <div className="flex justify-between text-gray-600">
+                                <span>Duration:</span>
+
+                                <span className="font-medium text-gray-900">
+                                  {pricing.course?.duration || 'N/A'}
+                                </span>
+                              </div>
+
+                              <div className="flex justify-between text-gray-600">
+                                <span>Format:</span>
+
+                                <span className="text-right font-medium text-gray-900">
+                                  {pricing.course?.format || 'N/A'}
+                                </span>
+                              </div>
+
+                              <hr className="border-blue-100/70" />
+
+                              <div className="flex justify-between text-base font-bold text-gray-900">
+                                <span className="text-[rgb(1,0,128)]">
+                                  Due Now:
+                                </span>
+
+                                <span className="text-[rgb(1,0,128)]">
+                                  ₦
+                                  {pricing.amountToPay?.toLocaleString() || '0'}
+                                </span>
+                              </div>
+
+                              {enrollment?.paymentOption === 'part' &&
+                                pricing.balance > 0 && (
+                                  <div className="mt-2 flex justify-between rounded-lg border border-amber-100 bg-amber-50 p-2.5 text-xs font-medium text-amber-700">
+                                    <span>Remaining Balance (70%):</span>
+
+                                    <span className="font-bold">
+                                      ₦
+                                      {pricing.balance?.toLocaleString() || '0'}
+                                    </span>
+                                  </div>
+                                )}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Payment Button */}
+                    <div>
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className="flex w-full items-center justify-center gap-2 rounded-lg bg-[rgb(1,0,128)] px-4 py-3.5 text-sm font-bold text-white shadow-md transition-all hover:bg-blue-800 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
+                      >
+                        {submitting
+                          ? paymentMode === 'bank'
+                            ? 'Submitting enrollment...'
+                            : 'Redirecting to checkout...'
+                          : paymentMode === 'bank'
+                            ? 'I have paid, Submit'
+                            : 'Proceed to Payment'}
+
+                        {!submitting && paymentMode !== 'bank' && (
+                          <MdOutlinePayment className="text-lg" />
+                        )}
+                      </button>
+
+                      {paymentMode === 'bank' && (
+                        <p className="mt-3 text-center text-xs text-gray-500">
+                          Your enrollment will be sent now. An admin will
+                          confirm your transfer and you will be assigned a
+                          student number afterwards.
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
