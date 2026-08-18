@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {
   MdLock,
   MdArrowForward,
@@ -12,6 +13,10 @@ import {
 import { Eye, EyeOff } from 'lucide-react';
 
 export default function ResetPasswordPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const token = searchParams.get('token');
+
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -25,6 +30,11 @@ export default function ResetPasswordPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+
+    if (!token) {
+      setError('Reset token is missing or invalid.');
+      return;
+    }
 
     if (!password || !confirmPassword) {
       setError('Please fill in all fields.');
@@ -43,11 +53,28 @@ export default function ResetPasswordPage() {
 
     setLoading(true);
 
-    // Frontend only for now
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch('/api/auth/reset-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token, password }),
+      });
 
-    setLoading(false);
-    setSuccess(true);
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to reset password');
+      }
+
+      setSuccess(true);
+      router.refresh();
+    } catch (err: any) {
+      setError(err.message || 'An error occurred while resetting password.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

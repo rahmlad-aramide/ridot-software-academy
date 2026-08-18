@@ -27,10 +27,25 @@ export default function ForgotPasswordPage() {
 
     setLoading(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const res = await fetch('/api/auth/forgot-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
 
-    setLoading(false);
-    setSubmitted(true);
+      if (!res.ok) {
+        setError(data.error || 'Unable to send reset instructions.');
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
